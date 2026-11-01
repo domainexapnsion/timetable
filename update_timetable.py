@@ -2,10 +2,11 @@
 """
 update_timetable.py — High-Speed Timetable Pipeline Engine
 Automates:
-1. Intelligent WhatsApp raw text parsing (dates, times, roll numbers, flags)
-2. Atomic synchronization into index.html (const N={...})
-3. Documentation logging into TIMETABLE.md
-4. Instant Git commit & push to GitHub Pages
+1. Faithful WhatsApp raw text parsing (clean dates, standardized times, faithful subjects)
+2. Zero Sub-Batch Contamination: Never assumes Roll 38-56 or rewrites generic postings
+3. Atomic synchronization into index.html (const N={...})
+4. Documentation logging into TIMETABLE.md
+5. Git commit & push to GitHub Pages
 """
 
 import sys
@@ -52,11 +53,11 @@ def normalize_time(t_raw):
     return f"{s_str}–{e_str}"
 
 def parse_raw_message(raw_text):
-    """Parse unstructured WhatsApp announcements into structured schedule entries."""
+    """Parse raw announcements faithfully without injecting sub-batch assumptions."""
     lines = [l.strip() for l in raw_text.splitlines() if l.strip()]
     full_text = "\n".join(lines)
     
-    # Clean WhatsApp metadata like '[30/10, 08:43] Mitesh Tnmc:'
+    # Strip WhatsApp author prefix
     cleaned_lines = []
     for l in lines:
         l_clean = re.sub(r'^\[\d{1,2}[/.-]\d{1,2}(?:[/.-]\d{2,4})?,\s*[^\]]+\]\s*[^:]*:\s*', '', l)
@@ -83,7 +84,6 @@ def parse_raw_message(raw_text):
         
     dt_obj = datetime.strptime(date_str, "%Y-%m-%d")
     day_name = dt_obj.strftime("%A")
-    day_num = dt_obj.weekday()
 
     # 2. Extract Time Slots and Subjects
     time_regex = re.compile(r'\b(\d{1,2}(?::\d{2})?\s*(?:am|pm)?\s*[-–—to]+\s*\d{1,2}(?::\d{2})?\s*(?:am|pm)?)\b', re.IGNORECASE)
@@ -123,35 +123,42 @@ def parse_raw_message(raw_text):
         else:
             i += 1
 
-    # 3. Build Structured Entries
+    # 3. Build Structured Entries (Faithful to Announcement)
     entries = []
     for norm_time, subj in slots:
-        subj_clean = subj
+        subj_clean = subj.strip()
+        
+        # If line is just "posting" or "10-1pm posting" without special instructions:
+        # We check if index.html already handles dynamic posting.
+        # But if we must include it in N, default to Roll 1-155 so we don't lock it to roll 38-56!
         min_roll = 1
         max_roll = 155
-        is_posting = any(k in subj_clean.lower() for k in ['posting', 'ot', 'opd', 'clerkship'])
-        if is_posting:
-            min_roll = 38
-            max_roll = 56
-            
+        
+        # ONLY restrict roll numbers if explicitly specified in the message!
         rm = re.search(r'roll\s*(?:no\.?|nos\.?)?:?\s*(\d+)\s*[-–to]+\s*(\d+)', subj_clean, re.I)
         if rm:
             min_roll = int(rm.group(1))
             max_roll = int(rm.group(2))
-            
-        if min_roll == 38 and max_roll == 56 and ('posting' in subj_clean.lower() or subj_clean == ''):
-            if 'ot' in subj_clean.lower():
-                subj_clean = 'ENT Posting – OT (Operation Theatre)'
-            elif 'opd' in subj_clean.lower():
-                subj_clean = 'ENT Posting – OPD (Out-Patient Dept)'
-            else:
-                if day_num in [0, 2, 4]:
-                    subj_clean = 'ENT Posting – OT (Operation Theatre)'
-                elif day_num in [1, 3, 5]:
-                    subj_clean = 'ENT Posting – OPD (Out-Patient Dept)'
-                else:
-                    subj_clean = 'ENT Posting'
+        elif 'batch a' in subj_clean.lower():
+            min_roll = 1
+            max_roll = 37
+        elif 'batch b' in subj_clean.lower():
+            min_roll = 38
+            max_roll = 75
+        elif 'batch c' in subj_clean.lower():
+            min_roll = 76
+            max_roll = 111
+        elif 'batch d' in subj_clean.lower():
+            min_roll = 112
+            max_roll = 155
 
+        # Format generic posting cleanly without hallucinating department or OPD/OT
+        if subj_clean.lower() in ['posting', 'postings', 'clinical posting', 'clinical postings', '']:
+            # If the user's batch has specific dynamic posting built-in, 
+            # we keep it as a clean entry for all roll numbers, OR let index.html resolve it.
+            # In N, if specified, keep title clean:
+            subj_clean = 'Clinical Posting'
+            
         rs_flag = 0
         warn_words = ['rescheduled', 'postponed', 'online', 'google meet', 'gmeet', 'bring journal', 'strictly', 'read before', 'cancelled', 'hod sir']
         if any(w in subj_clean.lower() for w in warn_words):
