@@ -177,9 +177,9 @@ details[open] .att-arrow{transform:rotate(180deg)}
    </summary>
    <div class="att-panel">
     <div style="font-size:15px;color:#666;margin-bottom:12px">Calculated automatically from your scheduled classes &amp; marked absentees. Turn on <b>Select Absentee Mode</b> above and tap any lecture to mark a bunk.</div>
-    <div class="att-grid">
+    <div class="att-grid" id="overallGrid">
      <div class="att-card">
-      <div class="att-c-title"><span>Theory Lectures</span><span class="att-c-pct" id="thPct">--%</span></div>
+      <div class="att-c-title"><span>Theory Lectures (Overall)</span><span class="att-c-pct" id="thPct">--%</span></div>
       <div class="att-c-sub" id="thSub">Attended: -- / -- (Bunked: --) • Floor: 75%</div>
       <div class="att-c-cushion" id="thCushion">--</div>
      </div>
@@ -189,46 +189,48 @@ details[open] .att-arrow{transform:rotate(180deg)}
       <div class="att-c-cushion" id="prCushion">--</div>
      </div>
     </div>
-    <div style="margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
-     <div style="font-size:15px;color:var(--navy)">
-      Threshold Floor: 
-      <button class="cbtn ctoday" id="btnTgt75" style="height:26px;font-size:13px;background:var(--hi)" onclick="setTargetFloor(75)">75% Theory</button>
-      <button class="cbtn ctoday" id="btnTgt80" style="height:26px;font-size:13px" onclick="setTargetFloor(80)">80% Posting</button>
-      <button class="cbtn ctoday" id="btnTgt60" style="height:26px;font-size:13px" onclick="setTargetFloor(60)">60% Abyss</button>
-     </div>
-     <button class="cbtn ctoday" style="height:26px;font-size:13px;color:var(--err)" onclick="resetAbsences()">Reset Absences</button>
+
+    <!-- Subject Wise Grid -->
+    <div style="margin-top:16px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+     <div style="font:bold 18px var(--head);color:var(--ink)">📚 Subject-Wise Attendance &amp; Cushions</div>
+     <button class="cbtn ctoday" style="height:26px;font-size:12px;color:var(--err)" onclick="resetAbsences()">Reset Absences</button>
+    </div>
+    <div class="att-grid" id="subjGrid">
+     <!-- Injected dynamically by updateAttendanceSummary() -->
     </div>
 
-    <div style="margin-top:14px;padding:12px 14px;background:#f8fafc;border:1.5px dashed #94a3b8;border-radius:12px;font-size:13.5px;color:#475569;line-height:1.45">
-     <div style="font:bold 16px var(--head);color:#334155;margin-bottom:6px">📋 Tracker Assumptions &amp; NMC Criteria</div>
-     <div style="margin-bottom:4px">• <b>Classes Counted by Tracker (26-Oct to Today):</b> Total <b>14 Theory</b> &amp; <b>6 Postings</b>.</div>
-     <div style="margin-left:12px;margin-bottom:4px;font-size:12.5px;color:#64748b">
-       - <i>Community Medicine:</i> 3 conducted<br>
-       - <i>FMT:</i> 3 conducted<br>
-       - <i>ENT Theory:</i> 2 conducted (incl. 1 online)<br>
-       - <i>Ophthalmology:</i> 2 conducted<br>
-       - <i>Surgery, Medicine, OBGY, Paeds:</i> 1 each<br>
-       - <i>ENT Clinical Posting:</i> 6 days conducted (Roll 38–56)
+    <!-- Curriculum Source & Conducted Breakdown -->
+    <div style="margin-top:16px;padding:12px 14px;background:#f8fafc;border:1.5px dashed #94a3b8;border-radius:12px;font-size:13.5px;color:#475569;line-height:1.45" id="curriculumAssumptions">
+     <div style="font:bold 16px var(--head);color:#334155;margin-bottom:6px">📋 Official Curriculum Benchmarks &amp; Classes Conducted</div>
+     <div style="margin-bottom:4px">• <b>Statutory Benchmark Source:</b> NMC CBME 2024 Guidelines (UGMEB Notification No. D-11011/500/2024-AcademicCell).</div>
+     <div style="margin-bottom:6px">• <b>Annual Curricular Hours Believed (Phase III Part 1):</b>
+      <div style="margin-left:12px;margin-top:2px;font-size:12.5px;color:#64748b">
+       - <i>FMT:</i> 120 hrs (35 Theory Lectures, 65 Practical/SGT incl. 21h autopsy demo)<br>
+       - <i>Community Medicine:</i> 150 hrs (50 Theory Lectures, 80 Practical/SGT) + 36h FAP<br>
+       - <i>Ophthalmology:</i> 100 hrs (30 Theory Lectures, 50 Practical/SGT)<br>
+       - <i>ENT:</i> 100 hrs (30 Theory Lectures, 50 Practical/SGT)<br>
+       - <i>Clinical Postings:</i> 33 Weeks (593 Hours)
+      </div>
      </div>
-     <div style="margin-bottom:3px">• <b>75% Theory Floor:</b> Mandatory NMC CBME threshold to be eligible for university theory exams.</div>
-     <div style="margin-bottom:3px">• <b>80% Practical / Posting Floor:</b> Mandatory clinical attendance threshold for practical eligibility.</div>
-     <div style="margin-bottom:3px">• <b>&lt; 60% Detention Line:</b> Absolute barring from university exams (zero condonation).</div>
-     <div>• <b>Safe Skips Calculation:</b> Exact consecutive lectures/postings you can skip while keeping attendance &ge; 75% or &ge; 80%.</div>
+     <div style="margin-bottom:2px">• <b>Classes Conducted So Far (26-Oct to Today):</b> Total <b id="dynTotSummary">-- Theory &amp; -- Postings</b></div>
+     <div style="margin-left:12px;font-size:12.5px;color:#64748b" id="dynSubjConducted">
+       <!-- Dynamically populated to match cards -->
+     </div>
     </div>
 
     <div class="cloud-sync-box" style="margin-top:16px;padding:12px;background:#f0f7ff;border:2px dashed var(--ink);border-radius:12px">
      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
       <div style="font:bold 18px var(--head);color:var(--ink);display:flex;align-items:center;gap:6px">
-       <span>☁️ Google Sheets Cloud Backup</span>
+       <span>☁️ Cloud Backup</span>
        <span id="sheetSyncBadge" style="font-size:12px;padding:2px 8px;border-radius:10px;font-family:var(--body);background:#eefbf0;color:var(--safe)">Connected</span>
       </div>
       <div style="display:flex;gap:6px">
-       <button class="cbtn ctoday" style="height:28px;font-size:13px" onclick="syncWithGoogleSheets(true)" id="btnSyncNow" title="Push current attendance to Google Sheet">🔄 Backup Attendance</button>
-       <button class="cbtn ctoday" style="height:28px;font-size:13px" onclick="pullFromGoogleSheets()" id="btnPullNow" title="Restore attendance from Google Sheet">📥 Restore</button>
+       <button class="cbtn ctoday" style="height:28px;font-size:13px" onclick="syncWithGoogleSheets(true)" id="btnSyncNow" title="Push current attendance to cloud backup">🔄 Backup to Cloud</button>
+       <button class="cbtn ctoday" style="height:28px;font-size:13px" onclick="pullFromGoogleSheets()" id="btnPullNow" title="Restore attendance from cloud">📥 Restore from Cloud</button>
       </div>
      </div>
      <div style="margin-top:6px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;font-size:13px;color:#555">
-      <span id="sheetSyncMsg">Private to Roll #<span id="syncRollDisplay">--</span>. Cached on device &amp; synced to cloud.</span>
+      <span id="sheetSyncMsg">Private to Roll #<span id="syncRollDisplay">--</span>. Cached on device &amp; backed up to cloud.</span>
       <label style="display:inline-flex;align-items:center;gap:5px;cursor:pointer">
        <input type="checkbox" id="autoSyncCheck" onchange="toggleAutoSync(this.checked)">
        <span>Auto-sync</span>
@@ -518,14 +520,31 @@ $('trows').onclick=e=>{
 
 let absences={};
 try{absences=JSON.parse(localStorage.getItem('tnmc_absences')||'{}')}catch(e){}
-let currentTgtFloor=75;
-function setTargetFloor(val){
- currentTgtFloor=val;
- $('btnTgt75').style.background=val===75?'var(--hi)':'#fff';
- $('btnTgt80').style.background=val===80?'var(--hi)':'#fff';
- $('btnTgt60').style.background=val===60?'var(--hi)':'#fff';
- updateAttendanceSummary();
+const SUBJ_CONFIG = {
+  FMT: { name: 'FMT (Forensic Medicine)', annualLec: 35, floor: 75, type: 'theory' },
+  CM: { name: 'Community Medicine (PSM)', annualLec: 50, floor: 75, type: 'theory' },
+  Ophthal: { name: 'Ophthalmology', annualLec: 30, floor: 75, type: 'theory' },
+  ENT: { name: 'ENT (Theory)', annualLec: 30, floor: 75, type: 'theory' },
+  Allied: { name: 'Allied Clinical (Med/Surg/OBG/Peds)', annualLec: null, floor: 75, type: 'theory' },
+  Posting: { name: 'Clinical Postings', annualLec: 198, floor: 80, type: 'posting' }
+};
+
+function classifySlot(title, isPrac) {
+  const t = title.toLowerCase();
+  if (t.includes('rescheduled to') || t.startsWith('rescheduled') || t.includes('postponed') || t.includes('cancelled') || t.includes('canceled') || t.includes('holiday') || t.includes('meeting') || t.includes('reminder')) {
+    return null;
+  }
+  if (isPrac || t.includes('posting') || t.includes('ot (operation') || t.includes('opd (out-patient') || t.includes('clerkship')) {
+    return 'Posting';
+  }
+  if (t.includes('fmt') || t.includes('forensic')) return 'FMT';
+  if (t.includes('community medicine') || t.includes('cm:') || t.includes('psm') || t.includes('ncd')) return 'CM';
+  if (t.includes('ophthalmology') || t.includes('op:')) return 'Ophthal';
+  if (t.includes('ent')) return 'ENT';
+  if (t.includes('surgery') || t.includes('medicine') || t.includes('obgy') || t.includes('paediatrics') || t.includes('pediatrics')) return 'Allied';
+  return 'Allied';
 }
+
 function resetAbsences(){
  if(confirm('Reset all marked absences back to zero?')){
   absences={};
@@ -535,12 +554,23 @@ function resetAbsences(){
   if(autoSync && typeof SHEET_URL !== 'undefined' && SHEET_URL)syncWithGoogleSheets(false);
  }
 }
+
 function updateAttendanceSummary(){
  if(batch==null||roll==null)return;
  const start=D('2026-10-26');
  const now=new Date();
  const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
  let thTot=0,thMiss=0,prTot=0,prMiss=0;
+
+ const subjStats = {
+  FMT: { tot: 0, miss: 0 },
+  CM: { tot: 0, miss: 0 },
+  Ophthal: { tot: 0, miss: 0 },
+  ENT: { tot: 0, miss: 0 },
+  Allied: { tot: 0, miss: 0 },
+  Posting: { tot: 0, miss: 0 }
+ };
+
  let cur=new Date(start.getTime());
  while(cur<=today){
   const k=toISO(cur);
@@ -568,20 +598,26 @@ function updateAttendanceSummary(){
    it.forEach(x=>{
     const tmNum=timeOrder(x[0]);
     const slotKey=k+'_'+tmNum;
-    const isAcademic=!x[1].includes('MEETING')&&!x[1].includes('Holiday')&&!x[1].includes('Reminder');
-    if(!isAcademic)return;
     const isPrac=x[1].toLowerCase().includes('posting')||x[1].includes('OT')||x[1].includes('OPD')||x[1].toLowerCase().includes('clerkship');
-    if(isPrac){
+    const sKey = classifySlot(x[1], isPrac);
+    if(!sKey) return;
+
+    const isBunk = !!absences[slotKey];
+    if(sKey === 'Posting'){
      prTot++;
-     if(absences[slotKey])prMiss++;
-    }else{
+     subjStats.Posting.tot++;
+     if(isBunk){ prMiss++; subjStats.Posting.miss++; }
+    } else {
      thTot++;
-     if(absences[slotKey])thMiss++;
+     if(!subjStats[sKey]) subjStats[sKey] = { tot: 0, miss: 0 };
+     subjStats[sKey].tot++;
+     if(isBunk){ thMiss++; subjStats[sKey].miss++; }
     }
    });
   }
   cur.setDate(cur.getDate()+1);
  }
+
  const thAtt=Math.max(0,thTot-thMiss);
  const prAtt=Math.max(0,prTot-prMiss);
  const thPct=thTot===0?100:(thAtt/thTot*100);
@@ -595,30 +631,89 @@ function updateAttendanceSummary(){
  if($('prPct'))$('prPct').style.color=prPct>=80?'var(--safe)':(prPct>=60?'var(--warn)':'var(--err)');
  if($('prSub'))$('prSub').textContent='Attended: '+prAtt+' / '+prTot+' (Missed: '+prMiss+') • Floor: 80%';
 
- const tgtTh=currentTgtFloor;
- if(thPct>=tgtTh){
-  const skips=Math.floor((100*thAtt-tgtTh*thTot)/tgtTh);
-  $('thCushion').textContent=skips>0?'🏖️ Safe cushion: '+skips+' lecture'+(skips>1?'s':'')+' can be skipped!':'⚠️ Edge: 0 more skips allowed to keep '+tgtTh+'%';
+ if(thPct>=75){
+  const skips=Math.floor((100*thAtt-75*thTot)/75);
+  $('thCushion').textContent=skips>0?'🏖️ Safe cushion: '+skips+' lecture'+(skips>1?'s':'')+' can be skipped!':'⚠️ Edge: 0 more skips allowed to keep 75%';
   $('thCushion').style.color='var(--navy)';
  }else{
-  const need=Math.ceil((tgtTh*thTot-100*thAtt)/(100-tgtTh));
+  const need=Math.ceil((75*thTot-100*thAtt)/(100-75));
   $('thCushion').textContent='🚨 DEFICIT: Attend next '+need+' lecture'+(need>1?'s':'')+' consecutively!';
   $('thCushion').style.color='var(--err)';
  }
 
- const tgtPr=80;
- if(prPct>=tgtPr){
-  const skips=Math.floor((100*prAtt-tgtPr*prTot)/tgtPr);
-  $('prCushion').textContent=skips>0?'🏖️ Safe cushion: '+skips+' posting day'+(skips>1?'s':'')+' can be skipped!':'⚠️ Edge: 0 skips allowed to keep '+tgtPr+'%';
+ if(prPct>=80){
+  const skips=Math.floor((100*prAtt-80*prTot)/80);
+  $('prCushion').textContent=skips>0?'🏖️ Safe cushion: '+skips+' posting day'+(skips>1?'s':'')+' can be skipped!':'⚠️ Edge: 0 skips allowed to keep 80%';
   $('prCushion').style.color='var(--navy)';
  }else{
-  const need=Math.ceil((tgtPr*prTot-100*prAtt)/(100-tgtPr));
+  const need=Math.ceil((80*prTot-100*prAtt)/(100-80));
   $('prCushion').textContent='🚨 DEFICIT: Attend next '+need+' posting'+(need>1?'s':'')+' consecutively!';
   $('prCushion').style.color='var(--err)';
  }
 
  if($('sumBadge')){
   $('sumBadge').innerHTML='<b>Th:</b> '+thPct.toFixed(0)+'% ('+(thPct>=75?'Safe':'Deficit')+') | <b>Pr:</b> '+prPct.toFixed(0)+'% ('+(prPct>=80?'Safe':'Deficit')+')';
+ }
+
+ // Render Subject-Wise Cards
+ let subjCardsHtml = '';
+ const subjOrder = ['FMT', 'CM', 'Ophthal', 'ENT', 'Allied', 'Posting'];
+ subjOrder.forEach(key => {
+  const d = subjStats[key];
+  if(!d || d.tot === 0) return;
+  const cfg = SUBJ_CONFIG[key] || { name: key, annualLec: null, floor: 75 };
+  const tot = d.tot;
+  const miss = d.miss;
+  const att = Math.max(0, tot - miss);
+  const floor = cfg.floor;
+  const pct = tot === 0 ? 100 : (att / tot * 100);
+  const color = pct >= floor ? 'var(--safe)' : (pct >= 60 ? 'var(--warn)' : 'var(--err)');
+  
+  let cushionTxt = '';
+  let cushionColor = 'var(--navy)';
+  if(pct >= floor){
+   const skips = Math.floor((100 * att - floor * tot) / floor);
+   cushionTxt = skips > 0 
+     ? '🏖️ Safe cushion: <b>' + skips + '</b> ' + (key === 'Posting' ? 'posting' : 'lecture') + (skips > 1 ? 's' : '') + ' can be skipped!' 
+     : '⚠️ Edge: <b>0</b> more skips allowed to keep &ge;' + floor + '%';
+   cushionColor = skips > 0 ? 'var(--navy)' : 'var(--warn)';
+  }else{
+   const need = Math.ceil((floor * tot - 100 * att) / (100 - floor));
+   cushionTxt = '🚨 DEFICIT: Attend next <b>' + need + '</b> ' + (key === 'Posting' ? 'posting' : 'lecture') + (need > 1 ? 's' : '') + ' consecutively!';
+   cushionColor = 'var(--err)';
+  }
+
+  let annualTxt = '';
+  if(cfg.annualLec){
+   const minAtt = Math.ceil((floor / 100) * cfg.annualLec);
+   const maxBunks = cfg.annualLec - minAtt;
+   const leftBunks = Math.max(0, maxBunks - miss);
+   annualTxt = '<div style="font-size:12px;color:#64748b;margin-top:6px;border-top:1px dashed #cbd5e1;padding-top:4px">' +
+     '🎯 NMC Target: <b>' + cfg.annualLec + ' ' + (key === 'Posting' ? 'Days' : 'Lectures') + '</b> • Max annual bunks: <b>' + maxBunks + '</b> (' + leftBunks + ' left)' +
+     '</div>';
+  }
+
+  subjCardsHtml += '<div class="att-card">' +
+   '<div class="att-c-title"><span>' + cfg.name + '</span><span class="att-c-pct" style="color:' + color + '">' + pct.toFixed(1) + '%</span></div>' +
+   '<div class="att-c-sub">Attended: <b>' + att + ' / ' + tot + '</b> (Bunked: <b>' + miss + '</b>) • Floor: ' + floor + '%</div>' +
+   '<div class="att-c-cushion" style="color:' + cushionColor + '">' + cushionTxt + '</div>' +
+   annualTxt +
+   '</div>';
+ });
+ if($('subjGrid')) $('subjGrid').innerHTML = subjCardsHtml;
+
+ // Dynamic Curriculum Summary Box
+ if($('dynTotSummary')) $('dynTotSummary').textContent = thTot + ' Theory & ' + prTot + ' Postings';
+ if($('dynSubjConducted')){
+  let cHtml = '';
+  subjOrder.forEach(key => {
+   const d = subjStats[key];
+   if(d && d.tot > 0){
+    const cfg = SUBJ_CONFIG[key];
+    cHtml += '<div>- <i>' + cfg.name + ':</i> <b>' + d.tot + ' conducted</b> (Attended: ' + (d.tot - d.miss) + ', Bunked: ' + d.miss + ')</div>';
+   }
+  });
+  $('dynSubjConducted').innerHTML = cHtml;
  }
 }
 
@@ -784,11 +879,11 @@ async function syncWithGoogleSheets(userInitiated) {
     const nowStr = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
     localStorage.setItem('tnmc_sheets_last_sync', nowStr);
     updateSheetUI();
-    if (userInitiated) alert('✅ Successfully backed up attendance for Roll #' + roll + ' to Google Sheet!');
+    if (userInitiated) alert('✅ Successfully backed up attendance for Roll #' + roll + ' to cloud!');
   } catch (err) {
     if (badge) { badge.textContent = 'Sync Error'; badge.style.background = '#fef2f2'; badge.style.color = 'var(--err)'; }
     if (msg) msg.textContent = 'Sync failed. Check internet connection.';
-    console.error('Sheets sync error:', err);
+    console.error('Cloud sync error:', err);
   }
 }
 
@@ -818,7 +913,7 @@ async function pullFromGoogleSheets() {
       updateSheetUI();
     }
   } catch (err) {
-    alert('Failed to restore from Google Sheet. Check internet or Web App deployment permissions (HTTP 403 / access).');
+    alert('Failed to restore from cloud backup. Check internet connection.');
     updateSheetUI();
   }
 }
