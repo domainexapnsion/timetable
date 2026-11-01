@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Timetable Board</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&display=swap">
+<style>
+:root{box-sizing:border-box;color-scheme:light;--ink:#1d4ed8;--navy:#12306e;--hi:#cfe3ff;--err:#c2410c;
+--head:"Caveat Brush","Segoe Print","Bradley Hand","Marker Felt","Comic Sans MS",cursive;--body:"Patrick Hand","Segoe Print","Bradley Hand","Comic Sans MS",cursive}
+*{box-sizing:border-box}
+html,body{margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{min-height:100vh;background:#fff;color:var(--navy);font:20px/1.3 var(--body);
+padding:calc(env(safe-area-inset-top,0px) + 16px) 16px calc(env(safe-area-inset-bottom,0px) + 24px);
+background-image:linear-gradient(rgba(29,78,216,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(29,78,216,.07) 1px,transparent 1px);background-size:34px 34px}
+.page{max-width:none;width:100%;margin:0 auto;position:relative;z-index:0;isolation:isolate;font:20px/1.3 var(--body);color:var(--navy);background:#fff!important}
+.page:before{content:"";position:absolute;top:-40px;bottom:-40px;left:50%;width:100vw;margin-left:-50vw;z-index:-1;background-color:#fff;background-image:linear-gradient(rgba(29,78,216,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(29,78,216,.07) 1px,transparent 1px);background-size:34px 34px}
+html{background:#fff!important;overflow-y:auto!important;height:auto!important}
+body{position:static!important;background-color:#fff!important;width:100%;max-width:none;margin:0;min-height:100vh;height:auto!important;overflow:visible!important}
+.dt{display:flex;align-items:center;gap:20px}
+.qs{margin-top:14px;padding-top:12px;border-top:2.5px dashed rgba(29,78,216,.35)}
+.bar0{display:flex;justify-content:space-between;align-items:center;gap:10px}
+h1{margin:0;font:34px/1 var(--head);color:var(--ink);position:relative;display:inline-block;transform:rotate(-1deg)}
+h1 svg{position:absolute;left:0;bottom:-12px;width:100%;height:12px}
+.views{display:inline-flex;align-items:center;gap:5px;font:14px var(--body);color:#888;margin-top:6px}
+.views svg{width:15px;height:15px;opacity:.8}
+.sub{font-size:15px;opacity:.7;margin-top:14px}
+.chip{position:relative;flex:none;border:0;background:none;cursor:pointer;width:84px;height:68px;color:var(--ink);font:30px/1 var(--head);display:grid;place-items:center;text-align:center}
+.chip svg{position:absolute;inset:0;width:100%;height:100%}
+.chip span{position:relative}
+.chip small{display:block;font:14px var(--body);color:var(--navy);margin-top:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;margin-top:26px}
+.box{position:relative;padding:20px 20px 22px;min-height:220px}
+.box:before{content:"";position:absolute;inset:0;border:3.5px solid var(--ink);border-radius:18px 10px 16px 8px/10px 16px 8px 18px;filter:url(#w);pointer-events:none}
+.wide{grid-column:1/-1;min-height:0}
+.lab{font:15px var(--body);letter-spacing:1px;text-transform:uppercase;color:var(--ink)}
+.dnum{font:112px/.95 var(--head);color:var(--ink);margin:6px 0 2px}
+.wd{font:42px/1 var(--head);display:inline;background:linear-gradient(transparent 55%,var(--hi) 55%);padding:0 4px}
+.my{font-size:24px;margin-top:6px}
+.pname{font:46px/1.05 var(--head);color:var(--ink);margin:8px 0 6px}
+.pname.b{color:var(--navy)}
+.rng{font-size:21px}
+.meter{margin-top:16px;height:22px;position:relative}
+.meter:before{content:"";position:absolute;inset:0;border:3px solid var(--navy);border-radius:12px 8px 11px 7px;filter:url(#w)}
+.meter i{position:absolute;left:4px;top:4px;bottom:4px;border-radius:8px;background:repeating-linear-gradient(-45deg,var(--ink) 0 5px,#5b8def 5px 10px);transition:width .7s;max-width:calc(100% - 8px)}
+.left{margin-top:10px;font-size:22px;color:var(--ink)}
+.q{font:32px/1.2 var(--head);margin:8px 0 8px;color:var(--navy)}
+.by{font-size:21px;text-align:right;color:var(--ink)}
+.tr{display:flex;gap:12px;align-items:baseline;padding:9px 0;border-bottom:2.5px dashed rgba(29,78,216,.35)}.tr:last-child{border:0}.tm{flex:none;width:92px;font:26px/1 var(--head);color:var(--ink)}.tx{font-size:24px}.tg{font-size:15px;color:var(--err);border:2px solid var(--err);border-radius:10px;padding:0 7px;margin-left:8px;white-space:nowrap}
+.trow{display:flex;gap:14px;align-items:baseline;padding:8px 0;border-bottom:2.5px dashed rgba(29,78,216,.35);font-size:24px}.trow:last-child{border:0}.trow b{font:30px var(--head);color:var(--ink);min-width:104px;flex:none}.trow.rs span{background:linear-gradient(transparent 55%,var(--hi) 55%)}
+.tt-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.tt-ctrls{display:inline-flex;align-items:center;gap:4px}
+.cbtn{background:#fff;border:2.5px solid var(--ink);border-radius:9px 5px 8px 5px;color:var(--ink);font:bold 18px var(--head);height:32px;min-width:32px;padding:0 7px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:2px 2px 0 var(--hi);touch-action:manipulation;filter:url(#w)}
+.cbtn:active{transform:translate(1px,1px);box-shadow:none}
+.ctoday{font:16px var(--body);padding:0 10px}
+.cdate{background:#fff;border:2.5px solid var(--ink);border-radius:9px 5px 8px 5px;color:var(--navy);font:16px var(--body);height:32px;padding:0 6px;cursor:pointer;outline:none;box-shadow:2px 2px 0 var(--hi);max-width:145px}
+.cdate:focus{border-color:var(--ink);background:#f4f8ff}
+.dood{position:absolute;pointer-events:none}
+.ov{position:fixed;inset:0;display:none;place-items:center;padding:20px;background:rgba(255,255,255,.88);backdrop-filter:blur(4px);z-index:9}
+.ov.on{display:grid}
+.pop{position:relative;width:100%;max-width:340px;background:#fff;padding:26px 22px 20px;text-align:center;animation:pop .3s ease-out}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+.pop:before{content:"";position:absolute;inset:0;border:3.5px solid var(--ink);border-radius:18px 10px 16px 8px/10px 16px 8px 18px;filter:url(#w);pointer-events:none;box-shadow:6px 6px 0 var(--hi)}
+.pop h2{margin:0 0 4px;font:38px/1 var(--head);color:var(--ink)}
+.pop p{margin:0 0 14px;font-size:19px}
+.pop input{position:relative;width:100%;font:46px/1 var(--head);text-align:center;padding:8px;border:3px dashed var(--ink);border-radius:12px;background:#f4f8ff;color:var(--navy);outline:none}
+.pop input:focus{border-style:solid;background:#fff}
+.go{position:relative;margin-top:16px;width:100%;font:30px/1 var(--head);padding:12px;border:3px solid var(--navy);border-radius:14px 8px 13px 9px;background:var(--ink);color:#fff;cursor:pointer;box-shadow:4px 4px 0 var(--navy)}
+.go:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--navy)}
+.err{position:relative;min-height:24px;margin-top:8px;font-size:18px;color:var(--err)}
+.x{position:relative;margin-top:4px;background:none;border:0;font:18px var(--body);color:var(--ink);text-decoration:underline;cursor:pointer;display:none}
+@media(max-width:700px){
+.page{font-size:16px}
+body{font-size:16px;padding:calc(env(safe-area-inset-top,0px) + 10px) 10px calc(env(safe-area-inset-bottom,0px) + 16px)}
+h1{font-size:24px}h1 svg{bottom:-9px}.sub{font-size:12px;margin-top:11px}
+.views{font-size:12px;gap:4px;margin-top:3px}.views svg{width:13px;height:13px}
+.chip{width:62px;height:52px;font-size:22px}.chip small{font-size:11px}
+.grid{gap:14px;margin-top:18px}
+.box{padding:12px 14px 14px;min-height:0}.box:before{border-width:3px}
+.dt{display:flex;align-items:center;gap:14px}
+.lab{font-size:12px}
+.dnum{font-size:68px;margin:0}
+.qs{margin-top:10px;padding-top:8px}
+.wd{font-size:28px}.my{font-size:17px;margin-top:2px}
+.pname{font-size:30px;margin:4px 0}.rng{font-size:16px}
+.meter{height:16px;margin-top:10px}.left{font-size:17px;margin-top:6px}
+.q{font-size:22px;margin:4px 0}.by{font-size:16px}
+.trow{font-size:17px;padding:5px 0}.trow b{font-size:22px;min-width:84px}
+.tt-head{gap:6px}
+.tt-ctrls{gap:3px}
+.cbtn{height:28px;min-width:28px;font-size:16px;padding:0 5px}
+.ctoday{font-size:13px;padding:0 7px;height:28px}
+.cdate{height:28px;font-size:13px;padding:0 4px;max-width:125px}
+.dood{transform:scale(.65);transform-origin:top right}
+.pop{padding:20px 16px 16px}.pop h2{font-size:30px}.pop p{font-size:16px;margin-bottom:10px}
+.pop input{font-size:34px}.go{font-size:24px;padding:9px}.err{font-size:15px;min-height:20px}
+}
+
+.tt-foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;padding-top:10px;border-top:2.5px dashed rgba(29,78,216,.35)}
+.toggle-bar{display:inline-flex;align-items:center;gap:8px;cursor:pointer;user-select:none;font:bold 18px var(--head);color:var(--ink)}
+.toggle-bar input{display:none}
+.t-switch{position:relative;width:38px;height:22px;background:#e2e8f0;border:2.5px solid var(--ink);border-radius:12px;transition:all .2s;display:inline-block}
+.t-switch:before{content:"";position:absolute;top:2px;left:2px;width:12px;height:12px;background:var(--ink);border-radius:50%;transition:all .2s}
+.toggle-bar input:checked + .t-switch{background:var(--hi)}
+.toggle-bar input:checked + .t-switch:before{transform:translateX(16px);background:var(--err)}
+.t-hint{font:14px var(--body);color:var(--err);font-style:italic}
+.trow.is-absent{color:var(--err);opacity:.85}
+.trow.is-absent b{color:var(--err)}
+.trow.is-absent span{text-decoration:line-through}
+.abs-tag{display:inline-block;font:13px var(--body);font-weight:bold;color:var(--err);border:1.5px solid var(--err);border-radius:6px;padding:0 5px;margin-left:8px;text-decoration:none!important;vertical-align:middle}
+.mode-edit-abs .trow{cursor:pointer;padding:6px 8px;border-radius:8px;border:1.5px dashed rgba(29,78,216,.35);margin:4px 0}
+.mode-edit-abs .trow:hover{background:rgba(207,227,255,.3)}
+.mode-edit-abs .trow:active{background:rgba(207,227,255,.6)}
+.att-acc{min-height:0;margin-top:0}
+.att-sum{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;font:22px/1 var(--head);color:var(--ink);user-select:none}
+.att-sum::-webkit-details-marker{display:none}
+.att-sum-right{display:flex;align-items:center;gap:8px;font:15px var(--body);color:var(--navy)}
+.att-arrow{font-size:14px;transition:transform .2s;display:inline-block}
+details[open] .att-arrow{transform:rotate(180deg)}
+.att-panel{padding-top:14px;margin-top:12px;border-top:2.5px dashed rgba(29,78,216,.35)}
+.att-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.att-card{background:#f8faff;border:2px dashed var(--ink);border-radius:12px;padding:12px 14px}
+.att-c-title{font:20px/1.1 var(--head);color:var(--ink);margin-bottom:4px;display:flex;justify-content:space-between;align-items:baseline}
+.att-c-pct{font:28px/1 var(--head)}
+.att-c-cushion{font:17px/1.2 var(--head);margin:8px 0 2px;color:var(--navy)}
+.att-c-sub{font-size:14px;color:#555}
+
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="w"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter></svg>
+<div class="page">
+ <div class="bar0">
+  <div>
+   <h1>Timetable Board<svg viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M2 7 C20 1 30 11 50 6 S80 1 100 7 130 11 150 6 180 1 200 7 230 11 250 6 S285 3 298 7" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round"/></svg></h1>
+   <div><span class="views" id="vc" title="Views"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span id="vc-num">--</span></span></div>
+  </div>
+  <button class="chip" id="mg" title="Change roll no."><svg viewBox="0 0 84 68"><path d="M14 14C34-2 76 4 80 32 82 58 48 68 22 58 0 48 2 22 30 8" fill="none" stroke="#1d4ed8" stroke-width="3.5" stroke-linecap="round"/></svg><span><span id="bt">?</span><small id="rl"></small></span></button>
+ </div>
+ <div class="grid">
+  <div class="box">
+   <svg class="dood" style="right:16px;top:14px" width="46" height="46" viewBox="0 0 46 46"><path d="M23 4l5.5 13.5 14.5 1-11 9.5 3.5 14L23 33l-12.5 9 3.5-14-11-9.5 14.5-1z" fill="none" stroke="#1d4ed8" stroke-width="2.8" stroke-linejoin="round"/></svg>
+   <div class="lab">Today is</div>
+   <div class="dt"><div class="dnum" id="dn">--</div><div><div><span class="wd" id="wd">---</span></div><div class="my" id="my"></div></div></div>
+   <div class="qs"><div class="lab">Quote of the day</div><div class="q" id="qt"></div><div class="by" id="qa"></div></div>
+  </div>
+  <div class="box">
+   <div class="lab" id="lab">Today's posting</div>
+   <div class="pname" id="nm">&#8230;</div>
+   <div class="rng" id="rg"></div>
+   <div class="meter" id="bw"><i id="pb" style="width:0"></i></div>
+   <div class="left" id="lf"></div>
+  </div>
+  <div class="box wide" id="tbox" style="display:none;min-height:0">
+   <div class="tt-head">
+    <div class="lab" id="ttlab">Today's timetable</div>
+    <div class="tt-ctrls">
+     <button class="cbtn" id="btnprev" title="Previous day">&lt;</button>
+     <input type="date" id="dp" class="cdate" title="Pick date">
+     <button class="cbtn" id="btnnext" title="Next day">&gt;</button>
+     <button class="cbtn ctoday" id="btntoday" title="Reset to today">Today</button>
+    </div>
+   </div>
+   <div id="trows" style="margin-top:8px"></div>
+   <div class="tt-foot">
+    <label class="toggle-bar">
+     <input type="checkbox" id="absToggle">
+     <span class="t-switch"></span>
+     <span class="t-text">✏️ Select Absentee Mode</span>
+    </label>
+    <span class="t-hint" id="absHint" style="display:none">Tap any lecture to mark absent/present</span>
+   </div>
+  </div>
+
+  <details class="box wide att-acc" id="attAcc">
+   <summary class="att-sum">
+    <span style="display:inline-flex;align-items:center;gap:6px">📊 Attendance &amp; Bunk Cushion</span>
+    <span class="att-sum-right"><span id="sumBadge">Loading...</span><span class="att-arrow">▼</span></span>
+   </summary>
+   <div class="att-panel">
+    <div style="font-size:15px;color:#666;margin-bottom:12px">Calculated automatically from your scheduled classes &amp; marked absentees. Turn on <b>Select Absentee Mode</b> above and tap any lecture to mark a bunk.</div>
+    <div class="att-grid">
+     <div class="att-card">
+      <div class="att-c-title"><span>Theory Lectures</span><span class="att-c-pct" id="thPct">--%</span></div>
+      <div class="att-c-sub" id="thSub">Attended: -- / -- (Bunked: --) • Floor: 75%</div>
+      <div class="att-c-cushion" id="thCushion">--</div>
+     </div>
+     <div class="att-card">
+      <div class="att-c-title"><span>Clinical Postings</span><span class="att-c-pct" id="prPct">--%</span></div>
+      <div class="att-c-sub" id="prSub">Attended: -- / -- (Missed: --) • Floor: 80%</div>
+      <div class="att-c-cushion" id="prCushion">--</div>
+     </div>
+    </div>
+    <div style="margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+     <div style="font-size:15px;color:var(--navy)">
+      Threshold Floor: 
+      <button class="cbtn ctoday" id="btnTgt75" style="height:26px;font-size:13px;background:var(--hi)" onclick="setTargetFloor(75)">75% Theory</button>
+      <button class="cbtn ctoday" id="btnTgt80" style="height:26px;font-size:13px" onclick="setTargetFloor(80)">80% Posting</button>
+      <button class="cbtn ctoday" id="btnTgt60" style="height:26px;font-size:13px" onclick="setTargetFloor(60)">60% Abyss</button>
+     </div>
+     <button class="cbtn ctoday" style="height:26px;font-size:13px;color:var(--err)" onclick="resetAbsences()">Reset Absences</button>
+    </div>
+
+    <div style="margin-top:14px;padding:12px 14px;background:#f8fafc;border:1.5px dashed #94a3b8;border-radius:12px;font-size:13.5px;color:#475569;line-height:1.45">
+     <div style="font:bold 16px var(--head);color:#334155;margin-bottom:6px">📋 Tracker Assumptions &amp; NMC Criteria</div>
+     <div style="margin-bottom:4px">• <b>Classes Counted by Tracker (26-Oct to Today):</b> Total <b>14 Theory</b> &amp; <b>6 Postings</b>.</div>
+     <div style="margin-left:12px;margin-bottom:4px;font-size:12.5px;color:#64748b">
+       - <i>Community Medicine:</i> 3 conducted<br>
+       - <i>FMT:</i> 3 conducted<br>
+       - <i>ENT Theory:</i> 2 conducted (incl. 1 online)<br>
+       - <i>Ophthalmology:</i> 2 conducted<br>
+       - <i>Surgery, Medicine, OBGY, Paeds:</i> 1 each<br>
+       - <i>ENT Clinical Posting:</i> 6 days conducted (Roll 38–56)
+     </div>
+     <div style="margin-bottom:3px">• <b>75% Theory Floor:</b> Mandatory NMC CBME threshold to be eligible for university theory exams.</div>
+     <div style="margin-bottom:3px">• <b>80% Practical / Posting Floor:</b> Mandatory clinical attendance threshold for practical eligibility.</div>
+     <div style="margin-bottom:3px">• <b>&lt; 60% Detention Line:</b> Absolute barring from university exams (zero condonation).</div>
+     <div>• <b>Safe Skips Calculation:</b> Exact consecutive lectures/postings you can skip while keeping attendance &ge; 75% or &ge; 80%.</div>
+    </div>
+
+    <div class="cloud-sync-box" style="margin-top:16px;padding:12px;background:#f0f7ff;border:2px dashed var(--ink);border-radius:12px">
+     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+      <div style="font:bold 18px var(--head);color:var(--ink);display:flex;align-items:center;gap:6px">
+       <span>☁️ Google Sheets Cloud Backup</span>
+       <span id="sheetSyncBadge" style="font-size:12px;padding:2px 8px;border-radius:10px;font-family:var(--body);background:#eefbf0;color:var(--safe)">Connected</span>
+      </div>
+      <div style="display:flex;gap:6px">
+       <button class="cbtn ctoday" style="height:28px;font-size:13px" onclick="syncWithGoogleSheets(true)" id="btnSyncNow" title="Push current attendance to Google Sheet">🔄 Backup Attendance</button>
+       <button class="cbtn ctoday" style="height:28px;font-size:13px" onclick="pullFromGoogleSheets()" id="btnPullNow" title="Restore attendance from Google Sheet">📥 Restore</button>
+      </div>
+     </div>
+     <div style="margin-top:6px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;font-size:13px;color:#555">
+      <span id="sheetSyncMsg">Private to Roll #<span id="syncRollDisplay">--</span>. Cached on device &amp; synced to cloud.</span>
+      <label style="display:inline-flex;align-items:center;gap:5px;cursor:pointer">
+       <input type="checkbox" id="autoSyncCheck" onchange="toggleAutoSync(this.checked)">
+       <span>Auto-sync</span>
+      </label>
+     </div>
+    </div>
+   </div>
+  </details>
+
+ </div>
+ <div style="text-align:center;margin-top:24px;font-size:16px;color:#888;font-style:italic;">"Lekhak yaha kahna chahte hai ki unko jab man kiya tab wo ise update karenge."</div>
+</div>
+
+<div class="ov" id="ov"><div class="pop">
+ <h2>Hey, doc-to-be!</h2><p>Enter your roll number to see your posting.</p>
+ <input id="roll" type="number" inputmode="numeric" min="1" max="155" placeholder="1 - 155" autocomplete="off">
+ <div class="err" id="err"></div>
+ <button class="go" id="go">Show my board</button>
+ <button class="x" id="cx">cancel</button>
+</div></div>
+
+
+<script>
+const D=s=>{const[y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d)};
+const F=d=>d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+const toISO=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const DAY=864e5,B=['A','B','C','D'];
+const SHEET_URL='https://script.google.com/macros/s/AKfycbz2BxQaUsDZnvb2evMB3xKpcCuMIP6HUbSguj76fNGcmp3SZN8VPHIgFte1MKzZ4Ff9/exec';
+let autoSync = true;
+try{autoSync = localStorage.getItem('tnmc_sheets_autosync') !== '0';}catch(e){}
+const timeOrder=tm=>{
+ if(!tm)return 20;
+ if(tm.includes('5:30')||tm.includes('5–6')||tm.includes('5-6'))return 17.5;
+ if(tm.includes('8–9')||tm.includes('8-9'))return 8;
+ if(tm.includes('9–10')||tm.includes('9-10'))return 9;
+ if(tm.includes('10 am')||tm.includes('10-1'))return 10;
+ if(tm.includes('1–2')||tm.includes('1-2'))return 13;
+ if(tm.includes('2–3')||tm.includes('2-3'))return 14;
+ if(tm.includes('3–4')||tm.includes('3-4'))return 15;
+ if(tm.includes('4–5')||tm.includes('4-5'))return 16;
+ return 20;
+};
+const S1=['Community Medicine','ENT','Ophthalmology','Psychiatry (2 wks) / Orthopaedics (2 wks)'];
+const S2=['Medicine','OBGY','Surgery','Paediatrics (2 wks) / Surgery (1 wk)'];
+const T1=[['2026-10-26','2026-11-29'],['2026-11-30','2026-12-27'],['2026-12-28','2027-01-24'],['2027-01-25','2027-02-21']];
+const T2=[['2027-03-05','2027-03-25'],['2027-03-26','2027-04-15'],['2027-04-16','2027-05-06'],['2027-05-07','2027-06-03']];
+const T3=[['2027-06-04','2027-06-10'],['2027-06-11','2027-06-17']];
+const RG=[[1,37],[38,75],[76,111],[112,155]];
+const BR=[['2026-11-07','2026-11-13','Diwali break'],['2027-02-22','2027-03-04','Term exam break'],['2027-05-24','2027-05-30','Summer vacation']];
+const Q=[["You can't connect the dots looking forward; you can only connect them looking backwards.", "Steve Jobs"], ["Where the mind is without fear and the head is held high.", "Rabindranath Tagore"], ["The important thing is not to stop questioning.", "Albert Einstein"], ["The best way out is always through.", "Robert Frost"], ["The universe is change; our life is what our thoughts make it.", "Marcus Aurelius"], ["Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.", "A.P.J. Abdul Kalam"], ["The first principle is that you must not fool yourself—and you are the easiest person to fool.", "Richard Feynman"], ["Your time is limited, so don't waste it living someone else's life.", "Steve Jobs"], ["The unexamined life is not worth living.", "Socrates"], ["A man who dares to waste one hour of time has not discovered the value of life.", "Charles Darwin"], ["It is no measure of health to be well adjusted to a profoundly sick society.", "J. Krishnamurti"], ["Absorb what is useful, discard what is useless, and add what is specifically your own.", "Bruce Lee"], ["He who has a why to live can bear almost any how.", "Friedrich Nietzsche"], ["Arise, awake, and stop not till the goal is reached.", "Swami Vivekananda"], ["The secret of getting ahead is getting started.", "Mark Twain"], ["An investment in knowledge pays the best interest.", "Benjamin Franklin"], ["Talent hits a target no one else can hit; genius hits a target no one else can see.", "Arthur Schopenhauer"], ["To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.", "Ralph Waldo Emerson"], ["When we are no longer able to change a situation, we are challenged to change ourselves.", "Viktor Frankl"], ["Cultivation of mind should be the ultimate aim of human existence.", "Dr. B.R. Ambedkar"], ["Life isn't about finding yourself. Life is about creating yourself.", "George Bernard Shaw"], ["Who looks outside, dreams; who looks inside, awakes.", "Carl Jung"], ["The credit belongs to the man who is actually in the arena.", "Theodore Roosevelt"], ["His mathematical notebooks offer a better window into his thinking than the many unverified motivational quotes attributed to him.", "Srinivasa Ramanujan"], ["Nothing will work unless you do.", "Maya Angelou"], ["It's not what happens to you, but how you react to it that matters.", "Epictetus"], ["There are no facts, only interpretations.", "Friedrich Nietzsche"], ["Nothing in life is to be feared, it is only to be understood.", "Marie Curie"], ["Nothing great was ever achieved without enthusiasm.", "Ralph Waldo Emerson"], ["Stay hungry. Stay foolish.", "Steve Jobs"]];
+const $=id=>document.getElementById(id);
+let batch=null,roll=null,last='',selectedDate=new Date();
+selectedDate=new Date(selectedDate.getFullYear(),selectedDate.getMonth(),selectedDate.getDate());
+function build(b){
+ const L=[];
+ T1.forEach((r,i)=>L.push({s:D(r[0]),e:D(r[1]),n:S1[(b-i+4)%4]}));
+ T2.forEach((r,i)=>L.push({s:D(r[0]),e:D(r[1]),n:S2[(b-i+4)%4]}));
+ const f=b<2;
+ L.push({s:D(T3[0][0]),e:D(T3[0][1]),n:f?'Family Adoption Program':'Surgery'});
+ L.push({s:D(T3[1][0]),e:D(T3[1][1]),n:f?'Surgery':'Family Adoption Program'});
+ return L;
+}
+function render(){
+ const n=new Date(),t=new Date(n.getFullYear(),n.getMonth(),n.getDate());
+ last=t.toDateString();
+ $('dn').textContent=t.getDate();
+ $('wd').textContent=t.toLocaleDateString('en-GB',{weekday:'long'});
+ $('my').textContent=t.toLocaleDateString('en-GB',{month:'long',year:'numeric'});
+ const k=Math.floor(Date.UTC(t.getFullYear(),t.getMonth(),t.getDate())/DAY)%Q.length;
+ $('qt').textContent='"' + Q[k][0] + '"';$('qa').textContent='- ' + Q[k][1];
+ if(batch==null)return;
+ $('bt').textContent=B[batch];$('rl').textContent='#'+roll;
+ const L=build(batch),br=BR.find(x=>t>=D(x[0])&&t<=D(x[1]));
+ const cur=br?{n:br[2],s:D(br[0]),e:D(br[1]),b:1}:L.find(x=>t>=x.s&&t<=x.e);
+ $('nm').className='pname'+(br?' b':'');
+ $('bw').style.display='block';
+ updateTT(selectedDate);
+ updateAttendanceSummary();
+ updateSheetUI();
+ if(cur){
+  const tot=Math.round((cur.e-cur.s)/DAY)+1,d=Math.round((t-cur.s)/DAY)+1,l=tot-d;
+  $('lab').textContent=cur.b?"Today's status":"Today's posting";
+  $('nm').textContent=cur.n;$('rg').textContent=F(cur.s)+' > '+F(cur.e);
+  $('pb').style.width=(d/tot*100)+'%';
+  $('lf').textContent=l==0?'> Last day!':'> '+l+' day'+(l>1?'s':'')+' to go | Day '+d+' of '+tot;
+ }else if(t<L[0].s){
+  const d=Math.round((L[0].s-t)/DAY);
+  $('lab').textContent='Not started';$('nm').textContent='Postings start soon';$('nm').className='pname b';
+  $('rg').textContent='Begins '+F(L[0].s);$('bw').style.display='none';$('lf').textContent='> in '+d+' days';
+ }else{
+  $('lab').textContent='All done';$('nm').textContent='Postings complete!';$('rg').textContent='Prelims Jun/Jul 2027 | University exam Aug 2027';$('bw').style.display='none';$('lf').textContent='';
+ }
+}
+const SURGERY_SCHEDULE={
+ '2026-10-28':{t:'Basic Concepts of Post Op Care (SU 1.3)',f:'Dr. Maaz'},
+ '2026-11-04':{t:'Surgical Audit (SU 7.1, 7.2)',f:'Dr. Harsh'},
+ '2026-11-18':{t:'Clinical Research in General Surgery (SU 7.1, 7.2)',f:'Dr. Harsh'},
+ '2026-11-25':{t:'Cancer – Early Detection and Role of MDT Approach',f:'Dr. Nitin Borle'},
+ '2026-12-02':{t:'Informed Consent in Surgery',f:'Dr. Asma Khalife'},
+ '2026-12-09':{t:'Surgical Approaches, Incisions, and Instruments in Surgery',f:'Dr. Asma Khalife'},
+ '2026-12-16':{t:'Knots, Sutures, and Needles',f:'Dr. Maaz'},
+ '2026-12-23':{t:'Management of Post Op Pain and Chronic Pain',f:'Dr. C. Deshpande'},
+ '2026-12-30':{t:'Principles of Safe General Surgery',f:'Dr. C. Deshpande'},
+ '2027-01-06':{t:'Transport of Injured Patient and Basic Life Support',f:'Dr. Satish Dharap'},
+ '2027-01-13':{t:'Cleft Lip and Cleft Palate',f:'Dr. Uday Bhat'},
+ '2027-01-20':{t:'Oral and Oropharyngeal Cancer – Etiopathogenesis, Signs and Symptoms',f:'Dr. Sachin Suryavanshi'},
+ '2027-01-27':{t:'Oral and Oropharyngeal Cancer – Investigations, Management, and Reconstructive Flaps',f:'Dr. Sachin Suryavanshi'},
+ '2027-02-03':{t:'Disorders of the Salivary Glands – Surgical Anatomy, Pathology, and Clinical Presentation',f:'Dr. Shantanu'},
+ '2027-02-10':{t:'Disorders of the Salivary Glands – Investigations and Treatment',f:'Dr. Shantanu'},
+ '2027-02-17':{t:'Thyroid Gland – Applied Anatomy, Physiology, and Etiopathogenesis of Thyroid Swelling',f:'Dr. Rajesh Mahey'},
+ '2027-02-24':{t:'Thyroid Cancer – Clinical Features, Classification and Management',f:'Dr. Rajesh Mahey'},
+ '2027-03-03':{t:'Parathyroid Glands – Applied Anatomy, Hypo and Hyperparathyroidism, Management of Parathyroid Disorders',f:'Dr. Rajesh Mahey'},
+ '2027-03-17':{t:'Adrenal Glands: Applied Anatomy, Etiology, Clinical Features, Principles of Management',f:'Dr. Sudatta Waghmare'},
+ '2027-03-24':{t:'Adrenal Tumours: Clinical Features, Investigations and Principles of Management',f:'Dr. Sudatta Waghmare'},
+ '2027-03-31':{t:'The Breast: Applied Anatomy and Investigations of Breast Diseases',f:'Dr. Jayashri Pandya'},
+ '2027-04-21':{t:'The Breast: Benign Breast Diseases including Infections of the Breast',f:'Dr. Jayashri Pandya'},
+ '2027-04-28':{t:'The Breast: Benign and Malignant Disorders of the Breast',f:'Dr. Jayashri Pandya'},
+ '2027-05-05':{t:'Occlusive Arterial Diseases',f:'Dr. Rajesh Patil'}
+};
+const CM_SCHEDULE={
+ '2026-10-26':{tm:'3–4 pm',t:'NCD I: Hypertension, Stroke',f:'Dr. Armaity Dehmubed / Dr. Subhana Siyad'},
+ '2026-10-27':{tm:'1–2 pm',t:'NCD II: Diabetes Mellitus, Obesity',f:'Dr. Abhiram Kasbe / Dr. Subhankar Padhi'},
+ '2026-10-30':{tm:'3–4 pm',t:'NCD III: Cancer',f:'Dr. Satish Mali / Dr. Roshni Remold'},
+ '2026-11-02':{tm:'3–4 pm',t:'NCD IV: Blindness & Accidents',f:'Dr. Komal Dhumal / Dr. Nikhil Honale'},
+ '2026-11-03':{tm:'1–2 pm',t:'National Health Programs & NPNCD',f:'Dept of CM'},
+ '2026-11-06':{tm:'3–4 pm',t:'Integrated Disease Surveillance Programme (IDSP)',f:'Dr. Rashmi Sawant'},
+ '2026-11-16':{tm:'3–4 pm',t:'Epidemiology of HIV and NACP',f:'Dr. Subhasri Subhadarsini'},
+ '2026-11-17':{tm:'1–2 pm',t:'Vectors & NVBDCP',f:'Dr. Mangala Bote / Dr. Subhana Siyad'},
+ '2026-11-20':{tm:'3–4 pm',t:'Healthcare of Community & Community Diagnosis',f:'Dr. Erum Naaz'},
+ '2026-11-23':{tm:'3–4 pm',t:'Health Care Delivery System & PHC',f:'Dr. Pranita Dharmadhikari'},
+ '2026-11-27':{tm:'3–4 pm',t:'Air/Water Pollution & NPCB',f:'Dr. Komal Dhumal'},
+ '2026-11-30':{tm:'3–4 pm',t:'Noise & Radiation Pollution',f:'Dr. Roshni Remold'},
+ '2026-12-01':{tm:'1–2 pm',t:'National Tuberculosis Elimination Programme (NTEP)',f:'Dr. Subhankar Padhi'},
+ '2026-12-04':{tm:'3–4 pm',t:'National Mental Health Programme',f:'Dr. Rujuta Hadaye / Dr. Subhasri Subhadarsini'},
+ '2026-12-07':{tm:'3–4 pm',t:'IMNCI',f:'Dr. Nikhil Honale'},
+ '2026-12-08':{tm:'1–2 pm',t:'Universal Immunization Programme',f:'Dr. Subhana Siyad'},
+ '2026-12-11':{tm:'3–4 pm',t:'Occupational illness & ESI scheme',f:'Dr. Armaity Dehmubed / Dr. Roshni Remold'},
+ '2026-12-14':{tm:'3–4 pm',t:'Health Planning & Planning Cycle',f:'Dr. Satish Mali / Dr. Subhankar Padhi'},
+ '2026-12-15':{tm:'1–2 pm',t:'Health Management Techniques & Policies',f:'Dr. Pranita Dharmadhikari'}
+};
+const BATCH_A_CLERKSHIP={
+ '2026-10-26':'PSM Clerkship: Orientation & Clinical Exam (Room 504)',
+ '2026-10-27':'PSM Clerkship: Family Planning & Models – Dr. Shivlila Kante (Room 504)',
+ '2026-10-28':'PSM Clerkship: ANC / PNC Case Presentations – Dr. Ankita Patil (Room 504)',
+ '2026-10-29':'PSM Clerkship: Biostatistics I – Dr. Komal Dhumal (Room 504)',
+ '2026-10-30':'PSM Clerkship: Public Health Admin & MOH Visit – Dr. Subhana Siyad (Room 504)'
+};
+const N={
+ '2026-10-26':[
+  [38,56,'10 am–1 pm','ENT Posting – OT (Operation Theatre)',0],
+  [38,56,'1–2 pm','Community Medicine – rescheduled',1],
+  [38,56,'2–3 pm','FMT',0]
+ ],
+ '2026-10-27':[
+  [1,155,'8–9 am','Ophthalmology (Venue 402)',0],
+  [1,155,'9–10 am','OBGY',0],
+  [38,56,'10 am–1 pm','ENT Posting – OPD (Out-Patient Dept)',0],
+  [1,155,'1–2 pm','Community Medicine: NCD II – DM & Obesity (Dr. Abhiram Kasbe / Dr. Subhankar Padhi)',0],
+  [1,155,'2–3 pm','ENT',0],
+  [1,155,'3–4 pm','Paediatrics',0]
+ ],
+ '2026-10-28':[
+  [1,155,'9–10 am','Surgery: Basic Concepts of Post-Op Care (SU 1.3) – Dr. Maaz (Venue 502)',0],
+  [38,56,'10 am–1 pm','ENT Posting – OT (Operation Theatre)',0],
+  [1,155,'1–2 pm','FMT: Food Poisoning – Dr. Sharad Sir ⚠️ Read before coming',1],
+  [1,155,'2–3 pm','Medicine: Anaemia – Classification, Etiology & Prevalence',0]
+ ],
+ '2026-10-29':[
+  [1,155,'9–10 am','ENT (Online): Anatomy & Epistaxis (GMeet link on grp | Format: Roll no - Name)',1],
+  [38,56,'10 am–1 pm','ENT Posting – OPD (Out-Patient Dept)',0],
+  [1,155,'1–2 pm','Ophthalmology: Uveitis (Lec hall 402)',0]
+ ],
+ '2026-10-30':[
+  [1,155,'9–10 am','FMT – Rescheduled to 2–3 pm',1],
+  [38,56,'10 am–1 pm','ENT Posting – OT (Operation Theatre)',0],
+  [1,155,'1–2 pm','Community Medicine: NCD III – Cancer (Lec hall 302)',1],
+  [1,155,'2–3 pm','FMT: Age Estimation (Lec hall 502) ⚠️ Bring Journal strictly! [Surgery postponed]',1]
+ ],
+ '2026-10-31':[
+  [38,56,'10 am–1 pm','ENT Posting – OPD (Out-Patient Dept)',0]
+ ],
+ '2026-11-02':[
+  [38,56,'10 am–1 pm','ENT Posting – OT (Operation Theatre)',0],
+  [1,155,'3–4 pm','Community Medicine: NCD IV – Blindness & Accidents (Dr. Komal Dhumal / Dr. Nikhil Honale)',0]
+ ]
+};
+function tt(t,dept,br){
+ const key=toISO(t);
+ const it=[];
+ if(br){
+  it.push(['All day',br[2]+' (Holiday)',1]);
+ }
+ if(N[key]){
+  N[key].forEach(x=>{if(roll>=x[0]&&roll<=x[1])it.push([x[2],x[3],x[4]])});
+ }
+ if(SURGERY_SCHEDULE[key]&&!it.some(x=>x[1].toLowerCase().includes('surgery'))){
+  const s=SURGERY_SCHEDULE[key];
+  it.push(['9–10 am','Surgery: '+s.t+' – '+s.f+' (Venue 502)',0]);
+ }
+ if(CM_SCHEDULE[key]&&!it.some(x=>x[1].toLowerCase().includes('community medicine'))){
+  const c=CM_SCHEDULE[key];
+  it.push([c.tm,'Community Medicine: '+c.t+' – '+c.f+' (Venue 402)',0]);
+ }
+ if(!it.some(x=>x[0].includes('10 am')||x[1].toLowerCase().includes('posting')||x[1].includes('OT')||x[1].includes('OPD')||x[1].includes('clerkship'))){
+  if(roll>=1&&roll<=37&&BATCH_A_CLERKSHIP[key]){
+   it.push(['10 am–1 pm',BATCH_A_CLERKSHIP[key],0]);
+  }else if(roll>=38&&roll<=56&&t>=D('2026-10-26')&&t<=D('2026-11-29')&&!(t>=D('2026-11-07')&&t<=D('2026-11-13'))){
+   const w=t.getDay();
+   if([1,3,5].includes(w))it.push(['10 am–1 pm','ENT Posting – OT (Operation Theatre)',0]);
+   else if([2,4,6].includes(w))it.push(['10 am–1 pm','ENT Posting – OPD (Out-Patient Dept)',0]);
+  }else if(dept&&t.getDay()!==0){
+   it.push(['10 am–1 pm',dept+' Posting',0]);
+  }
+ }
+ it.sort((a,b)=>timeOrder(a[0])-timeOrder(b[0]));
+ $('tbox').style.display = 'block';
+ if (it.length) {
+  $('trows').innerHTML = it.map(x => {
+   const slotId = key + '_' + timeOrder(x[0]);
+   const isAbs = !!absences[slotId];
+   return '<div class="trow' + (x[2] ? ' rs' : '') + (isAbs ? ' is-absent' : '') + '" data-slot="' + slotId + '"><b>' + x[0] + '</b><span>' + x[1] + (isAbs ? '<span class="abs-tag">Absent</span>' : '') + '</span></div>';
+  }).join('');
+ } else {
+  const isSun=t.getDay()===0;
+  $('trows').innerHTML = '<div style="padding:10px 0;font-size:20px;opacity:0.75;font-style:italic">'+(isSun?'Sunday - No scheduled lectures or postings.':'No scheduled lectures or postings.')+'</div>';
+ }
+}
+function updateTT(target){
+ const n=new Date(),today=new Date(n.getFullYear(),n.getMonth(),n.getDate());
+ const diff=Math.round((target-today)/DAY);
+ if(diff===0){
+  $('ttlab').textContent="Today's timetable";
+ }else if(diff===1){
+  $('ttlab').textContent="Tomorrow's timetable ("+target.toLocaleDateString('en-GB',{day:'numeric',month:'short'})+")";
+ }else if(diff===-1){
+  $('ttlab').textContent="Yesterday's timetable ("+target.toLocaleDateString('en-GB',{day:'numeric',month:'short'})+")";
+ }else{
+  $('ttlab').textContent=target.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short',year:'numeric'});
+ }
+ if($('dp'))$('dp').value=toISO(target);
+ const L=build(batch);
+ const br=BR.find(x=>target>=D(x[0])&&target<=D(x[1]));
+ const curT=br?{n:br[2],b:1}:L.find(x=>target>=x.s&&target<=x.e);
+ const dept=curT&&!curT.b?curT.n:'';
+ tt(target,dept,br);
+}
+$('btnprev').onclick=()=>{
+ selectedDate.setDate(selectedDate.getDate()-1);
+ updateTT(selectedDate);
+};
+$('btnnext').onclick=()=>{
+ selectedDate.setDate(selectedDate.getDate()+1);
+ updateTT(selectedDate);
+};
+$('btntoday').onclick=()=>{
+ const n=new Date();
+ selectedDate=new Date(n.getFullYear(),n.getMonth(),n.getDate());
+ updateTT(selectedDate);
+};
+$('absToggle').onchange=e=>{
+ if(e.target.checked){
+  $('trows').classList.add('mode-edit-abs');
+  $('absHint').style.display='inline';
+ }else{
+  $('trows').classList.remove('mode-edit-abs');
+  $('absHint').style.display='none';
+ }
+};
+$('trows').onclick=e=>{
+ if(!$('absToggle').checked)return;
+ const row=e.target.closest('.trow');
+ if(!row)return;
+ const slot=row.dataset.slot;
+ if(!slot)return;
+ if(absences[slot])delete absences[slot];
+ else absences[slot]=true;
+ localStorage.setItem('tnmc_absences',JSON.stringify(absences));
+ updateTT(selectedDate);
+ updateAttendanceSummary();
+ if(autoSync && typeof SHEET_URL !== 'undefined' && SHEET_URL){
+  syncWithGoogleSheets(false);
+ }
+};
+
+let absences={};
+try{absences=JSON.parse(localStorage.getItem('tnmc_absences')||'{}')}catch(e){}
+let currentTgtFloor=75;
+function setTargetFloor(val){
+ currentTgtFloor=val;
+ $('btnTgt75').style.background=val===75?'var(--hi)':'#fff';
+ $('btnTgt80').style.background=val===80?'var(--hi)':'#fff';
+ $('btnTgt60').style.background=val===60?'var(--hi)':'#fff';
+ updateAttendanceSummary();
+}
+function resetAbsences(){
+ if(confirm('Reset all marked absences back to zero?')){
+  absences={};
+  localStorage.setItem('tnmc_absences',JSON.stringify(absences));
+  updateTT(selectedDate);
+  updateAttendanceSummary();
+  if(autoSync && typeof SHEET_URL !== 'undefined' && SHEET_URL)syncWithGoogleSheets(false);
+ }
+}
+function updateAttendanceSummary(){
+ if(batch==null||roll==null)return;
+ const start=D('2026-10-26');
+ const now=new Date();
+ const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+ let thTot=0,thMiss=0,prTot=0,prMiss=0;
+ let cur=new Date(start.getTime());
+ while(cur<=today){
+  const k=toISO(cur);
+  const br=BR.find(x=>cur>=D(x[0])&&cur<=D(x[1]));
+  if(!br&&cur.getDay()!==0){
+   const it=[];
+   if(N[k]){N[k].forEach(x=>{if(roll>=x[0]&&roll<=x[1])it.push([x[2],x[3],x[4]])})}
+   if(SURGERY_SCHEDULE[k]&&!it.some(x=>x[1].toLowerCase().includes('surgery'))){
+    const s=SURGERY_SCHEDULE[k];
+    it.push(['9–10 am','Surgery: '+s.t+' – '+s.f+' (Venue 502)',0]);
+   }
+   if(CM_SCHEDULE[k]&&!it.some(x=>x[1].toLowerCase().includes('community medicine'))){
+    const c=CM_SCHEDULE[k];
+    it.push([c.tm,'Community Medicine: '+c.t+' – '+c.f+' (Venue 402)',0]);
+   }
+   if(!it.some(x=>x[0].includes('10 am')||x[1].toLowerCase().includes('posting')||x[1].includes('OT')||x[1].includes('OPD')||x[1].includes('clerkship'))){
+    if(roll>=1&&roll<=37&&BATCH_A_CLERKSHIP[k]){
+     it.push(['10 am–1 pm',BATCH_A_CLERKSHIP[k],0]);
+    }else if(roll>=38&&roll<=56&&cur>=D('2026-10-26')&&cur<=D('2026-11-29')){
+     const w=cur.getDay();
+     if([1,3,5].includes(w))it.push(['10 am–1 pm','ENT Posting – OT (Operation Theatre)',0]);
+     else if([2,4,6].includes(w))it.push(['10 am–1 pm','ENT Posting – OPD (Out-Patient Dept)',0]);
+    }
+   }
+   it.forEach(x=>{
+    const tmNum=timeOrder(x[0]);
+    const slotKey=k+'_'+tmNum;
+    const isAcademic=!x[1].includes('MEETING')&&!x[1].includes('Holiday')&&!x[1].includes('Reminder');
+    if(!isAcademic)return;
+    const isPrac=x[1].toLowerCase().includes('posting')||x[1].includes('OT')||x[1].includes('OPD')||x[1].toLowerCase().includes('clerkship');
+    if(isPrac){
+     prTot++;
+     if(absences[slotKey])prMiss++;
+    }else{
+     thTot++;
+     if(absences[slotKey])thMiss++;
+    }
+   });
+  }
+  cur.setDate(cur.getDate()+1);
+ }
+ const thAtt=Math.max(0,thTot-thMiss);
+ const prAtt=Math.max(0,prTot-prMiss);
+ const thPct=thTot===0?100:(thAtt/thTot*100);
+ const prPct=prTot===0?100:(prAtt/prTot*100);
+
+ if($('thPct'))$('thPct').textContent=thPct.toFixed(1)+'%';
+ if($('thPct'))$('thPct').style.color=thPct>=75?'var(--safe)':(thPct>=60?'var(--warn)':'var(--err)');
+ if($('thSub'))$('thSub').textContent='Attended: '+thAtt+' / '+thTot+' (Bunked: '+thMiss+') • Floor: 75%';
+
+ if($('prPct'))$('prPct').textContent=prPct.toFixed(1)+'%';
+ if($('prPct'))$('prPct').style.color=prPct>=80?'var(--safe)':(prPct>=60?'var(--warn)':'var(--err)');
+ if($('prSub'))$('prSub').textContent='Attended: '+prAtt+' / '+prTot+' (Missed: '+prMiss+') • Floor: 80%';
+
+ const tgtTh=currentTgtFloor;
+ if(thPct>=tgtTh){
+  const skips=Math.floor((100*thAtt-tgtTh*thTot)/tgtTh);
+  $('thCushion').textContent=skips>0?'🏖️ Safe cushion: '+skips+' lecture'+(skips>1?'s':'')+' can be skipped!':'⚠️ Edge: 0 more skips allowed to keep '+tgtTh+'%';
+  $('thCushion').style.color='var(--navy)';
+ }else{
+  const need=Math.ceil((tgtTh*thTot-100*thAtt)/(100-tgtTh));
+  $('thCushion').textContent='🚨 DEFICIT: Attend next '+need+' lecture'+(need>1?'s':'')+' consecutively!';
+  $('thCushion').style.color='var(--err)';
+ }
+
+ const tgtPr=80;
+ if(prPct>=tgtPr){
+  const skips=Math.floor((100*prAtt-tgtPr*prTot)/tgtPr);
+  $('prCushion').textContent=skips>0?'🏖️ Safe cushion: '+skips+' posting day'+(skips>1?'s':'')+' can be skipped!':'⚠️ Edge: 0 skips allowed to keep '+tgtPr+'%';
+  $('prCushion').style.color='var(--navy)';
+ }else{
+  const need=Math.ceil((tgtPr*prTot-100*prAtt)/(100-tgtPr));
+  $('prCushion').textContent='🚨 DEFICIT: Attend next '+need+' posting'+(need>1?'s':'')+' consecutively!';
+  $('prCushion').style.color='var(--err)';
+ }
+
+ if($('sumBadge')){
+  $('sumBadge').innerHTML='<b>Th:</b> '+thPct.toFixed(0)+'% ('+(thPct>=75?'Safe':'Deficit')+') | <b>Pr:</b> '+prPct.toFixed(0)+'% ('+(prPct>=80?'Safe':'Deficit')+')';
+ }
+}
+
+$('dp').onchange=e=>{
+ if(!e.target.value)return;
+ selectedDate=D(e.target.value);
+ updateTT(selectedDate);
+};
+function show(cancel){$('ov').classList.add('on');$('cx').style.display=cancel?'inline':'none';$('roll').value='';$('err').textContent='';setTimeout(()=>$('roll').focus(),60)}
+function submit(){
+ const n=parseInt($('roll').value,10),i=RG.findIndex(g=>n>=g[0]&&n<=g[1]);
+ if(!(n>0)||i<0){$('err').textContent='Enter a valid roll no. (1-155)';return}
+ roll=n;batch=i;
+ try{localStorage.setItem('mbbs24roll',String(n))}catch(e){}
+ $('ov').classList.remove('on');render();
+}
+$('go').onclick=submit;
+$('roll').onkeydown=e=>{if(e.key=='Enter')submit()};
+$('mg').onclick=()=>show(batch!=null);
+$('cx').onclick=()=>$('ov').classList.remove('on');
+render();
+if($('fs'))$('fs').onclick=()=>{
+ const e=document.documentElement,on=document.fullscreenElement||document.webkitFullscreenElement;
+ try{
+  if(on){(document.exitFullscreen||document.webkitExitFullscreen).call(document)}
+  else if(e.requestFullscreen){e.requestFullscreen().catch(()=>window.open(location.href,'_blank'))}
+  else if(e.webkitRequestFullscreen){e.webkitRequestFullscreen()}
+  else window.open(location.href,'_blank');
+ }catch(x){window.open(location.href,'_blank')}
+};
+let saved=null;try{saved=parseInt(localStorage.getItem('mbbs24roll'),10)}catch(e){}
+const si=RG.findIndex(g=>saved>=g[0]&&saved<=g[1]);
+if(si>=0){roll=saved;batch=si;render()}else show(false);
+setInterval(()=>{if(new Date().toDateString()!=last)render()},60000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)render()});
+async function initViews(){
+ const el=$('vc-num');
+ if(!el)return;
+ const key='tnmc_mbbs_timetable_views';
+ let count=parseInt(localStorage.getItem(key)||'0',10);
+ const hit=!sessionStorage.getItem('counted_'+key);
+ try{
+  const url=hit?'https://countapi.mileshilliard.com/api/v1/hit/'+key:'https://countapi.mileshilliard.com/api/v1/get/'+key;
+  const res=await fetch(url,{cache:'no-store'});
+  if(res.ok){
+   const d=await res.json();
+   if(d&&typeof d.value==='number'){
+    el.textContent=d.value.toLocaleString();
+    localStorage.setItem(key,String(d.value));
+    if(hit)sessionStorage.setItem('counted_'+key,'1');
+    return;
+   }
+  }
+ }catch(e){}
+ if(hit){count++;localStorage.setItem(key,String(count));sessionStorage.setItem('counted_'+key,'1')}
+ el.textContent=count>0?count.toLocaleString():'1';
+}
+initViews();
+
+// --- GOOGLE SHEETS CLOUD SYNC ENGINE (HARDCODED BATCH DEPLOYMENT) ---
+function updateSheetUI() {
+  const badge = $('sheetSyncBadge');
+  const msg = $('sheetSyncMsg');
+  const autoCheck = $('autoSyncCheck');
+  const rollDisp = $('syncRollDisplay');
+  if (autoCheck) autoCheck.checked = autoSync;
+  if (rollDisp) rollDisp.textContent = roll !== null ? roll : '--';
+  
+  const lastSync = localStorage.getItem('tnmc_sheets_last_sync');
+  if (badge) {
+    badge.textContent = lastSync ? 'Synced ' + lastSync : 'Connected';
+    badge.style.background = '#eefbf0';
+    badge.style.color = 'var(--safe)';
+  }
+  if (msg) {
+    msg.innerHTML = 'Private to Roll #<b>' + (roll !== null ? roll : '--') + '</b>. Cached locally &amp; synced to cloud.';
+  }
+}
+
+function toggleAutoSync(val) {
+  autoSync = val;
+  localStorage.setItem('tnmc_sheets_autosync', val ? '1' : '0');
+}
+
+function collectAbsenceDetails() {
+  const details = [];
+  const start = D('2026-10-26');
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  let cur = new Date(start.getTime());
+  while (cur <= today) {
+    const k = toISO(cur);
+    const br = BR.find(x => cur >= D(x[0]) && cur <= D(x[1]));
+    if (!br && cur.getDay() !== 0) {
+      const it = [];
+      if (N[k]) { N[k].forEach(x => { if (roll >= x[0] && roll <= x[1]) it.push([x[2], x[3], x[4]]) }); }
+      if (SURGERY_SCHEDULE[k] && !it.some(x => x[1].toLowerCase().includes('surgery'))) {
+        it.push(['9–10 am', 'Surgery: ' + SURGERY_SCHEDULE[k].t, 0]);
+      }
+      if (CM_SCHEDULE[k] && !it.some(x => x[1].toLowerCase().includes('community medicine'))) {
+        it.push([CM_SCHEDULE[k].tm, 'CM: ' + CM_SCHEDULE[k].t, 0]);
+      }
+      if (!it.some(x => x[0].includes('10 am') || x[1].toLowerCase().includes('posting') || x[1].includes('OT') || x[1].includes('OPD') || x[1].includes('clerkship'))) {
+        if (roll >= 38 && roll <= 56) {
+          const w = cur.getDay();
+          it.push(['10 am–1 pm', w % 2 === 1 ? 'ENT Posting (OT)' : 'ENT Posting (OPD)', 0]);
+        }
+      }
+      it.forEach(x => {
+        const tmNum = timeOrder(x[0]);
+        const slotKey = k + '_' + tmNum;
+        if (absences[slotKey]) {
+          const isPrac = x[1].toLowerCase().includes('posting') || x[1].includes('OT') || x[1].includes('OPD') || x[1].toLowerCase().includes('clerkship');
+          details.push({
+            date: k,
+            time: x[0],
+            subject: x[1],
+            type: isPrac ? 'Practical/Posting' : 'Theory'
+          });
+        }
+      });
+    }
+    cur.setDate(cur.getDate() + 1);
+  }
+  return details;
+}
+
+async function syncWithGoogleSheets(userInitiated) {
+  if (roll === null) {
+    show(true);
+    return;
+  }
+  const badge = $('sheetSyncBadge');
+  const msg = $('sheetSyncMsg');
+  if (badge) { badge.textContent = 'Syncing...'; badge.style.background = '#fffbeb'; badge.style.color = 'var(--warn)'; }
+  
+  const payload = {
+    action: 'sync',
+    roll: roll,
+    absences: absences,
+    stats: {
+      thTot: parseInt($('thSub')?.textContent.match(/Attended:\s*\d+\s*\/\s*(\d+)/)?.[1] || 0, 10),
+      thAtt: parseInt($('thSub')?.textContent.match(/Attended:\s*(\d+)/)?.[1] || 0, 10),
+      thMiss: parseInt($('thSub')?.textContent.match(/Bunked:\s*(\d+)/)?.[1] || 0, 10),
+      thPct: parseFloat($('thPct')?.textContent || 0),
+      thCushion: $('thCushion')?.textContent || '',
+      prTot: parseInt($('prSub')?.textContent.match(/Attended:\s*\d+\s*\/\s*(\d+)/)?.[1] || 0, 10),
+      prAtt: parseInt($('prSub')?.textContent.match(/Attended:\s*(\d+)/)?.[1] || 0, 10),
+      prMiss: parseInt($('prSub')?.textContent.match(/Missed:\s*(\d+)/)?.[1] || 0, 10),
+      prPct: parseFloat($('prPct')?.textContent || 0),
+      prCushion: $('prCushion')?.textContent || ''
+    },
+    absenceDetails: collectAbsenceDetails()
+  };
+
+  try {
+    await fetch(SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+    const nowStr = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+    localStorage.setItem('tnmc_sheets_last_sync', nowStr);
+    updateSheetUI();
+    if (userInitiated) alert('✅ Successfully backed up attendance for Roll #' + roll + ' to Google Sheet!');
+  } catch (err) {
+    if (badge) { badge.textContent = 'Sync Error'; badge.style.background = '#fef2f2'; badge.style.color = 'var(--err)'; }
+    if (msg) msg.textContent = 'Sync failed. Check internet connection.';
+    console.error('Sheets sync error:', err);
+  }
+}
+
+async function pullFromGoogleSheets() {
+  if (roll === null) {
+    show(true);
+    return;
+  }
+  const badge = $('sheetSyncBadge');
+  if (badge) { badge.textContent = 'Pulling...'; badge.style.background = '#fffbeb'; badge.style.color = 'var(--warn)'; }
+  try {
+    const url = SHEET_URL + (SHEET_URL.includes('?') ? '&' : '?') + 'action=get&roll=' + roll;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    if (data && data.status === 'success' && data.absences) {
+      absences = data.absences;
+      localStorage.setItem('tnmc_absences', JSON.stringify(absences));
+      updateTT(selectedDate);
+      updateAttendanceSummary();
+      const nowStr = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+      localStorage.setItem('tnmc_sheets_last_sync', nowStr + ' (Restored)');
+      updateSheetUI();
+      alert('✅ Successfully restored attendance for Roll #' + roll + ' from cloud!');
+    } else {
+      alert('No cloud backup found for Roll #' + roll + ' yet.');
+      updateSheetUI();
+    }
+  } catch (err) {
+    alert('Failed to restore from Google Sheet. Check internet or Web App deployment permissions (HTTP 403 / access).');
+    updateSheetUI();
+  }
+}
+updateSheetUI();
+</script></body></html>
