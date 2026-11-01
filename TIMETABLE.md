@@ -71,9 +71,13 @@
 
 ---
 
-## 📅 Daily Timetable — 02-Nov-2026 (Monday) ✅ Verified
+## 📅 Daily Timetable — 02-Nov-2026 (Monday) ✅ Verified (Mitesh TNMC Group)
+* **09:00 AM – 10:00 AM:** Medicine Lecture (Venue: Room 502)
 * **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre)
+* **01:00 PM – 02:00 PM:** General Surgery Lecture (Online)
+* **02:00 PM – 03:00 PM:** FMT Lecture (Taken by HOD Sir) ⚠️ **Key Department Session**
 * **03:00 PM – 04:00 PM:** Community Medicine Lecture — NCD IV: Blindness & Accidents (Faculty: Dr. Komal Dhumal / Dr. Nikhil Honale; Venue: Lecture Hall 402)
+* *Note:* Topics are sent earlier in group according to department.
 
 ---
 
