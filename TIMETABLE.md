@@ -91,6 +91,39 @@
 
 ---
 
+## 📅 Daily Timetable — 04-Nov-2026 (Wednesday) ✅ Verified (Mitesh TNMC Group)
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre)
+* **02:15 PM – 03:15 PM:** Medicine Lecture (Venue: Room 302) ⚠️ **Rescheduled from 1-2 PM / FMT rescheduled to 5-Nov / OBGY cancelled & rescheduled**
+
+---
+
+## 📅 Daily Timetable — 05-Nov-2026 (Thursday) ✅ Verified (Mitesh TNMC Group)
+* **08:00 AM – 09:00 AM:** Obstetrics & Gynaecology (OBGY) (Venue: Room 302) ⚠️ **Venue shifted from 402 to 302**
+* **09:00 AM – 10:00 AM:** ENT Lecture (Online) — Anatomy & Epistaxis
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OPD Day** (Roll 38–56: Out-Patient Dept)
+* **01:00 PM – 02:00 PM:** Ophthalmology Lecture (Venue: Room 302)
+* **02:00 PM – 03:00 PM:** FMT Lecture — Medical Jurisprudence Part 2 (Venue: Room 302) ⚠️ **Rescheduled from 04-Nov**
+
+---
+
+## 📅 Daily Timetable — 06-Nov-2026 (Friday) ✅ Verified (Mitesh TNMC Group)
+* **09:00 AM – 10:00 AM:** FMT Lecture — Medical Jurisprudence Part 3 (Venue: Room 502)
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre)
+* **01:00 PM – 02:00 PM:** Community Medicine Lecture — Integrated Disease Surveillance Programme (IDSP) — Dr. Rashmi Sawant (Venue: Room 502) ⚠️ **Rescheduled from 3-4 PM; mandatory presence by 12:55 PM**
+* **03:00 PM – 04:00 PM:** General Surgery Lecture (Online) ⚠️ **Rescheduled to online at 3 PM**
+
+---
+
+## 📅 Daily Timetable — 16-Nov-2026 (Monday) ✅ Verified (Mitesh TNMC Group)
+* **09:00 AM – 10:00 AM:** Medicine Lecture ⚠️ **CANCELLED**
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre)
+* **01:00 PM – 02:00 PM:** General Surgery Lecture (Venue: Room 502)
+* **02:00 PM – 03:00 PM:** FMT Lecture — Medical Jurisprudence (Last Lecture) — Dr. Pawan Sir ⚠️ **MANDATORY: Padhke aao / High attendance priority**
+* **03:00 PM – 04:00 PM:** Community Medicine Lecture — Epidemiology of HIV & NACP — Dr. Subhasri Subhadarsini (Venue: Room 402)
+
+---
+
+
 
 ## 🔪 Department of General Surgery — Lecture Schedule (Batch 2024)
 * **Venue:** Room 502
