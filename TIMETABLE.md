@@ -417,3 +417,360 @@
 * **Term 3 Postings (04-Jun-2027 to 17-Jun-2027):** Family Adoption Program & Surgery
 * **Prelims:** June / July 2027
 * **MUHS University Exams:** August 2027
+
+---
+
+## 🩺 Department of General Medicine — Master Conflict-Resolved Curriculum
+*Institution: TNMC & BYL Nair Charitable Hospital, Mumbai*
+*Batch: Phase 3 Part 1 MBBS (CBME Batch 2024)*
+*Department Leadership: Dr. Rosemarie de Souza (HOD) | Dr. G. C. Rajadhyaksha (I/c UG Teaching)*
+*Batch Representative: CR Mitesh Gohil (Mob: 9820824947)*
+*Weekly Rhythm:*
+* **Mondays:** 09:00 AM – 10:00 AM (Lecture Hall 502)
+* **Wednesdays:** 03:00 PM – 04:00 PM (Lecture Hall 502 / 302)
+
+### Section 1: Lecture Series (30 Chronological Lectures)
+
+* **Lecture 01 • 26-Oct-2026 (Mon, 9–10 AM)**
+  - Topic: Obesity — Definition, Prevalence, Etiology, Risk Factors & Environmental Factors
+  - Faculty: Dr. Nilesh
+* **Lecture 02 • 28-Oct-2026 (Wed, 3–4 PM)**
+  - Topic: Anaemia — Classification, Etiology & Prevalence
+  - Faculty: Dr. Amogh Athani
+* **Lecture 03 • 02-Nov-2026 (Mon, 9–10 AM)**
+  - Topic: Diagnostic Plan for Evaluation of Anaemia including Bone Marrow Aspiration & Biopsy
+  - Faculty: Dr. Adarsh Patil
+* **Lecture 04 • 04-Nov-2026 (Wed, 3–4 PM)**
+  - Topic: Components of Haemogram, Tests for Iron & B12 Deficiency
+  - Faculty: Dr. Shubham
+* **Lecture 05 • 16-Nov-2026 (Mon, 9–10 AM)** *(Cancelled on 16-Nov)*
+  - Topic: GI Disorder — Etiology & Distinguishing Features of Upper & Lower GI Bleed
+  - Faculty: Dr. Krishna Kadav
+* **Lecture 06 • 18-Nov-2026 (Wed, 3–4 PM)**
+  - Topic: Physiological Effects, Evaluation and Steps in Stabilizing a Patient with Acute Volume Loss due to GI Bleed (including Blood & Component Transfusion)
+  - Faculty: Dr. Akshay Rasve
+* **Lecture 07 • 23-Nov-2026 (Mon, 9–10 AM)**
+  - Topic: Indications for Blood Transfusion & Components, Precautions during Transfusion including Mismatch Transfusion
+  - Faculty: Dr. Umesh
+* **Lecture 08 • 25-Nov-2026 (Wed, 3–4 PM)**
+  - Topic: SDL 1 — National Programmes for Prevention of Anaemia
+  - Faculty: Dr. Srivatsa
+* **Lecture 09 • 30-Nov-2026 (Mon, 9–10 AM)**
+  - Topic: Investigations & Treatment of GI Bleed & Acid Peptic Disease
+  - Faculty: Dr. Swapnil
+* **Lecture 10 • 02-Dec-2026 (Wed, 3–4 PM)**
+  - Topic: SDL 2 — Cholelithiasis & Cholecystitis
+  - Faculty: Dr. Prakruti
+* **Lecture 11 • 07-Dec-2026 (Mon, 9–10 AM)**
+  - Topic: Liver Disorders — Hyperbilirubinemia, ALD & DILI (Etiology & Pathophysiology)
+  - Faculty: Dr. Aditya
+* **Lecture 12 • 09-Dec-2026 (Wed, 3–4 PM)**
+  - Topic: Viral Hepatitis — Epidemiology, Microbiology, Immunology, Clinical Evolution, Management & Vaccination
+  - Faculty: Dr. Mala Kaneria
+* **Lecture 13 • 14-Dec-2026 (Mon, 9–10 AM)**
+  - Topic: Liver Cirrhosis & Portal Hypertension — Pathophysiology, Evolution, Management, Complications & Indications for Liver Transplantation
+  - Faculty: Dr. Girish Rajadhyaksha
+* **Lecture 14 • 16-Dec-2026 (Wed, 3–4 PM)**
+  - Topic: Diagnostic Approach in Liver Disease — CBC, LFT, Ascitic Fluid, Hepatitis Serology; Indications & Findings in USG, MRCP, ERCP
+  - Faculty: Dr. Souhaan
+* **Lecture 15 • 21-Dec-2026 (Mon, 9–10 AM)**
+  - Topic: Autoimmune Disease — Pathophysiology & Genetic Basis
+  - Faculty: Dr. Amey
+* **Lecture 16 • 23-Dec-2026 (Wed, 3–4 PM)**
+  - Topic: Arthritis — Pathophysiology, Etiology, Classification, Presenting Features & Approach to Joint Pain
+  - Faculty: Dr. Chaitanya
+* **Lecture 17 • 28-Dec-2026 (Mon, 9–10 AM)**
+  - Topic: Systemic Manifestations of Rheumatological Diseases — Diagnostic Workup, Treatment Plan & Patient Preference Incorporation
+  - Faculty: Dr. Ajay
+* **Lecture 18 • 30-Dec-2026 (Wed, 3–4 PM)**
+  - Topic: SDL 3 — Distinguishing Features of Articular vs Periarticular Diseases & Indications for Arthrocentesis
+  - Faculty: Dr. Vikas
+* **Lecture 19 • 04-Jan-2027 (Mon, 9–10 AM)**
+  - Topic: Obesity — Natural History, Complications, Lab Tests, Pharmacotherapy, Bariatric Surgery & Prevention
+  - Faculty: Dr. Ajay
+* **Lecture 20 • 06-Jan-2027 (Wed, 3–4 PM)**
+  - Topic: Diabetes — Definition, Classification, Epidemiology, Pathogenesis, Genetics, Risk Factors & Clinical Evolution (Type 1 & 2 DM)
+  - Faculty: Dr. Swapnil
+* **Lecture 21 • 11-Jan-2027 (Mon, 9–10 AM)**
+  - Topic: Micro and Macrovascular Complications of Diabetes — Pathogenesis & Temporal Evolution
+  - Faculty: Dr. Santosh Gosavi
+* **Lecture 22 • 13-Jan-2027 (Wed, 3–4 PM)**
+  - Topic: Pharmacological Therapies for DM — Indications, Contraindications & Adverse Drug Reactions (ADRs)
+  - Faculty: Dr. Rakesh
+* **Lecture 23 • 18-Jan-2027 (Mon, 9–10 AM)**
+  - Topic: Diabetic Emergencies and Management
+  - Faculty: Dr. Shilpa
+* **Lecture 24 • 20-Jan-2027 (Wed, 3–4 PM)**
+  - Topic: SDL 4 — Pharmacology, Indications, ADR & Interactions of Drugs for Prevention of Target Organ Damage & Chronic Diabetic Complications
+  - Faculty: Dr. Sangeeta
+* **Lecture 25 • 25-Jan-2027 (Mon, 9–10 AM)**
+  - Topic: Malignancies — Epidemiology, Genetic Basis, Risk Factors & Infections Causing Malignancies
+  - Faculty: Dr. Chaitanya
+* **Lecture 26 • 27-Jan-2027 (Wed, 3–4 PM)**
+  - Topic: Malignancies — Natural History, Presentation, Course, Complications & Causes of Death for Common Cancers
+  - Faculty: Dr. Amogh Athani
+* **Lecture 27 • 01-Feb-2027 (Mon, 9–10 AM)**
+  - Topic: SDL 5 — End of Life Care: Principles of Management, Ethical & Medicolegal Issues; Curative vs Palliative Care
+  - Faculty: Dr. Shubham
+* **Lecture 28 • 03-Feb-2027 (Wed, 3–4 PM)**
+  - Topic: Thyroid Disorders — Principles of TFTs, RAI Uptake, Alteration of Physiology & HPT Axis
+  - Faculty: Dr. Adarsh Patil
+* **Lecture 29 • 08-Feb-2027 (Mon, 9–10 AM)**
+  - Topic: Hypothyroidism — Epidemiology, Pathogenesis, Genetics, TFT Interpretation, Thyroxine Pharmacotherapy & GoI Iodization Programmes
+  - Faculty: Dr. Akshay Rasve
+* **Lecture 30 • 10-Feb-2027 (Wed, 3–4 PM)**
+  - Topic: Hyperthyroidism — Epidemiology, Pathogenesis, Genetics, TFT Interpretation, Antithyroid Pharmacotherapy & ADRs
+  - Faculty: Dr. Krishna Kadav
+
+### Section 2: Clinical Seminars & Tutorials Matrix (32 Sessions: Feb – Jun 2027)
+*Rhythm: Mondays 9–10 AM & Wednesdays 3–4 PM*
+
+* **01 • 15-Feb-2027 (Mon):** Clinical approach to Ascites — Dr. Amey
+* **02 • 17-Feb-2027 (Wed):** Clinical approach to Anaemia — Dr. Vrinda Kulkarni
+* **03 • 22-Feb-2027 (Mon):** Clinical approach to Lymphadenopathy — Dr. Swapnil
+* **04 • 24-Feb-2027 (Wed):** Clinical approach to Jaundice — Dr. Prakruti
+* **05 • 01-Mar-2027 (Mon):** Clinical approach to Chest Pain — Dr. Aditya
+* **06 • 03-Mar-2027 (Wed):** Clinical approach to Bleeding Diathesis — Dr. Vrinda Kulkarni
+* **07 • 08-Mar-2027 (Mon):** Clinical approach to Headache — Dr. Vikas
+* **08 • 15-Mar-2027 (Mon):** Clinical approach to Comatose Patient — Dr. Souhaan
+* **09 • 17-Mar-2027 (Wed):** Portal Hypertension & Complications — Dr. Amey
+* **10 • 24-Mar-2027 (Wed):** Pulmonary Arterial Hypertension — Dr. Chaitanya
+* **11 • 29-Mar-2027 (Mon):** Pulmonary Function Tests (PFTs) — Dr. Srivats
+* **12 • 31-Mar-2027 (Wed):** Thyroid Function Tests (TFTs) — Dr. Girish Rajadhyaksha
+* **13 • 05-Apr-2027 (Mon):** Graves' Disease — Dr. Mala Kaneria
+* **14 • 12-Apr-2027 (Mon):** Microvascular Complications of Diabetes Mellitus — Dr. Amogh
+* **15 • 19-Apr-2027 (Mon):** Macrovascular Complications of Diabetes Mellitus — Dr. Santosh Gosavi
+* **16 • 21-Apr-2027 (Wed):** Insulin & Analogues — Dr. Rakesh
+* **17 • 26-Apr-2027 (Mon):** Medical Emergencies: Common Poisoning — Dr. Shilpa
+* **18 • 28-Apr-2027 (Wed):** Medical Emergencies related to Pharmacological Agents — Dr. Sangeeta
+* **19 • 03-May-2027 (Mon):** Drugs: IV Fluids & Pain Killers including Narcotics — Dr. Ajay
+* **20 • 05-May-2027 (Wed):** Drugs used in CPR — Dr. Amogh Athani
+* **21 • 10-May-2027 (Mon):** Instruments for Injections & IV Access — Dr. Shubham
+* **22 • 12-May-2027 (Wed):** Instruments for Routine Invasive Procedures — Dr. Adarsh Patil
+* **23 • 17-May-2027 (Mon):** Format of reading Chest X-Ray: Skeletal & Pleural involvement — Dr. Akshay Rasve
+* **24 • 19-May-2027 (Wed):** Parenchymal Involvement in Chest X-Ray — Dr. Krishna Kadav
+* **25 • 31-May-2027 (Mon):** ECG: Basics of Reporting ECG with Abnormal Rate — Dr. Ajay
+* **26 • 02-Jun-2027 (Wed):** ECG: Rhythm Disturbances — Dr. Srivatsa
+* **27 • 07-Jun-2027 (Mon):** Pandemic Module: Clinical Trials (Various Phases) — Dr. Swapnil
+* **28 • 09-Jun-2027 (Wed):** Pandemic Module: Compliance with Regulatory Authorities & Pharmacovigilance — Dr. Prakruti
+* **29 • 14-Jun-2027 (Mon):** Pandemic Module: New Drug Development — Dr. Aditya
+* **30 • 16-Jun-2027 (Wed):** Pandemic Module: Challenges & Solutions in New Drug Development — Dr. Prakruti
+* **31 • 21-Jun-2027 (Mon):** Pandemic Module: Urgency in Procedures in New Drug Development — Dr. Vikas
+* **32 • 23-Jun-2027 (Wed):** Pandemic Module: Need for Monitoring in New Drug Development — Dr. Souhaan
+
+---
+
+## 👁️ Department of Ophthalmology — AY 2026 Master Curriculum
+*Institution: TNMC & BYL Nair Charitable Hospital, Mumbai*
+*Academic Rhythm:*
+* **Tuesdays:** 08:00 AM – 09:00 AM (Lecture Hall 302 / 402)
+* **Thursdays:** 01:00 PM – 02:00 PM (Lecture Hall 402 / 302)
+
+### Phase 1: Core Didactic Lecture Matrix (28 Lectures)
+
+* **01 • 27-Oct-2026 (Tue, 8–9 AM):** Physiology of Vision — Dr. Sanoja
+* **02 • 29-Oct-2026 (Thu, 1–2 PM):** Refractive Errors: Myopia & Astigmatism — Dr. Rashmi
+* **03 • 03-Nov-2026 (Tue, 8–9 AM):** Hypermetropia, Accommodation & Presbyopia — Dr. Salma
+* **04 • 05-Nov-2026 (Thu, 1–2 PM):** Refractive Surgery — Dr. Twinkle
+* **05 • 17-Nov-2026 (Tue, 8–9 AM):** Eyelid & Adnexa: Hordeolum Externum/Internum, Blepharitis — Dr. Rashmi
+* **06 • 19-Nov-2026 (Thu, 1–2 PM):** Eyelid Malpositions: Ptosis, Entropion, Ectropion, Lid Lag, Lagophthalmos — Dr. Rashmi
+* **07 • 26-Nov-2026 (Thu, 1–2 PM):** Proptosis: Etiology, Clinical Features & Management — Dr. Darshana ma'am / Dr. Rashmi
+* **08 • 01-Dec-2026 (Tue, 8–9 AM):** Infective Conjunctivitis — Dr. Shraddha
+* **09 • 03-Dec-2026 (Thu, 1–2 PM):** Non-Infective Conjunctivitis & Allergic Conjunctivitis — Dr. Anuja
+* **10 • 08-Dec-2026 (Tue, 8–9 AM):** Dry Eye Syndrome — Dr. Sanoja
+* **11 • 10-Dec-2026 (Thu, 1–2 PM):** Corneal Ulcer: Bacterial, Fungal & Viral — Dr. Salma
+* **12 • 15-Dec-2026 (Tue, 8–9 AM):** Infective Keratitis — Dr. Twinkle
+* **13 • 17-Dec-2026 (Thu, 1–2 PM):** Non-Infective Keratitis — Dr. Twinkle
+* **14 • 22-Dec-2026 (Tue, 8–9 AM):** Corneal Blindness: Burden, Causes & Prevention — Dr. Salma
+* **15 • 24-Dec-2026 (Thu, 1–2 PM):** Keratoplasty: Principles & Techniques — Dr. Rashmi
+* **16 • 29-Dec-2026 (Tue, 8–9 AM):** Eye Donation & Eye Banking Regulations — Dr. Shraddha
+* **17 • 31-Dec-2026 (Thu, 1–2 PM):** Uveitis: Acute vs Chronic, Granulomatous vs Non-Granulomatous — Dr. Darshana ma'am
+* **18 • 05-Jan-2027 (Tue, 8–9 AM):** Uveitis: Specific Types & Complications — Dr. Darshana ma'am
+* **19 • 07-Jan-2027 (Thu, 1–2 PM):** Aqueous Humour Dynamics, IOP Measurement & Angle Assessment — Dr. Sanoja
+* **20 • 12-Jan-2027 (Tue, 8–9 AM):** Primary Open Angle Glaucoma (POAG) & Visual Field Defects — Dr. Anuja
+* **21 • 14-Jan-2027 (Thu, 1–2 PM):** Primary Angle Closure Glaucoma (PACG) & Secondary Glaucomas — Dr. Salma
+* **22 • 19-Jan-2027 (Tue, 8–9 AM):** Congenital Glaucoma & Developmental Anomalies — Dr. Rashmi
+* **23 • 28-Jan-2027 (Thu, 1–2 PM):** Cataract: Etiopathogenesis, Stages of Maturation & Complications — Dr. Twinkle
+* **24 • 02-Feb-2027 (Tue, 8–9 AM):** Cataract Surgery: Modern Techniques & IOL Types — Dr. Shraddha
+* **25 • 04-Feb-2027 (Thu, 1–2 PM):** Vascular Diseases of Retina: Diabetic & Hypertensive Retinopathy — Dr. Darshana ma'am
+* **26 • 09-Feb-2027 (Tue, 8–9 AM):** Fundus Examination Techniques & Retinal Detachment — Dr. Sanoja
+* **27 • 11-Feb-2027 (Thu, 1–2 PM):** Optic Nerve Diseases: Papilloedema, Optic Neuritis & Atrophy — Dr. Salma
+* **28 • 16-Feb-2027 (Tue, 8–9 AM):** Visual Pathway Lesions & Field Defects — Dr. Rashmi
+* **29 • 18-Feb-2027 (Thu, 1–2 PM):** Strabismus: Evaluation, D/D & Principles of Management — Dr. Twinkle
+* **30 • 23-Feb-2027 (Tue, 8–9 AM):** Ocular Trauma: Stabilization, Initial Management & Referral Criteria — Dr. Anuja
+
+### Phase 2: Self-Directed Learning (SDL) Matrix (10 Sessions)
+
+* **SDL 01 • 25-Feb-2027 (Thu, 1–2 PM):** Glaucoma with Shallow vs Deep Anterior Chamber
+* **SDL 02 • 02-Mar-2027 (Tue, 8–9 AM):** Diagnostic Investigations in Glaucoma
+* **SDL 03 • 04-Mar-2027 (Thu, 1–2 PM):** Medical & Surgical Treatment Algorithms in Glaucoma
+* **SDL 04 • 09-Mar-2027 (Tue, 8–9 AM):** Mechanisms by which Strabismus leads to Amblyopia
+* **SDL 05 • 11-Mar-2027 (Thu, 1–2 PM):** Amblyopia Management Protocols & Occlusion Therapy
+* **SDL 06 • 16-Mar-2027 (Tue, 8–9 AM):** Etiological Matrix of Corneal Blindness in India
+* **SDL 07 • 18-Mar-2027 (Thu, 1–2 PM):** Indications & Patient Selection for Keratoplasty
+* **SDL 08 • 23-Mar-2027 (Tue, 8–9 AM):** Types of Keratoplasty (PK, DALK, DSEK, DMEK)
+* **SDL 09 • 25-Mar-2027 (Thu, 1–2 PM):** National Programme for Control of Blindness & Causes of Avoidable Blindness
+* **SDL 10 • 30-Mar-2027 (Tue, 8–9 AM):** Eye Donation, Eye Banking Protocols & AETCOM Module 2
+
+### Phase 3: Small Group Teaching (SGT) Matrix (Batch A Roster: Apr – Jun 2027)
+* **01 • 01-Apr-2027 (Thu):** Gonioscopic Anatomy of the Anterior Chamber Angle
+* **02 • 06-Apr-2027 (Tue):** Aqueous Production & Maintenance of IOP
+* **03 • 08-Apr-2027 (Thu):** Refractive Errors: Myopia & Astigmatism
+* **04 • 13-Apr-2027 (Tue):** Refractive Errors: Hypermetropia & Aphakia
+* **05 • 20-Apr-2027 (Tue):** Visual Pathway Architecture
+* **06 • 22-Apr-2027 (Thu):** Normal Fundus & Techniques of Fundus Examination
+* **07 • 27-Apr-2027 (Tue):** Anatomy of Orbit, Surgical Spaces of Orbit, SOF & Proptosis
+* **08 • 29-Apr-2027 (Thu):** Follicular Conjunctivitis & Trachoma
+* **09 • 04-May-2027 (Tue):** Dry Eye Assessment (Schirmer, TBUT, Tear Film)
+* **10 • 06-May-2027 (Thu):** Keratoconus & Corneal Topography
+* **11 • 11-May-2027 (Tue):** Differential Diagnosis of Limbal Nodule
+* **12 • 13-May-2027 (Thu):** Primary Open Angle Glaucoma Clinical Workup
+* **13 • 18-May-2027 (Tue):** Secondary Glaucomas
+* **14 • 01-Jun-2027 (Tue):** Diabetic Retinopathy & Hypertensive Retinopathy Grading
+* **15 • 03-Jun-2027 (Thu):** Optic Neuritis, Optic Atrophy & Papilloedema
+* **16 • 08-Jun-2027 (Tue):** Visual Pathway Lesions Localization
+* **17 • 10-Jun-2027 (Thu):** Abnormal Pupillary Reactions (RAPD, Horner, Argyll Robertson)
+* **18 • 15-Jun-2027 (Tue):** Anatomy of Cornea & Corneal Transparency Maintenance
+* **19 • 17-Jun-2027 (Thu):** Lacrimal Apparatus Anatomy, Syringing & Physiology
+* **20 • 22-Jun-2027 (Tue):** Anatomy & Metabolism of Lens, Accommodation
+* **21 • 24-Jun-2027 (Thu):** Anatomy of Extraocular Muscles, 3rd, 4th & 6th Cranial Nerves
+
+---
+
+## 🤰 Department of Obstetrics & Gynaecology (OBGY) — Lecture Schedule
+*Institution: TNMC & BYL Nair Charitable Hospital, Mumbai*
+*Department Leadership: Dr. Kartik (Professor and Head)*
+*Venue:* Lecture Hall 402 (Tuesdays) | Lecture Hall 502 (Wednesdays)
+*Weekly Rhythm:*
+* **Tuesdays:** 09:00 AM – 10:00 AM
+* **Wednesdays:** 02:00 PM – 03:00 PM
+
+### Chronological 25-Lecture Matrix
+
+* **Lecture 01 • 03-Nov-2026 (Tue, 9–10 AM)**
+  - Topic: Anemia in Pregnancy (Iron deficiency + Megaloblastic) (OG 12.2) [Includes Classroom Test]
+  - Faculty: Dr. Manisha
+* **Lecture 02 • 04-Nov-2026 (Wed, 2–3 PM)** *(Rescheduled)*
+  - Topic: Anemia in Pregnancy (excluding Iron deficiency and Megaloblastic) (OG 14.2)
+  - Faculty: Dr. Chaitanya
+* **Lecture 03 • 17-Nov-2026 (Tue, 9–10 AM)**
+  - Topic: Preterm Labour and Pre-labour Rupture of Membranes (PROM) (OG 12.2)
+  - Faculty: Dr. Sonal
+* **Lecture 04 • 18-Nov-2026 (Wed, 2–3 PM)**
+  - Topic: Disorders of Amniotic Fluid: Polyhydramnios & Oligohydramnios (OG 13.2)
+  - Faculty: Dr. Seema
+* **Lecture 05 • 25-Nov-2026 (Wed, 2–3 PM)**
+  - Topic: Prolonged Pregnancy and Post-term Delivery (OG 13.2)
+  - Faculty: Dr. Pallavi
+* **Lecture 06 • 01-Dec-2026 (Tue, 9–10 AM)**
+  - Topic: Antepartum Haemorrhage: Placenta Praevia (OG 10.1)
+  - Faculty: Dr. Vandana
+* **Lecture 07 • 02-Dec-2026 (Wed, 2–3 PM)**
+  - Topic: Rh-Negative Pregnancy & Isoimmunization (OG 12.1)
+  - Faculty: Dr. Aishwarya
+* **Lecture 08 • 08-Dec-2026 (Tue, 9–10 AM)**
+  - Topic: Antepartum Haemorrhage: Abruptio Placentae & Vasa Praevia (OG 10.1)
+  - Faculty: Dr. Vandana
+* **Lecture 09 • 09-Dec-2026 (Wed, 2–3 PM)**
+  - Topic: Intrauterine Fetal Death (IUFD) (OG 16.3)
+  - Faculty: Dr. Medha
+* **Lecture 10 • 15-Dec-2026 (Tue, 9–10 AM)**
+  - Topic: Abnormalities of Placenta and Umbilical Cord (OG 16.3)
+  - Faculty: Dr. Madhavi
+* **Lecture 11 • 16-Dec-2026 (Wed, 2–3 PM)**
+  - Topic: Intrauterine Growth Restriction (IUGR) (OG 14.1)
+  - Faculty: Dr. Rupali
+* **Lecture 12 • 22-Dec-2026 (Tue, 9–10 AM)**
+  - Topic: Heart Disease in Pregnancy (OG 12.4)
+  - Faculty: Dr. Gaurang
+* **Lecture 13 • 23-Dec-2026 (Wed, 2–3 PM)**
+  - Topic: Diabetes in Pregnancy (Gestational & Pre-gestational) (OG 12.3)
+  - Faculty: Dr. Kartik
+* **Lecture 14 • 29-Dec-2026 (Tue, 9–10 AM)**
+  - Topic: Infections in Pregnancy: TORCH, Malaria, UTI (OG 12.5)
+  - Faculty: Dr. Jinal
+* **Lecture 15 • 30-Dec-2026 (Wed, 2–3 PM)**
+  - Topic: Hepatic Disorders in Pregnancy (OG 12.6)
+  - Faculty: Dr. Manisha
+* **Lecture 16 • 05-Jan-2027 (Tue, 9–10 AM)**
+  - Topic: Hypertensive Disorders in Pregnancy – Part 1: Gestational HTN & Pre-eclampsia (OG 12.6)
+  - Faculty: Dr. Kavitha
+* **Lecture 17 • 06-Jan-2027 (Wed, 2–3 PM)**
+  - Topic: Hypertensive Disorders in Pregnancy – Part 2: Eclampsia & HELLP Syndrome (OG 12.6)
+  - Faculty: Dr. Kavitha
+* **Lecture 18 • 12-Jan-2027 (Tue, 9–10 AM)**
+  - Topic: Thyroid Disorders in Pregnancy (OG 12.6)
+  - Faculty: Dr. Jinal
+* **Lecture 19 • 13-Jan-2027 (Wed, 2–3 PM)**
+  - Topic: Respiratory Disorders in Pregnancy (TB, COVID-19, Influenza, Asthma) (OG 12.6)
+  - Faculty: Dr. Manisha
+* **Lecture 20 • 19-Jan-2027 (Tue, 9–10 AM)**
+  - Topic: Viral Infections in Pregnancy: Hepatitis, Varicella, Rubella (OG 12.6)
+  - Faculty: Dr. Madhavi
+* **Lecture 21 • 20-Jan-2027 (Wed, 2–3 PM)**
+  - Topic: HIV in Pregnancy & PPTCT Guidelines (OG 12.7)
+  - Faculty: Dr. Kavitha
+* **Lecture 22 • 27-Jan-2027 (Wed, 2–3 PM)**
+  - Topic: Gynaecological Disorders in Pregnancy: Fibroids, Ovarian Tumours (OG 27.3)
+  - Faculty: Dr. Rupali
+* **Lecture 23 • 02-Feb-2027 (Tue, 9–10 AM)**
+  - Topic: Surgical Disorders in Pregnancy: Acute Appendicitis, Cholecystitis (OG 27.3)
+  - Faculty: Dr. Sonal
+* **Lecture 24 • 03-Feb-2027 (Wed, 2–3 PM)**
+  - Topic: National Health Programmes – Part 1: Safe Motherhood, RMNCH+A (Integration with CM) (OG 27.3)
+  - Faculty: Dr. Aishwarya
+* **Lecture 25 • 09-Feb-2027 (Tue, 9–10 AM)**
+  - Topic: National Health Programmes – Part 2: Respectful Maternity Care (RMC) & LaQshya Guidelines (OG 27.3)
+  - Faculty: Dr. Pallavi
+
+---
+
+## 👂 Department of ENT (Otorhinolaryngology) — Lecture Schedule
+*Institution: TNMC & BYL Nair Charitable Hospital, Mumbai*
+*Department Leadership: Dr. Bachi T. Hathiram (Professor and HOD)*
+*Venue:* Lecture Hall 402
+*Weekly Rhythm:*
+* **Tuesdays:** 02:00 PM – 03:00 PM
+* **Thursdays:** 09:00 AM – 10:00 AM
+
+### Chronological 39-Lecture Matrix
+
+* **01 • 27-Oct-2026 (Tue, 2–3 PM):** Anatomy of the Ear — Dr. Bachi Hathiram
+* **02 • 29-Oct-2026 (Thu, 9–10 AM):** Physiology of Hearing and Balance — Dr. Vicky Khattar
+* **03 • 03-Nov-2026 (Tue, 2–3 PM):** Acute Suppurative Otitis Media (ASOM) — Dr. Sanjay Chhabria
+* **04 • 05-Nov-2026 (Thu, 9–10 AM):** Otitis Media with Effusion (OME) — Dr. Rohan Fuladi
+* **05 • 17-Nov-2026 (Tue, 2–3 PM):** Chronic Otitis Media (Mucosal Type) — Dr. Bachi Hathiram
+* **06 • 19-Nov-2026 (Thu, 9–10 AM):** Chronic Otitis Media (Squamosal Type / Cholesteatoma) — Dr. Vicky Khattar
+* **07 • 26-Nov-2026 (Thu, 9–10 AM):** Differential Diagnosis of Otalgia & Diseases of External Ear — Dr. Aditi Achari
+* **08 • 01-Dec-2026 (Tue, 2–3 PM):** Otosclerosis & Stapedectomy — Dr. Meena Kale
+* **09 • 03-Dec-2026 (Thu, 9–10 AM):** Facial Nerve Anatomy, Topodiagnosis & Facial Nerve Palsy — Dr. Siva
+* **10 • 08-Dec-2026 (Tue, 2–3 PM):** Peripheral Vertigo & Meniere's Disease — Dr. Aditi Achari
+* **11 • 10-Dec-2026 (Thu, 9–10 AM):** D/D of Hearing Loss, Sudden Sensorineural Hearing Loss (SSNHL) & NIHL — Dr. Rohan Fuladi
+* **12 • 15-Dec-2026 (Tue, 2–3 PM):** National Programme for Prevention of Deafness (NPPCD), Noise & Environmental Pollution — Dr. Meena Kale
+* **13 • 17-Dec-2026 (Thu, 9–10 AM):** AETCOM in ENT Practice: Doctor-Patient Communication — Dr. Siva
+* **14 • 22-Dec-2026 (Tue, 2–3 PM):** AETCOM in ENT: Breaking Bad News & Informed Consent — Dr. Aditi Achari
+* **15 • 24-Dec-2026 (Thu, 9–10 AM):** Anatomy of Nose and Paranasal Sinuses (PNS) — Dr. Sanjay Chhabria
+* **16 • 29-Dec-2026 (Tue, 2–3 PM):** Physiology of Nose and Paranasal Sinuses — Dr. Rohan Fuladi
+* **17 • 31-Dec-2026 (Thu, 9–10 AM):** Epistaxis: Etiology, Vascular Anatomy (Little's Area, Woodruff's Plexus) & Management — Dr. Siva
+* **18 • 05-Jan-2027 (Tue, 2–3 PM):** Rhinitis: Allergic Rhinitis, Vasomotor Rhinitis & Atrophic Rhinitis — Dr. Rohan Fuladi
+* **19 • 07-Jan-2027 (Thu, 9–10 AM):** Nasal Polyposis: Antrochoanal vs Ethmoidal Polyps — Dr. Vicky Khattar
+* **20 • 12-Jan-2027 (Tue, 2–3 PM):** Acute & Chronic Rhinosinusitis & Complications — Dr. Meena Kale
+* **21 • 14-Jan-2027 (Thu, 9–10 AM):** Deviated Nasal Septum (DNS), Septoplasty & SMR — Dr. Aditi Achari
+* **22 • 19-Jan-2027 (Tue, 2–3 PM):** Juvenile Nasopharyngeal Angiofibroma (JNA) & Tumours of Nasopharynx — Dr. Bachi Hathiram
+* **23 • 21-Jan-2027 (Thu, 9–10 AM):** Tumours of Maxilla & Paranasal Sinuses — Dr. Vicky Khattar
+* **24 • 28-Jan-2027 (Thu, 9–10 AM):** Anatomy of Larynx & Cartilages — Dr. Meena Kale
+* **25 • 02-Feb-2027 (Tue, 2–3 PM):** Physiology of Larynx & Vocal Mechanics — Dr. Siva
+* **26 • 04-Feb-2027 (Thu, 9–10 AM):** Differential Diagnosis of Hoarseness of Voice & Vocal Cord Palsy — Dr. Aditi Achari
+* **27 • 09-Feb-2027 (Tue, 2–3 PM):** Acute & Chronic Laryngitis — Dr. Sanjay Chhabria
+* **28 • 11-Feb-2027 (Thu, 9–10 AM):** Benign Conditions of Vocal Cord (Nodules, Polyps, Cysts) & Congenital Lesions of Larynx — Dr. Vicky Khattar
+* **29 • 16-Feb-2027 (Tue, 2–3 PM):** Carcinoma of Larynx and Hypopharynx — Dr. Bachi Hathiram
+* **30 • 18-Feb-2027 (Thu, 9–10 AM):** Differential Diagnosis of Stridor & Foreign Bodies in Air and Food Passages — Dr. Meena Kale
+* **31 • 23-Feb-2027 (Tue, 2–3 PM):** Acute & Chronic Tonsillitis & Adenoid Hypertrophy — Dr. Siva
+* **32 • 25-Feb-2027 (Thu, 9–10 AM):** Surgical Anatomy of Head & Neck Fascial Spaces — Dr. Sanjay Chhabria
+* **33 • 02-Mar-2027 (Tue, 2–3 PM):** Trauma to Face and Neck (Laryngeal & Maxillofacial Trauma) — Dr. Meena Kale
+* **34 • 04-Mar-2027 (Thu, 9–10 AM):** Oral Premalignant Lesions (Leukoplakia, Erythroplakia, OSMF) & Oral Carcinoma — Dr. Rohan Fuladi
+* **35 • 09-Mar-2027 (Tue, 2–3 PM):** Differential Diagnosis of Dysphagia & Diseases of Oesophagus — Dr. Siva
+* **36 • 11-Mar-2027 (Thu, 9–10 AM):** Deep Neck Space Infections: Peritonsillar, Parapharyngeal, Retropharyngeal Abscess & Ludwig's Angina — Dr. Vicky Khattar
+* **37 • 16-Mar-2027 (Tue, 2–3 PM):** Diseases of Salivary Glands (Sialadenitis, Sialolithiasis, Tumours) — Dr. Rohan Fuladi
+* **38 • 18-Mar-2027 (Thu, 9–10 AM):** Manifestations of HIV in Otorhinolaryngology — Dr. Meena Kale
+* **39 • 23-Mar-2027 (Tue, 2–3 PM):** Emergency Procedures in ENT: Tracheostomy, Epistaxis Packing & Cricothyroidotomy — Dr. Siva
