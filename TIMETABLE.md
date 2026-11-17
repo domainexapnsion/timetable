@@ -123,6 +123,15 @@
 
 ---
 
+## 📅 Daily Timetable — 17-Nov-2026 (Tuesday) ✅ Verified (All lec as per schedule)
+* **08:00 AM – 09:00 AM:** Ophthalmology (Venue: Room 402)
+* **09:00 AM – 10:00 AM:** Obstetrics & Gynaecology (OBGY)
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OPD Day** (Roll 38–56: Out-Patient Dept)
+* **01:00 PM – 02:00 PM:** Community Medicine Lecture — Vectors & NVBDCP — Dr. Mangala Bote / Dr. Subhana Siyad (Venue: Room 402)
+* **02:00 PM – 03:00 PM:** ENT Lecture
+* **03:00 PM – 04:00 PM:** Paediatrics Lecture
+---
+
 
 
 ## 🔪 Department of General Surgery — Lecture Schedule (Batch 2024)
