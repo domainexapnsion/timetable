@@ -130,6 +130,34 @@
 * **01:00 PM – 02:00 PM:** Community Medicine Lecture — Vectors & NVBDCP — Dr. Mangala Bote / Dr. Subhana Siyad (Venue: Room 402)
 * **02:00 PM – 03:00 PM:** ENT Lecture
 * **03:00 PM – 04:00 PM:** Paediatrics Lecture
+
+---
+
+## 📅 Daily Timetable — 18-Nov-2026 (Wednesday) ✅ Verified
+* **09:00 AM – 10:00 AM:** General Surgery — Clinical Research in General Surgery (SU 7.1, 7.2) — Dr. Harsh (Venue: Room 502)
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre)
+* **02:00 PM – 03:00 PM:** Obstetrics & Gynaecology (OBGY) — Disorders of Amniotic Fluid: Polyhydramnios & Oligohydramnios (OG 13.2) — Dr. Seema (Venue: Room 502)
+* **03:00 PM – 04:00 PM:** General Medicine — Physiological Effects, Evaluation and Steps in Stabilizing a Patient with Acute Volume Loss due to GI Bleed — Dr. Akshay Rasve (Venue: Room 502)
+
+---
+
+## 📅 Daily Timetable — 19-Nov-2026 (Thursday) ✅ Verified
+* **09:00 AM – 10:00 AM:** ENT Lecture — Chronic Otitis Media (Squamosal Type / Cholesteatoma) — Dr. Vicky Khattar (Venue: Room 402)
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OPD Day** (Roll 38–56: Out-Patient Dept)
+* **01:00 PM – 02:00 PM:** Ophthalmology Lecture — Eyelid Malpositions: Ptosis, Entropion, Ectropion, Lid Lag, Lagophthalmos — Dr. Rashmi (Venue: Room 402 / 302)
+
+---
+
+## 📅 Daily Timetable — 20-Nov-2026 (Friday) ✅ Verified
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre)
+* **03:00 PM – 04:00 PM:** Community Medicine Lecture — Healthcare of Community & Community Diagnosis — Dr. Erum Naaz (Venue: Room 402)
+
+---
+
+## 📅 Daily Timetable — 21-Nov-2026 (Saturday) ✅ Verified
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OPD Day** (Roll 38–56: Out-Patient Dept)
+* *Note:* Posting session only. No afternoon theory lectures scheduled.
+
 ---
 
 

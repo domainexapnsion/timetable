@@ -378,6 +378,184 @@ const BATCH_A_CLERKSHIP={
  '2026-10-29':'PSM Clerkship: Biostatistics I – Dr. Komal Dhumal (Room 504)',
  '2026-10-30':'PSM Clerkship: Public Health Admin & MOH Visit – Dr. Subhana Siyad (Room 504)'
 };
+const MEDICINE_SCHEDULE={
+ '2026-10-26':{tm:'9–10 am',t:'Obesity — Definition, Prevalence, Etiology, Risk Factors & Environmental Factors',f:'Dr. Nilesh',v:'Venue 502'},
+ '2026-10-28':{tm:'3–4 pm',t:'Anaemia — Classification, Etiology & Prevalence',f:'Dr. Amogh Athani',v:'Venue 502/302'},
+ '2026-11-02':{tm:'9–10 am',t:'Diagnostic Plan for Evaluation of Anaemia including Bone Marrow Aspiration & Biopsy',f:'Dr. Adarsh Patil',v:'Venue 502'},
+ '2026-11-04':{tm:'3–4 pm',t:'Components of Haemogram, Tests for Iron & B12 Deficiency',f:'Dr. Shubham',v:'Venue 502/302'},
+ '2026-11-16':{tm:'9–10 am',t:'GI Disorder — Etiology & Distinguishing Features of Upper & Lower GI Bleed',f:'Dr. Krishna Kadav',v:'Venue 502'},
+ '2026-11-18':{tm:'3–4 pm',t:'Physiological Effects, Evaluation and Steps in Stabilizing a Patient with Acute Volume Loss due to GI Bleed (including Blood & Component Transfusion)',f:'Dr. Akshay Rasve',v:'Venue 502/302'},
+ '2026-11-23':{tm:'9–10 am',t:'Indications for Blood Transfusion & Components, Precautions during Transfusion including Mismatch Transfusion',f:'Dr. Umesh',v:'Venue 502'},
+ '2026-11-25':{tm:'3–4 pm',t:'SDL 1 — National Programmes for Prevention of Anaemia',f:'Dr. Srivatsa',v:'Venue 502/302'},
+ '2026-11-30':{tm:'9–10 am',t:'Investigations & Treatment of GI Bleed & Acid Peptic Disease',f:'Dr. Swapnil',v:'Venue 502'},
+ '2026-12-02':{tm:'3–4 pm',t:'SDL 2 — Cholelithiasis & Cholecystitis',f:'Dr. Prakruti',v:'Venue 502/302'},
+ '2026-12-07':{tm:'9–10 am',t:'Liver Disorders — Hyperbilirubinemia, ALD & DILI (Etiology & Pathophysiology)',f:'Dr. Aditya',v:'Venue 502'},
+ '2026-12-09':{tm:'3–4 pm',t:'Viral Hepatitis — Epidemiology, Microbiology, Immunology, Clinical Evolution, Management & Vaccination',f:'Dr. Mala Kaneria',v:'Venue 502/302'},
+ '2026-12-14':{tm:'9–10 am',t:'Liver Cirrhosis & Portal Hypertension — Pathophysiology, Evolution, Management, Complications & Indications for Liver Transplantation',f:'Dr. Girish Rajadhyaksha',v:'Venue 502'},
+ '2026-12-16':{tm:'3–4 pm',t:'Diagnostic Approach in Liver Disease — CBC, LFT, Ascitic Fluid, Hepatitis Serology; Indications & Findings in USG, MRCP, ERCP',f:'Dr. Souhaan',v:'Venue 502/302'},
+ '2026-12-21':{tm:'9–10 am',t:'Autoimmune Disease — Pathophysiology & Genetic Basis',f:'Dr. Amey',v:'Venue 502'},
+ '2026-12-23':{tm:'3–4 pm',t:'Arthritis — Pathophysiology, Etiology, Classification, Presenting Features & Approach to Joint Pain',f:'Dr. Chaitanya',v:'Venue 502/302'},
+ '2026-12-28':{tm:'9–10 am',t:'Systemic Manifestations of Rheumatological Diseases — Diagnostic Workup, Treatment Plan & Patient Preference Incorporation',f:'Dr. Ajay',v:'Venue 502'},
+ '2026-12-30':{tm:'3–4 pm',t:'SDL 3 — Distinguishing Features of Articular vs Periarticular Diseases & Indications for Arthrocentesis',f:'Dr. Vikas',v:'Venue 502/302'},
+ '2027-01-04':{tm:'9–10 am',t:'Obesity — Natural History, Complications, Lab Tests, Pharmacotherapy, Bariatric Surgery & Prevention',f:'Dr. Ajay',v:'Venue 502'},
+ '2027-01-06':{tm:'3–4 pm',t:'Diabetes — Definition, Classification, Epidemiology, Pathogenesis, Genetics, Risk Factors & Clinical Evolution (Type 1 & 2 DM)',f:'Dr. Swapnil',v:'Venue 502/302'},
+ '2027-01-11':{tm:'9–10 am',t:'Micro and Macrovascular Complications of Diabetes — Pathogenesis & Temporal Evolution',f:'Dr. Santosh Gosavi',v:'Venue 502'},
+ '2027-01-13':{tm:'3–4 pm',t:'Pharmacological Therapies for DM — Indications, Contraindications & Adverse Drug Reactions (ADRs)',f:'Dr. Rakesh',v:'Venue 502/302'},
+ '2027-01-18':{tm:'9–10 am',t:'Diabetic Emergencies and Management',f:'Dr. Shilpa',v:'Venue 502'},
+ '2027-01-20':{tm:'3–4 pm',t:'SDL 4 — Pharmacology, Indications, ADR & Interactions of Drugs for Prevention of Target Organ Damage & Chronic Diabetic Complications',f:'Dr. Sangeeta',v:'Venue 502/302'},
+ '2027-01-25':{tm:'9–10 am',t:'Malignancies — Epidemiology, Genetic Basis, Risk Factors & Infections Causing Malignancies',f:'Dr. Chaitanya',v:'Venue 502'},
+ '2027-01-27':{tm:'3–4 pm',t:'Malignancies — Natural History, Presentation, Course, Complications & Causes of Death for Common Cancers',f:'Dr. Amogh Athani',v:'Venue 502/302'},
+ '2027-02-01':{tm:'9–10 am',t:'SDL 5 — End of Life Care: Principles of Management, Ethical & Medicolegal Issues; Curative vs Palliative Care',f:'Dr. Shubham',v:'Venue 502'},
+ '2027-02-03':{tm:'3–4 pm',t:'Thyroid Disorders — Principles of TFTs, RAI Uptake, Alteration of Physiology & HPT Axis',f:'Dr. Adarsh Patil',v:'Venue 502/302'},
+ '2027-02-08':{tm:'9–10 am',t:'Hypothyroidism — Epidemiology, Pathogenesis, Genetics, TFT Interpretation, Thyroxine Pharmacotherapy & GoI Iodization Programmes',f:'Dr. Akshay Rasve',v:'Venue 502'},
+ '2027-02-10':{tm:'3–4 pm',t:'Hyperthyroidism — Epidemiology, Pathogenesis, Genetics, TFT Interpretation, Antithyroid Pharmacotherapy & ADRs',f:'Dr. Krishna Kadav',v:'Venue 502/302'},
+ '2027-02-15':{tm:'9–10 am',t:'Clinical approach to Ascites',f:'Dr. Amey',v:'Venue 502/302'},
+ '2027-02-17':{tm:'3–4 pm',t:'Clinical approach to Anaemia',f:'Dr. Vrinda Kulkarni',v:'Venue 502/302'},
+ '2027-02-22':{tm:'9–10 am',t:'Clinical approach to Lymphadenopathy',f:'Dr. Swapnil',v:'Venue 502/302'},
+ '2027-02-24':{tm:'3–4 pm',t:'Clinical approach to Jaundice',f:'Dr. Prakruti',v:'Venue 502/302'},
+ '2027-03-01':{tm:'9–10 am',t:'Clinical approach to Chest Pain',f:'Dr. Aditya',v:'Venue 502/302'},
+ '2027-03-03':{tm:'3–4 pm',t:'Clinical approach to Bleeding Diathesis',f:'Dr. Vrinda Kulkarni',v:'Venue 502/302'},
+ '2027-03-08':{tm:'9–10 am',t:'Clinical approach to Headache',f:'Dr. Vikas',v:'Venue 502/302'},
+ '2027-03-15':{tm:'9–10 am',t:'Clinical approach to Comatose Patient',f:'Dr. Souhaan',v:'Venue 502/302'},
+ '2027-03-17':{tm:'3–4 pm',t:'Portal Hypertension & Complications',f:'Dr. Amey',v:'Venue 502/302'},
+ '2027-03-24':{tm:'3–4 pm',t:'Pulmonary Arterial Hypertension',f:'Dr. Chaitanya',v:'Venue 502/302'},
+ '2027-03-29':{tm:'9–10 am',t:'Pulmonary Function Tests (PFTs)',f:'Dr. Srivats',v:'Venue 502/302'},
+ '2027-03-31':{tm:'3–4 pm',t:'Thyroid Function Tests (TFTs)',f:'Dr. Girish Rajadhyaksha',v:'Venue 502/302'},
+ '2027-04-05':{tm:'9–10 am',t:'Graves\' Disease',f:'Dr. Mala Kaneria',v:'Venue 502/302'},
+ '2027-04-12':{tm:'9–10 am',t:'Microvascular Complications of Diabetes Mellitus',f:'Dr. Amogh',v:'Venue 502/302'},
+ '2027-04-19':{tm:'9–10 am',t:'Macrovascular Complications of Diabetes Mellitus',f:'Dr. Santosh Gosavi',v:'Venue 502/302'},
+ '2027-04-21':{tm:'3–4 pm',t:'Insulin & Analogues',f:'Dr. Rakesh',v:'Venue 502/302'},
+ '2027-04-26':{tm:'9–10 am',t:'Medical Emergencies: Common Poisoning',f:'Dr. Shilpa',v:'Venue 502/302'},
+ '2027-04-28':{tm:'3–4 pm',t:'Medical Emergencies related to Pharmacological Agents',f:'Dr. Sangeeta',v:'Venue 502/302'},
+ '2027-05-03':{tm:'9–10 am',t:'Drugs: IV Fluids & Pain Killers including Narcotics',f:'Dr. Ajay',v:'Venue 502/302'},
+ '2027-05-05':{tm:'3–4 pm',t:'Drugs used in CPR',f:'Dr. Amogh Athani',v:'Venue 502/302'},
+ '2027-05-10':{tm:'9–10 am',t:'Instruments for Injections & IV Access',f:'Dr. Shubham',v:'Venue 502/302'},
+ '2027-05-12':{tm:'3–4 pm',t:'Instruments for Routine Invasive Procedures',f:'Dr. Adarsh Patil',v:'Venue 502/302'},
+ '2027-05-17':{tm:'9–10 am',t:'Format of reading Chest X-Ray: Skeletal & Pleural involvement',f:'Dr. Akshay Rasve',v:'Venue 502/302'},
+ '2027-05-19':{tm:'3–4 pm',t:'Parenchymal Involvement in Chest X-Ray',f:'Dr. Krishna Kadav',v:'Venue 502/302'},
+ '2027-05-31':{tm:'9–10 am',t:'ECG: Basics of Reporting ECG with Abnormal Rate',f:'Dr. Ajay',v:'Venue 502/302'},
+ '2027-06-02':{tm:'3–4 pm',t:'ECG: Rhythm Disturbances',f:'Dr. Srivatsa',v:'Venue 502/302'},
+ '2027-06-07':{tm:'9–10 am',t:'Pandemic Module: Clinical Trials (Various Phases)',f:'Dr. Swapnil',v:'Venue 502/302'},
+ '2027-06-09':{tm:'3–4 pm',t:'Pandemic Module: Compliance with Regulatory Authorities & Pharmacovigilance',f:'Dr. Prakruti',v:'Venue 502/302'},
+ '2027-06-14':{tm:'9–10 am',t:'Pandemic Module: New Drug Development',f:'Dr. Aditya',v:'Venue 502/302'},
+ '2027-06-16':{tm:'3–4 pm',t:'Pandemic Module: Challenges & Solutions in New Drug Development',f:'Dr. Prakruti',v:'Venue 502/302'},
+ '2027-06-21':{tm:'9–10 am',t:'Pandemic Module: Urgency in Procedures in New Drug Development',f:'Dr. Vikas',v:'Venue 502/302'},
+ '2027-06-23':{tm:'3–4 pm',t:'Pandemic Module: Need for Monitoring in New Drug Development',f:'Dr. Souhaan',v:'Venue 502/302'},
+};
+
+const OPHTHAL_SCHEDULE={
+ '2026-10-27':{tm:'8–9 am',t:'Physiology of Vision',f:'Dr. Sanoja',v:'Venue 302/402'},
+ '2026-10-29':{tm:'1–2 pm',t:'Refractive Errors: Myopia & Astigmatism',f:'Dr. Rashmi',v:'Venue 302/402'},
+ '2026-11-03':{tm:'8–9 am',t:'Hypermetropia, Accommodation & Presbyopia',f:'Dr. Salma',v:'Venue 302/402'},
+ '2026-11-05':{tm:'1–2 pm',t:'Refractive Surgery',f:'Dr. Twinkle',v:'Venue 302/402'},
+ '2026-11-17':{tm:'8–9 am',t:'Eyelid & Adnexa: Hordeolum Externum/Internum, Blepharitis',f:'Dr. Rashmi',v:'Venue 302/402'},
+ '2026-11-19':{tm:'1–2 pm',t:'Eyelid Malpositions: Ptosis, Entropion, Ectropion, Lid Lag, Lagophthalmos',f:'Dr. Rashmi',v:'Venue 302/402'},
+ '2026-11-26':{tm:'1–2 pm',t:'Proptosis: Etiology, Clinical Features & Management',f:'Dr. Darshana ma\'am / Dr. Rashmi',v:'Venue 302/402'},
+ '2026-12-01':{tm:'8–9 am',t:'Infective Conjunctivitis',f:'Dr. Shraddha',v:'Venue 302/402'},
+ '2026-12-03':{tm:'1–2 pm',t:'Non-Infective Conjunctivitis & Allergic Conjunctivitis',f:'Dr. Anuja',v:'Venue 302/402'},
+ '2026-12-08':{tm:'8–9 am',t:'Dry Eye Syndrome',f:'Dr. Sanoja',v:'Venue 302/402'},
+ '2026-12-10':{tm:'1–2 pm',t:'Corneal Ulcer: Bacterial, Fungal & Viral',f:'Dr. Salma',v:'Venue 302/402'},
+ '2026-12-15':{tm:'8–9 am',t:'Infective Keratitis',f:'Dr. Twinkle',v:'Venue 302/402'},
+ '2026-12-17':{tm:'1–2 pm',t:'Non-Infective Keratitis',f:'Dr. Twinkle',v:'Venue 302/402'},
+ '2026-12-22':{tm:'8–9 am',t:'Corneal Blindness: Burden, Causes & Prevention',f:'Dr. Salma',v:'Venue 302/402'},
+ '2026-12-24':{tm:'1–2 pm',t:'Keratoplasty: Principles & Techniques',f:'Dr. Rashmi',v:'Venue 302/402'},
+ '2026-12-29':{tm:'8–9 am',t:'Eye Donation & Eye Banking Regulations',f:'Dr. Shraddha',v:'Venue 302/402'},
+ '2026-12-31':{tm:'1–2 pm',t:'Uveitis: Acute vs Chronic, Granulomatous vs Non-Granulomatous',f:'Dr. Darshana ma\'am',v:'Venue 302/402'},
+ '2027-01-05':{tm:'8–9 am',t:'Uveitis: Specific Types & Complications',f:'Dr. Darshana ma\'am',v:'Venue 302/402'},
+ '2027-01-07':{tm:'1–2 pm',t:'Aqueous Humour Dynamics, IOP Measurement & Angle Assessment',f:'Dr. Sanoja',v:'Venue 302/402'},
+ '2027-01-12':{tm:'8–9 am',t:'Primary Open Angle Glaucoma (POAG) & Visual Field Defects',f:'Dr. Anuja',v:'Venue 302/402'},
+ '2027-01-14':{tm:'1–2 pm',t:'Primary Angle Closure Glaucoma (PACG) & Secondary Glaucomas',f:'Dr. Salma',v:'Venue 302/402'},
+ '2027-01-19':{tm:'8–9 am',t:'Congenital Glaucoma & Developmental Anomalies',f:'Dr. Rashmi',v:'Venue 302/402'},
+ '2027-01-28':{tm:'1–2 pm',t:'Cataract: Etiopathogenesis, Stages of Maturation & Complications',f:'Dr. Twinkle',v:'Venue 302/402'},
+ '2027-02-02':{tm:'8–9 am',t:'Cataract Surgery: Modern Techniques & IOL Types',f:'Dr. Shraddha',v:'Venue 302/402'},
+ '2027-02-04':{tm:'1–2 pm',t:'Vascular Diseases of Retina: Diabetic & Hypertensive Retinopathy',f:'Dr. Darshana ma\'am',v:'Venue 302/402'},
+ '2027-02-09':{tm:'8–9 am',t:'Fundus Examination Techniques & Retinal Detachment',f:'Dr. Sanoja',v:'Venue 302/402'},
+ '2027-02-11':{tm:'1–2 pm',t:'Optic Nerve Diseases: Papilloedema, Optic Neuritis & Atrophy',f:'Dr. Salma',v:'Venue 302/402'},
+ '2027-02-16':{tm:'8–9 am',t:'Visual Pathway Lesions & Field Defects',f:'Dr. Rashmi',v:'Venue 302/402'},
+ '2027-02-18':{tm:'1–2 pm',t:'Strabismus: Evaluation, D/D & Principles of Management',f:'Dr. Twinkle',v:'Venue 302/402'},
+ '2027-02-23':{tm:'8–9 am',t:'Ocular Trauma: Stabilization, Initial Management & Referral Criteria',f:'Dr. Anuja',v:'Venue 302/402'},
+ '2027-02-25':{tm:'1–2 pm',t:'Glaucoma with Shallow vs Deep Anterior Chamber',f:'Self-Directed Learning',v:'Venue 302/402'},
+ '2027-03-02':{tm:'8–9 am',t:'Diagnostic Investigations in Glaucoma',f:'Self-Directed Learning',v:'Venue 302/402'},
+ '2027-03-04':{tm:'1–2 pm',t:'Medical & Surgical Treatment Algorithms in Glaucoma',f:'Self-Directed Learning',v:'Venue 302/402'},
+ '2027-03-09':{tm:'8–9 am',t:'Mechanisms by which Strabismus leads to Amblyopia',f:'Self-Directed Learning',v:'Venue 302/402'},
+ '2027-03-11':{tm:'1–2 pm',t:'Amblyopia Management Protocols & Occlusion Therapy',f:'Self-Directed Learning',v:'Venue 302/402'},
+ '2027-03-16':{tm:'8–9 am',t:'Etiological Matrix of Corneal Blindness in India',f:'Self-Directed Learning',v:'Venue 302/402'},
+ '2027-03-18':{tm:'1–2 pm',t:'Indications & Patient Selection for Keratoplasty',f:'Self-Directed Learning',v:'Venue 302/402'},
+ '2027-03-23':{tm:'8–9 am',t:'Types of Keratoplasty (PK, DALK, DSEK, DMEK)',f:'Self-Directed Learning',v:'Venue 302/402'},
+ '2027-03-25':{tm:'1–2 pm',t:'National Programme for Control of Blindness & Causes of Avoidable Blindness',f:'Self-Directed Learning',v:'Venue 302/402'},
+ '2027-03-30':{tm:'8–9 am',t:'Eye Donation, Eye Banking Protocols & AETCOM Module 2',f:'Self-Directed Learning',v:'Venue 302/402'},
+};
+
+const OBGY_SCHEDULE={
+ '2026-11-03':{tm:'9–10 am',t:'Anemia in Pregnancy (Iron deficiency + Megaloblastic) (OG 12.2) [Includes Classroom Test]',f:'Dr. Manisha',v:'Venue 402'},
+ '2026-11-04':{tm:'2–3 pm',t:'Anemia in Pregnancy (excluding Iron deficiency and Megaloblastic) (OG 14.2)',f:'Dr. Chaitanya',v:'Venue 502'},
+ '2026-11-17':{tm:'9–10 am',t:'Preterm Labour and Pre-labour Rupture of Membranes (PROM) (OG 12.2)',f:'Dr. Sonal',v:'Venue 402'},
+ '2026-11-18':{tm:'2–3 pm',t:'Disorders of Amniotic Fluid: Polyhydramnios & Oligohydramnios (OG 13.2)',f:'Dr. Seema',v:'Venue 502'},
+ '2026-11-25':{tm:'2–3 pm',t:'Prolonged Pregnancy and Post-term Delivery (OG 13.2)',f:'Dr. Pallavi',v:'Venue 502'},
+ '2026-12-01':{tm:'9–10 am',t:'Antepartum Haemorrhage: Placenta Praevia (OG 10.1)',f:'Dr. Vandana',v:'Venue 402'},
+ '2026-12-02':{tm:'2–3 pm',t:'Rh-Negative Pregnancy & Isoimmunization (OG 12.1)',f:'Dr. Aishwarya',v:'Venue 502'},
+ '2026-12-08':{tm:'9–10 am',t:'Antepartum Haemorrhage: Abruptio Placentae & Vasa Praevia (OG 10.1)',f:'Dr. Vandana',v:'Venue 402'},
+ '2026-12-09':{tm:'2–3 pm',t:'Intrauterine Fetal Death (IUFD) (OG 16.3)',f:'Dr. Medha',v:'Venue 502'},
+ '2026-12-15':{tm:'9–10 am',t:'Abnormalities of Placenta and Umbilical Cord (OG 16.3)',f:'Dr. Madhavi',v:'Venue 402'},
+ '2026-12-16':{tm:'2–3 pm',t:'Intrauterine Growth Restriction (IUGR) (OG 14.1)',f:'Dr. Rupali',v:'Venue 502'},
+ '2026-12-22':{tm:'9–10 am',t:'Heart Disease in Pregnancy (OG 12.4)',f:'Dr. Gaurang',v:'Venue 402'},
+ '2026-12-23':{tm:'2–3 pm',t:'Diabetes in Pregnancy (Gestational & Pre-gestational) (OG 12.3)',f:'Dr. Kartik',v:'Venue 502'},
+ '2026-12-29':{tm:'9–10 am',t:'Infections in Pregnancy: TORCH, Malaria, UTI (OG 12.5)',f:'Dr. Jinal',v:'Venue 402'},
+ '2026-12-30':{tm:'2–3 pm',t:'Hepatic Disorders in Pregnancy (OG 12.6)',f:'Dr. Manisha',v:'Venue 502'},
+ '2027-01-05':{tm:'9–10 am',t:'Hypertensive Disorders in Pregnancy – Part 1: Gestational HTN & Pre-eclampsia (OG 12.6)',f:'Dr. Kavitha',v:'Venue 402'},
+ '2027-01-06':{tm:'2–3 pm',t:'Hypertensive Disorders in Pregnancy – Part 2: Eclampsia & HELLP Syndrome (OG 12.6)',f:'Dr. Kavitha',v:'Venue 502'},
+ '2027-01-12':{tm:'9–10 am',t:'Thyroid Disorders in Pregnancy (OG 12.6)',f:'Dr. Jinal',v:'Venue 402'},
+ '2027-01-13':{tm:'2–3 pm',t:'Respiratory Disorders in Pregnancy (TB, COVID-19, Influenza, Asthma) (OG 12.6)',f:'Dr. Manisha',v:'Venue 502'},
+ '2027-01-19':{tm:'9–10 am',t:'Viral Infections in Pregnancy: Hepatitis, Varicella, Rubella (OG 12.6)',f:'Dr. Madhavi',v:'Venue 402'},
+ '2027-01-20':{tm:'2–3 pm',t:'HIV in Pregnancy & PPTCT Guidelines (OG 12.7)',f:'Dr. Kavitha',v:'Venue 502'},
+ '2027-01-27':{tm:'2–3 pm',t:'Gynaecological Disorders in Pregnancy: Fibroids, Ovarian Tumours (OG 27.3)',f:'Dr. Rupali',v:'Venue 502'},
+ '2027-02-02':{tm:'9–10 am',t:'Surgical Disorders in Pregnancy: Acute Appendicitis, Cholecystitis (OG 27.3)',f:'Dr. Sonal',v:'Venue 402'},
+ '2027-02-03':{tm:'2–3 pm',t:'National Health Programmes – Part 1: Safe Motherhood, RMNCH+A (Integration with CM) (OG 27.3)',f:'Dr. Aishwarya',v:'Venue 502'},
+ '2027-02-09':{tm:'9–10 am',t:'National Health Programmes – Part 2: Respectful Maternity Care (RMC) & LaQshya Guidelines (OG 27.3)',f:'Dr. Pallavi',v:'Venue 402'},
+};
+
+const ENT_SCHEDULE={
+ '2026-10-27':{tm:'2–3 pm',t:'Anatomy of the Ear',f:'Dr. Bachi Hathiram',v:'Venue 402'},
+ '2026-10-29':{tm:'9–10 am',t:'Physiology of Hearing and Balance',f:'Dr. Vicky Khattar',v:'Venue 402'},
+ '2026-11-03':{tm:'2–3 pm',t:'Acute Suppurative Otitis Media (ASOM)',f:'Dr. Sanjay Chhabria',v:'Venue 402'},
+ '2026-11-05':{tm:'9–10 am',t:'Otitis Media with Effusion (OME)',f:'Dr. Rohan Fuladi',v:'Venue 402'},
+ '2026-11-17':{tm:'2–3 pm',t:'Chronic Otitis Media (Mucosal Type)',f:'Dr. Bachi Hathiram',v:'Venue 402'},
+ '2026-11-19':{tm:'9–10 am',t:'Chronic Otitis Media (Squamosal Type / Cholesteatoma)',f:'Dr. Vicky Khattar',v:'Venue 402'},
+ '2026-11-26':{tm:'9–10 am',t:'Differential Diagnosis of Otalgia & Diseases of External Ear',f:'Dr. Aditi Achari',v:'Venue 402'},
+ '2026-12-01':{tm:'2–3 pm',t:'Otosclerosis & Stapedectomy',f:'Dr. Meena Kale',v:'Venue 402'},
+ '2026-12-03':{tm:'9–10 am',t:'Facial Nerve Anatomy, Topodiagnosis & Facial Nerve Palsy',f:'Dr. Siva',v:'Venue 402'},
+ '2026-12-08':{tm:'2–3 pm',t:'Peripheral Vertigo & Meniere\'s Disease',f:'Dr. Aditi Achari',v:'Venue 402'},
+ '2026-12-10':{tm:'9–10 am',t:'D/D of Hearing Loss, Sudden Sensorineural Hearing Loss (SSNHL) & NIHL',f:'Dr. Rohan Fuladi',v:'Venue 402'},
+ '2026-12-15':{tm:'2–3 pm',t:'National Programme for Prevention of Deafness (NPPCD), Noise & Environmental Pollution',f:'Dr. Meena Kale',v:'Venue 402'},
+ '2026-12-17':{tm:'9–10 am',t:'AETCOM in ENT Practice: Doctor-Patient Communication',f:'Dr. Siva',v:'Venue 402'},
+ '2026-12-22':{tm:'2–3 pm',t:'AETCOM in ENT: Breaking Bad News & Informed Consent',f:'Dr. Aditi Achari',v:'Venue 402'},
+ '2026-12-24':{tm:'9–10 am',t:'Anatomy of Nose and Paranasal Sinuses (PNS)',f:'Dr. Sanjay Chhabria',v:'Venue 402'},
+ '2026-12-29':{tm:'2–3 pm',t:'Physiology of Nose and Paranasal Sinuses',f:'Dr. Rohan Fuladi',v:'Venue 402'},
+ '2026-12-31':{tm:'9–10 am',t:'Epistaxis: Etiology, Vascular Anatomy (Little\'s Area, Woodruff\'s Plexus) & Management',f:'Dr. Siva',v:'Venue 402'},
+ '2027-01-05':{tm:'2–3 pm',t:'Rhinitis: Allergic Rhinitis, Vasomotor Rhinitis & Atrophic Rhinitis',f:'Dr. Rohan Fuladi',v:'Venue 402'},
+ '2027-01-07':{tm:'9–10 am',t:'Nasal Polyposis: Antrochoanal vs Ethmoidal Polyps',f:'Dr. Vicky Khattar',v:'Venue 402'},
+ '2027-01-12':{tm:'2–3 pm',t:'Acute & Chronic Rhinosinusitis & Complications',f:'Dr. Meena Kale',v:'Venue 402'},
+ '2027-01-14':{tm:'9–10 am',t:'Deviated Nasal Septum (DNS), Septoplasty & SMR',f:'Dr. Aditi Achari',v:'Venue 402'},
+ '2027-01-19':{tm:'2–3 pm',t:'Juvenile Nasopharyngeal Angiofibroma (JNA) & Tumours of Nasopharynx',f:'Dr. Bachi Hathiram',v:'Venue 402'},
+ '2027-01-21':{tm:'9–10 am',t:'Tumours of Maxilla & Paranasal Sinuses',f:'Dr. Vicky Khattar',v:'Venue 402'},
+ '2027-01-28':{tm:'9–10 am',t:'Anatomy of Larynx & Cartilages',f:'Dr. Meena Kale',v:'Venue 402'},
+ '2027-02-02':{tm:'2–3 pm',t:'Physiology of Larynx & Vocal Mechanics',f:'Dr. Siva',v:'Venue 402'},
+ '2027-02-04':{tm:'9–10 am',t:'Differential Diagnosis of Hoarseness of Voice & Vocal Cord Palsy',f:'Dr. Aditi Achari',v:'Venue 402'},
+ '2027-02-09':{tm:'2–3 pm',t:'Acute & Chronic Laryngitis',f:'Dr. Sanjay Chhabria',v:'Venue 402'},
+ '2027-02-11':{tm:'9–10 am',t:'Benign Conditions of Vocal Cord (Nodules, Polyps, Cysts) & Congenital Lesions of Larynx',f:'Dr. Vicky Khattar',v:'Venue 402'},
+ '2027-02-16':{tm:'2–3 pm',t:'Carcinoma of Larynx and Hypopharynx',f:'Dr. Bachi Hathiram',v:'Venue 402'},
+ '2027-02-18':{tm:'9–10 am',t:'Differential Diagnosis of Stridor & Foreign Bodies in Air and Food Passages',f:'Dr. Meena Kale',v:'Venue 402'},
+ '2027-02-23':{tm:'2–3 pm',t:'Acute & Chronic Tonsillitis & Adenoid Hypertrophy',f:'Dr. Siva',v:'Venue 402'},
+ '2027-02-25':{tm:'9–10 am',t:'Surgical Anatomy of Head & Neck Fascial Spaces',f:'Dr. Sanjay Chhabria',v:'Venue 402'},
+ '2027-03-02':{tm:'2–3 pm',t:'Trauma to Face and Neck (Laryngeal & Maxillofacial Trauma)',f:'Dr. Meena Kale',v:'Venue 402'},
+ '2027-03-04':{tm:'9–10 am',t:'Oral Premalignant Lesions (Leukoplakia, Erythroplakia, OSMF) & Oral Carcinoma',f:'Dr. Rohan Fuladi',v:'Venue 402'},
+ '2027-03-09':{tm:'2–3 pm',t:'Differential Diagnosis of Dysphagia & Diseases of Oesophagus',f:'Dr. Siva',v:'Venue 402'},
+ '2027-03-11':{tm:'9–10 am',t:'Deep Neck Space Infections: Peritonsillar, Parapharyngeal, Retropharyngeal Abscess & Ludwig\'s Angina',f:'Dr. Vicky Khattar',v:'Venue 402'},
+ '2027-03-16':{tm:'2–3 pm',t:'Diseases of Salivary Glands (Sialadenitis, Sialolithiasis, Tumours)',f:'Dr. Rohan Fuladi',v:'Venue 402'},
+ '2027-03-18':{tm:'9–10 am',t:'Manifestations of HIV in Otorhinolaryngology',f:'Dr. Meena Kale',v:'Venue 402'},
+ '2027-03-23':{tm:'2–3 pm',t:'Emergency Procedures in ENT: Tracheostomy, Epistaxis Packing & Cricothyroidotomy',f:'Dr. Siva',v:'Venue 402'},
+};
+
 const N={
  '2026-10-26':[
   [38,56,'10 am–1 pm','ENT Posting – OT (Operation Theatre)',0],
@@ -460,35 +638,66 @@ const N={
   [1,155,'3–4 pm','Paediatrics',0]
  ]
 };
-function tt(t,dept,br){
- const key=toISO(t);
- const it=[];
- if(br){
-  it.push(['All day',br[2]+' (Holiday)',1]);
+function getDailyClasses(targetDate, r) {
+ const key = toISO(targetDate);
+ const br = BR.find(x => targetDate >= D(x[0]) && targetDate <= D(x[1]));
+ if (br) {
+  return [['All day', br[2] + ' (Holiday)', 1]];
  }
- if(N[key]){
-  N[key].forEach(x=>{if(roll>=x[0]&&roll<=x[1])it.push([x[2],x[3],x[4]])});
+ if (targetDate.getDay() === 0) return [];
+ const it = [];
+ if (N[key]) {
+  N[key].forEach(x => { if (r >= x[0] && r <= x[1]) it.push([x[2], x[3], x[4]]); });
  }
- if(SURGERY_SCHEDULE[key]&&!it.some(x=>x[1].toLowerCase().includes('surgery'))){
-  const s=SURGERY_SCHEDULE[key];
-  it.push(['9–10 am','Surgery: '+s.t+' – '+s.f+' (Venue 502)',0]);
+ if (typeof SURGERY_SCHEDULE !== 'undefined' && SURGERY_SCHEDULE[key] && !it.some(x => x[1].toLowerCase().includes('surgery'))) {
+  const s = SURGERY_SCHEDULE[key];
+  it.push(['9–10 am', 'Surgery: ' + s.t + ' – ' + s.f + ' (Venue 502)', 0]);
  }
- if(CM_SCHEDULE[key]&&!it.some(x=>x[1].toLowerCase().includes('community medicine'))){
-  const c=CM_SCHEDULE[key];
-  it.push([c.tm,'Community Medicine: '+c.t+' – '+c.f+' (Venue 402)',0]);
+ if (typeof CM_SCHEDULE !== 'undefined' && CM_SCHEDULE[key] && !it.some(x => x[1].toLowerCase().includes('community medicine') || x[1].toLowerCase().includes('cm:'))) {
+  const c = CM_SCHEDULE[key];
+  it.push([c.tm, 'Community Medicine: ' + c.t + ' – ' + c.f + ' (Venue 402)', 0]);
  }
- if(!it.some(x=>x[0].includes('10 am')||x[1].toLowerCase().includes('posting')||x[1].includes('OT')||x[1].includes('OPD')||x[1].includes('clerkship'))){
-  if(roll>=1&&roll<=37&&BATCH_A_CLERKSHIP[key]){
-   it.push(['10 am–1 pm',BATCH_A_CLERKSHIP[key],0]);
-  }else if(roll>=38&&roll<=56&&t>=D('2026-10-26')&&t<=D('2026-11-29')&&!(t>=D('2026-11-07')&&t<=D('2026-11-13'))){
-   const w=t.getDay();
-   if([1,3,5].includes(w))it.push(['10 am–1 pm','ENT Posting – OT (Operation Theatre)',0]);
-   else if([2,4,6].includes(w))it.push(['10 am–1 pm','ENT Posting – OPD (Out-Patient Dept)',0]);
-  }else if(dept&&t.getDay()!==0){
-   it.push(['10 am–1 pm',dept+' Posting',0]);
+ if (typeof MEDICINE_SCHEDULE !== 'undefined' && MEDICINE_SCHEDULE[key] && !it.some(x => x[1].toLowerCase().includes('medicine'))) {
+  const m = MEDICINE_SCHEDULE[key];
+  it.push([m.tm, 'Medicine: ' + m.t + ' – ' + m.f + ' (' + m.v + ')', 0]);
+ }
+ if (typeof OPHTHAL_SCHEDULE !== 'undefined' && OPHTHAL_SCHEDULE[key] && !it.some(x => x[1].toLowerCase().includes('ophthal'))) {
+  const o = OPHTHAL_SCHEDULE[key];
+  it.push([o.tm, 'Ophthalmology: ' + o.t + ' – ' + o.f + ' (' + o.v + ')', 0]);
+ }
+ if (typeof OBGY_SCHEDULE !== 'undefined' && OBGY_SCHEDULE[key] && !it.some(x => x[1].toLowerCase().includes('obgy') || x[1].toLowerCase().includes('obstetrics'))) {
+  const b = OBGY_SCHEDULE[key];
+  it.push([b.tm, 'OBGY: ' + b.t + ' – ' + b.f + ' (' + b.v + ')', 0]);
+ }
+ if (typeof ENT_SCHEDULE !== 'undefined' && ENT_SCHEDULE[key] && !it.some(x => (x[1].toLowerCase().includes('ent') || x[1].toLowerCase().includes('otorhinolaryngology')) && !x[1].toLowerCase().includes('posting'))) {
+  const e = ENT_SCHEDULE[key];
+  it.push([e.tm, 'ENT: ' + e.t + ' – ' + e.f + ' (' + e.v + ')', 0]);
+ }
+ if (targetDate.getDay() === 2 && !it.some(x => x[1].toLowerCase().includes('paediatrics'))) {
+  it.push(['3–4 pm', 'Paediatrics (Lecture Hall 402/502)', 0]);
+ }
+ if (!it.some(x => x[0].includes('10 am') || x[1].toLowerCase().includes('posting') || x[1].includes('OT') || x[1].includes('OPD') || x[1].includes('clerkship'))) {
+  if (r >= 1 && r <= 37 && BATCH_A_CLERKSHIP[key]) {
+   it.push(['10 am–1 pm', BATCH_A_CLERKSHIP[key], 0]);
+  } else if (r >= 38 && r <= 56 && targetDate >= D('2026-10-26') && targetDate <= D('2026-11-29')) {
+   const w = targetDate.getDay();
+   if ([1, 3, 5].includes(w)) it.push(['10 am–1 pm', 'ENT Posting – OT (Operation Theatre)', 0]);
+   else if ([2, 4, 6].includes(w)) it.push(['10 am–1 pm', 'ENT Posting – OPD (Out-Patient Dept)', 0]);
+  } else {
+   const bIdx = RG.findIndex(g => r >= g[0] && r <= g[1]);
+   if (bIdx >= 0) {
+    const L = build(bIdx);
+    const curT = L.find(x => targetDate >= x.s && targetDate <= x.e);
+    if (curT && !curT.b) it.push(['10 am–1 pm', curT.n + ' Posting', 0]);
+   }
   }
  }
- it.sort((a,b)=>timeOrder(a[0])-timeOrder(b[0]));
+ it.sort((a, b) => timeOrder(a[0]) - timeOrder(b[0]));
+ return it;
+}
+function tt(t,dept,br){
+ const key=toISO(t);
+ const it = getDailyClasses(t, roll !== null ? roll : 45);
  $('tbox').style.display = 'block';
  if (it.length) {
   $('trows').innerHTML = it.map(x => {
@@ -616,26 +825,8 @@ function updateAttendanceSummary(){
   const k=toISO(cur);
   const br=BR.find(x=>cur>=D(x[0])&&cur<=D(x[1]));
   if(!br&&cur.getDay()!==0){
-   const it=[];
-   if(N[k]){N[k].forEach(x=>{if(roll>=x[0]&&roll<=x[1])it.push([x[2],x[3],x[4]])})}
-   if(SURGERY_SCHEDULE[k]&&!it.some(x=>x[1].toLowerCase().includes('surgery'))){
-    const s=SURGERY_SCHEDULE[k];
-    it.push(['9–10 am','Surgery: '+s.t+' – '+s.f+' (Venue 502)',0]);
-   }
-   if(CM_SCHEDULE[k]&&!it.some(x=>x[1].toLowerCase().includes('community medicine'))){
-    const c=CM_SCHEDULE[k];
-    it.push([c.tm,'Community Medicine: '+c.t+' – '+c.f+' (Venue 402)',0]);
-   }
-   if(!it.some(x=>x[0].includes('10 am')||x[1].toLowerCase().includes('posting')||x[1].includes('OT')||x[1].includes('OPD')||x[1].includes('clerkship'))){
-    if(roll>=1&&roll<=37&&BATCH_A_CLERKSHIP[k]){
-     it.push(['10 am–1 pm',BATCH_A_CLERKSHIP[k],0]);
-    }else if(roll>=38&&roll<=56&&cur>=D('2026-10-26')&&cur<=D('2026-11-29')){
-     const w=cur.getDay();
-     if([1,3,5].includes(w))it.push(['10 am–1 pm','ENT Posting – OT (Operation Theatre)',0]);
-     else if([2,4,6].includes(w))it.push(['10 am–1 pm','ENT Posting – OPD (Out-Patient Dept)',0]);
-    }
-   }
-   it.forEach(x=>{
+      const it = getDailyClasses(cur, roll !== null ? roll : 45);
+      it.forEach(x=>{
     const tmNum=timeOrder(x[0]);
     const slotKey=k+'_'+tmNum;
     const isPrac=x[1].toLowerCase().includes('posting')||x[1].includes('OT')||x[1].includes('OPD')||x[1].toLowerCase().includes('clerkship');

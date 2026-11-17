@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Attendance & Bunk Tracker — TNMC</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&display=swap">
+<style>
+:root{
+  box-sizing:border-box;color-scheme:light;
+  --ink:#1d4ed8;--navy:#12306e;--hi:#cfe3ff;--err:#c2410c;--warn:#d97706;--safe:#15803d;
+  --head:"Caveat Brush","Segoe Print","Bradley Hand","Marker Felt","Comic Sans MS",cursive;
+  --body:"Patrick Hand","Segoe Print","Bradley Hand","Comic Sans MS",cursive;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100vh;background:#fff;color:var(--navy);font:20px/1.3 var(--body);
+  padding:calc(env(safe-area-inset-top,0px) + 16px) 16px calc(env(safe-area-inset-bottom,0px) + 24px);
+  background-image:linear-gradient(rgba(29,78,216,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(29,78,216,.07) 1px,transparent 1px);
+  background-size:34px 34px;
+}
+.page{width:100%;max-width:760px;margin:0 auto}
+.bar0{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+h1{margin:0;font:32px/1 var(--head);color:var(--ink);position:relative;display:inline-block;transform:rotate(-1deg)}
+.nav-link{display:inline-flex;align-items:center;gap:6px;font:bold 18px var(--head);color:var(--ink);text-decoration:none;padding:6px 14px;border:2.5px solid var(--ink);border-radius:12px 8px 10px 6px;background:#fff;box-shadow:3px 3px 0 var(--hi);filter:url(#w)}
+.nav-link:active{transform:translate(2px,2px);box-shadow:none}
+.box{position:relative;background:#fff;padding:20px;border-radius:18px 10px 16px 8px/10px 16px 8px 18px;margin-bottom:20px}
+.box:before{content:"";position:absolute;inset:0;border:3.5px solid var(--ink);border-radius:18px 10px 16px 8px/10px 16px 8px 18px;filter:url(#w);pointer-events:none}
+.lab{font:14px var(--body);letter-spacing:1px;text-transform:uppercase;color:var(--ink);font-weight:bold}
+.title-sm{font:24px/1.1 var(--head);color:var(--ink);margin:4px 0 12px}
+
+/* Target selector pills */
+.target-pills{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
+.pill{background:#fff;border:2px solid var(--ink);border-radius:20px;padding:5px 12px;font:16px var(--body);color:var(--navy);cursor:pointer;touch-action:manipulation;filter:url(#w)}
+.pill.active{background:var(--ink);color:#fff;font-weight:bold;box-shadow:2px 2px 0 var(--hi)}
+
+/* Input Grid */
+.in-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:16px}
+.in-card{background:#f8faff;border:2px dashed var(--ink);border-radius:12px;padding:10px 12px;text-align:center}
+.in-card label{display:block;font-size:15px;color:var(--ink);margin-bottom:4px}
+.in-ctrl{display:flex;align-items:center;justify-content:center;gap:8px}
+.in-btn{width:32px;height:32px;border:2px solid var(--ink);border-radius:8px;background:#fff;color:var(--ink);font:bold 20px var(--head);cursor:pointer;display:grid;place-items:center}
+.in-btn:active{transform:scale(0.92)}
+.num-in{width:70px;height:40px;font:28px/1 var(--head);text-align:center;border:2px solid var(--ink);border-radius:8px;background:#fff;color:var(--navy);outline:none}
+
+/* Gauge Banner */
+.res-card{background:#f0f5ff;border:2.5px solid var(--ink);border-radius:14px;padding:16px;text-align:center;margin-top:10px;filter:url(#w)}
+.pct-huge{font:68px/1 var(--head);color:var(--ink);margin:4px 0}
+.status-badge{display:inline-block;font:17px var(--body);font-weight:bold;padding:4px 12px;border-radius:14px;border:2px solid currentColor;margin-bottom:8px}
+.status-safe{color:var(--safe);background:#eefbf0}
+.status-warn{color:var(--warn);background:#fffbeb}
+.status-err{color:var(--err);background:#fef2f2}
+.cushion-text{font:24px/1.2 var(--head);color:var(--navy);margin:6px 0 2px}
+.sub-math{font-size:16px;color:#666}
+
+/* Subject Ledger */
+.subj-card{border-bottom:2px dashed rgba(29,78,216,.25);padding:12px 0}
+.subj-card:last-child{border:0}
+.subj-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.subj-name{font:24px/1.1 var(--head);color:var(--ink)}
+.subj-pct{font:22px/1 var(--head)}
+.subj-stats{font-size:16px;color:#555;margin:4px 0 8px}
+.subj-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn-mini{font:15px var(--body);background:#fff;border:1.5px solid var(--ink);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+.btn-mini:active{transform:scale(0.95)}
+.btn-att{border-color:var(--safe);color:var(--safe)}
+.btn-bunk{border-color:var(--err);color:var(--err)}
+.cushion-badge{font-size:14px;font-weight:bold;padding:2px 8px;border-radius:8px;border:1.5px solid currentColor}
+
+@media(max-width:600px){
+  body{padding:10px 8px 20px;font-size:17px}
+  h1{font-size:24px}
+  .box{padding:14px}
+  .pct-huge{font-size:52px}
+  .cushion-text{font-size:20px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="w"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+</svg>
+
+<div class="page">
+  <div class="bar0">
+    <div>
+      <h1>Attendance & Bunk Cushion</h1>
+      <div style="font-size:14px;opacity:0.7">TNMC / Nair Hospital CBME 2024 Engine</div>
+    </div>
+    <a href="index.html" class="nav-link">📅 Timetable Board</a>
+  </div>
+
+  <!-- QUICK CALCULATOR CARD -->
+  <div class="box">
+    <div class="lab">On-the-Spot Decision Engine</div>
+    <div class="title-sm">Quick Bunk Cushion Calculator</div>
+    
+    <div class="lab" style="font-size:12px">Target Eligibility Threshold</div>
+    <div class="target-pills" id="pills">
+      <button class="pill active" data-tgt="75">Theory Floor (75%)</button>
+      <button class="pill" data-tgt="80">Practical / OT Floor (80%)</button>
+      <button class="pill" data-tgt="60">Detention Abyss (60%)</button>
+      <button class="pill" data-tgt="85">Safety Buffer (85%)</button>
+    </div>
+
+    <div class="in-grid">
+      <div class="in-card">
+        <label>Total Conducted</label>
+        <div class="in-ctrl">
+          <button class="in-btn" onclick="stepVal('tot',-1)">-</button>
+          <input type="number" id="tot" class="num-in" value="20" min="1" max="300">
+          <button class="in-btn" onclick="stepVal('tot',1)">+</button>
+        </div>
+      </div>
+      <div class="in-card">
+        <label>Attended</label>
+        <div class="in-ctrl">
+          <button class="in-btn" onclick="stepVal('att',-1)">-</button>
+          <input type="number" id="att" class="num-in" value="18" min="0" max="300">
+          <button class="in-btn" onclick="stepVal('att',1)">+</button>
+        </div>
+      </div>
+      <div class="in-card">
+        <label>Missed / Bunked</label>
+        <div class="in-ctrl">
+          <button class="in-btn" onclick="stepVal('miss',-1)">-</button>
+          <input type="number" id="miss" class="num-in" value="2" min="0" max="300">
+          <button class="in-btn" onclick="stepVal('miss',1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DYNAMIC RESULT -->
+    <div class="res-card" id="resCard">
+      <div id="statBadge" class="status-badge status-safe">Safe Zone</div>
+      <div class="pct-huge" id="pctVal">90.0%</div>
+      <div class="cushion-text" id="cushionTxt">🏖️ You can safely bunk 4 more lecture(s)!</div>
+      <div class="sub-math" id="mathTxt">Current: 18 / 20 attended • Target: 75%</div>
+    </div>
+  </div>
+
+  <!-- SUBJECT-WISE TRACKER -->
+  <div class="box">
+    <div class="lab">MBBS 3rd Professional (Part 1)</div>
+    <div class="title-sm">Subject Ledger & Running Buffer</div>
+    <div style="font-size:15px;color:#666;margin-bottom:14px">Data automatically persists in your phone browser cache. Tap '+ Attended' or '+ Bunked' after each class.</div>
+    
+    <div id="subjectList"></div>
+    
+    <div style="text-align:center;margin-top:16px">
+      <button class="btn-mini" onclick="resetLedger()" style="color:#888;border-color:#ccc">Reset Ledger to Defaults</button>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin:16px 0;font-size:14px;color:#888;font-style:italic">
+    "Minimum 75% Theory | 80% Practical | < 60% Detention Abyss" — NMC CBME Guidelines
+  </div>
+</div>
+
+<script>
+let currentTarget = 75;
+
+// Elements
+const totEl = document.getElementById('tot');
+const attEl = document.getElementById('att');
+const missEl = document.getElementById('miss');
+
+// Sync inputs
+function stepVal(id, delta) {
+  const el = document.getElementById(id);
+  let v = parseInt(el.value || 0, 10) + delta;
+  if (v < 0) v = 0;
+  el.value = v;
+
+  if (id === 'tot') {
+    let t = parseInt(totEl.value, 10);
+    let a = parseInt(attEl.value, 10);
+    if (a > t) attEl.value = t;
+    missEl.value = Math.max(0, t - parseInt(attEl.value, 10));
+  } else if (id === 'att') {
+    let a = parseInt(attEl.value, 10);
+    let t = parseInt(totEl.value, 10);
+    if (a > t) totEl.value = a;
+    missEl.value = Math.max(0, parseInt(totEl.value, 10) - a);
+  } else if (id === 'miss') {
+    let m = parseInt(missEl.value, 10);
+    let a = parseInt(attEl.value, 10);
+    totEl.value = a + m;
+  }
+  calc();
+}
+
+[totEl, attEl, missEl].forEach(inp => {
+  inp.addEventListener('input', e => {
+    let t = parseInt(totEl.value || 0, 10);
+    let a = parseInt(attEl.value || 0, 10);
+    let m = parseInt(missEl.value || 0, 10);
+    if (e.target.id === 'miss') {
+      totEl.value = a + m;
+    } else {
+      if (a > t) totEl.value = a;
+      missEl.value = Math.max(0, parseInt(totEl.value, 10) - parseInt(attEl.value, 10));
+    }
+    calc();
+  });
+});
+
+// Pills
+document.getElementById('pills').addEventListener('click', e => {
+  if (e.target.classList.contains('pill')) {
+    document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    e.target.classList.add('active');
+    currentTarget = parseFloat(e.target.dataset.tgt);
+    calc();
+  }
+});
+
+function calc() {
+  const t = parseInt(totEl.value || 0, 10);
+  const a = parseInt(attEl.value || 0, 10);
+  const tgt = currentTarget;
+
+  if (t === 0) {
+    document.getElementById('pctVal').textContent = '100%';
+    document.getElementById('cushionTxt').textContent = 'No classes conducted yet.';
+    return;
+  }
+
+  const pct = (a / t) * 100;
+  document.getElementById('pctVal').textContent = pct.toFixed(1) + '%';
+  document.getElementById('mathTxt').textContent = `Current: ${a} / ${t} attended • Target: ${tgt}%`;
+
+  const badge = document.getElementById('statBadge');
+  const txt = document.getElementById('cushionTxt');
+
+  if (pct >= tgt) {
+    badge.className = 'status-badge status-safe';
+    badge.textContent = 'Safe Zone';
+    // Max consecutive skips allowed
+    // a / (t + x) >= tgt / 100 => 100*a >= tgt*(t + x) => x <= (100*a - tgt*t) / tgt
+    const skips = Math.floor((100 * a - tgt * t) / tgt);
+    if (skips === 0) {
+      txt.textContent = `⚠️ On the edge! Cannot bunk any lecture without falling below ${tgt}%.`;
+    } else {
+      txt.textContent = `🏖️ You can safely bunk ${skips} more lecture${skips > 1 ? 's' : ''}!`;
+    }
+  } else {
+    if (pct < 60) {
+      badge.className = 'status-badge status-err';
+      badge.textContent = '🚨 Detention Abyss (<60%)';
+    } else {
+      badge.className = 'status-badge status-warn';
+      badge.textContent = '⚠️ Remedial / Shortage Zone';
+    }
+    // Consecutive attendances needed:
+    // (a + y) / (t + y) >= tgt / 100 => 100(a+y) >= tgt(t+y) => (100-tgt)y >= tgt*t - 100*a
+    const need = Math.ceil((tgt * t - 100 * a) / (100 - tgt));
+    txt.textContent = `🚨 DEFICIT: Attend next ${need} lecture${need > 1 ? 's' : ''} consecutively to reach ${tgt}%!`;
+  }
+}
+
+// SUBJECT-WISE LEDGER SYSTEM
+const DEFAULT_SUBJECTS = [
+  { id: 'ent_post', name: 'ENT Clinical Posting (OT/OPD)', tgt: 80, tot: 4, att: 3, miss: 1, type: 'Practical' },
+  { id: 'cm', name: 'Community Medicine (PSM)', tgt: 75, tot: 3, att: 3, miss: 0, type: 'Theory' },
+  { id: 'fmt', name: 'Forensic Medicine & Toxicology (FMT)', tgt: 75, tot: 2, att: 2, miss: 0, type: 'Theory' },
+  { id: 'ophtha', name: 'Ophthalmology', tgt: 75, tot: 2, att: 2, miss: 0, type: 'Theory' },
+  { id: 'surgery', name: 'General Surgery (Wed Theory)', tgt: 75, tot: 1, att: 1, miss: 0, type: 'Theory' },
+  { id: 'medicine', name: 'General Medicine', tgt: 75, tot: 1, att: 1, miss: 0, type: 'Theory' },
+  { id: 'obgy', name: 'Obstetrics & Gynaecology (OBGY)', tgt: 75, tot: 1, att: 1, miss: 0, type: 'Theory' },
+  { id: 'ent_theory', name: 'ENT Theory', tgt: 75, tot: 2, att: 1, miss: 1, type: 'Theory' },
+  { id: 'paeds', name: 'Paediatrics', tgt: 75, tot: 1, att: 1, miss: 0, type: 'Theory' }
+];
+
+function loadLedger() {
+  const saved = localStorage.getItem('tnmc_attendance_ledger_v1');
+  if (saved) {
+    try { return JSON.parse(saved); } catch(e){}
+  }
+  return DEFAULT_SUBJECTS;
+}
+
+function saveLedger(data) {
+  localStorage.setItem('tnmc_attendance_ledger_v1', JSON.stringify(data));
+}
+
+let subjects = loadLedger();
+
+function renderLedger() {
+  const cont = document.getElementById('subjectList');
+  cont.innerHTML = subjects.map((s, idx) => {
+    const pct = s.tot === 0 ? 100 : (s.att / s.tot) * 100;
+    const tgt = s.tgt;
+    let badgeHtml = '';
+    if (pct >= tgt) {
+      const skips = Math.floor((100 * s.att - tgt * s.tot) / tgt);
+      badgeHtml = `<span class="cushion-badge status-safe">${skips} Skips Safe</span>`;
+    } else {
+      const need = Math.ceil((tgt * s.tot - 100 * s.att) / (100 - tgt));
+      badgeHtml = `<span class="cushion-badge status-err">Need ${need} Attended</span>`;
+    }
+    const pctColor = pct >= tgt ? 'var(--safe)' : (pct >= 60 ? 'var(--warn)' : 'var(--err)');
+
+    return `
+    <div class="subj-card">
+      <div class="subj-head">
+        <div>
+          <span class="subj-name">${s.name}</span>
+          <span style="font-size:13px;opacity:0.7;margin-left:6px">(${s.type} • Floor ${s.tgt}%)</span>
+        </div>
+        <div class="subj-pct" style="color:${pctColor}">${pct.toFixed(1)}%</div>
+      </div>
+      <div class="subj-stats">
+        Attended: <b>${s.att}</b> / <b>${s.tot}</b> | Bunked: <b>${s.miss}</b> &nbsp; ${badgeHtml}
+      </div>
+      <div class="subj-actions">
+        <button class="btn-mini btn-att" onclick="modSubject(${idx}, 1, 0)">+ Attended</button>
+        <button class="btn-mini btn-bunk" onclick="modSubject(${idx}, 0, 1)">+ Bunked</button>
+        <button class="btn-mini" onclick="fillQuick(${idx})">Load in Calc</button>
+      </div>
+    </div>
+    `;
+  }).join('');
+}
+
+function modSubject(idx, attDelta, missDelta) {
+  subjects[idx].att += attDelta;
+  subjects[idx].miss += missDelta;
+  subjects[idx].tot = subjects[idx].att + subjects[idx].miss;
+  saveLedger(subjects);
+  renderLedger();
+}
+
+function fillQuick(idx) {
+  const s = subjects[idx];
+  totEl.value = s.tot;
+  attEl.value = s.att;
+  missEl.value = s.miss;
+  // Trigger matching pill
+  const p = Array.from(document.querySelectorAll('.pill')).find(x => parseFloat(x.dataset.tgt) === s.tgt);
+  if (p) p.click();
+  calc();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function resetLedger() {
+  if (confirm("Reset attendance ledger to initial term defaults?")) {
+    subjects = JSON.parse(JSON.stringify(DEFAULT_SUBJECTS));
+    saveLedger(subjects);
+    renderLedger();
+  }
+}
+
+// Initial calc
+calc();
+renderLedger();
+</script>
+</body>
+</html>
