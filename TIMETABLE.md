@@ -133,11 +133,12 @@
 
 ---
 
-## 📅 Daily Timetable — 18-Nov-2026 (Wednesday) ✅ Verified
-* **09:00 AM – 10:00 AM:** General Surgery — Clinical Research in General Surgery (SU 7.1, 7.2) — Dr. Harsh (Venue: Room 502)
+## 📅 Daily Timetable — 18-Nov-2026 (Wednesday) ⚠️ Rescheduled
+* **09:00 AM – 10:00 AM:** General Surgery ❌ *Rescheduled*
 * **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre)
-* **02:00 PM – 03:00 PM:** Obstetrics & Gynaecology (OBGY) — Disorders of Amniotic Fluid: Polyhydramnios & Oligohydramnios (OG 13.2) — Dr. Seema (Venue: Room 502)
-* **03:00 PM – 04:00 PM:** General Medicine — Physiological Effects, Evaluation and Steps in Stabilizing a Patient with Acute Volume Loss due to GI Bleed — Dr. Akshay Rasve (Venue: Room 502)
+* **01:00 PM – 02:00 PM:** FMT Lecture (Venue: Lecture Hall 402)
+* **02:00 PM – 03:00 PM:** General Medicine Lecture (Venue: Lecture Hall 402) ⚠️ *(Rescheduled from 3–4 PM; OBGY postponed)*
+* **03:00 PM Onwards:** College dismissed / Evening Micro Study Block
 
 ---
 
