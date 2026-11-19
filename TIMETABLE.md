@@ -30,6 +30,44 @@
 
 ---
 
+## 🗓️ Overall Whole Week Generalised Timetable (Batch 2024 Master Rhythm)
+*Announced: CR Mitesh Gohil | Venue: Room 402 / 502*
+
+### Weekly Rhythm
+* **Monday:**
+  - 09:00 AM – 10:00 AM: Medicine
+  - 10:00 AM – 01:00 PM: Clinical Posting
+  - 01:00 PM – 02:00 PM: General Surgery
+  - 02:00 PM – 03:00 PM: FMT
+  - 03:00 PM – 04:00 PM: Community Medicine
+* **Tuesday:**
+  - 08:00 AM – 09:00 AM: Ophthalmology
+  - 09:00 AM – 10:00 AM: OBGY
+  - 10:00 AM – 01:00 PM: Clinical Posting
+  - 01:00 PM – 02:00 PM: Community Medicine
+  - 02:00 PM – 03:00 PM: ENT
+  - 03:00 PM – 04:00 PM: Paediatrics
+* **Wednesday:**
+  - 09:00 AM – 10:00 AM: General Surgery
+  - 10:00 AM – 01:00 PM: Clinical Posting
+  - 01:00 PM – 02:00 PM: FMT
+  - 02:00 PM – 03:00 PM: OBGY
+  - 03:00 PM – 04:00 PM: Medicine
+* **Thursday:**
+  - 09:00 AM – 10:00 AM: ENT
+  - 10:00 AM – 01:00 PM: Clinical Posting
+  - 01:00 PM – 02:00 PM: Ophthalmology
+* **Friday:**
+  - 09:00 AM – 10:00 AM: FMT
+  - 10:00 AM – 01:00 PM: Clinical Posting
+  - 01:00 PM – 02:00 PM: General Surgery
+  - 02:00 PM – 03:00 PM: Community Medicine
+* **Saturday:**
+  - 09:00 AM – 10:00 AM: Paediatrics
+  - 10:00 AM – 01:00 PM: Clinical Posting
+
+---
+
 ## 📅 Daily Timetable — 27-Oct-2026 (Tuesday)
 * **08:00 AM – 09:00 AM:** Ophthalmology (Venue: Room 402)
 * **09:00 AM – 10:00 AM:** Obstetrics & Gynaecology (OBGY)
@@ -136,16 +174,16 @@
 ## 📅 Daily Timetable — 18-Nov-2026 (Wednesday) ⚠️ Rescheduled
 * **09:00 AM – 10:00 AM:** General Surgery ❌ *Rescheduled*
 * **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre)
-* **01:00 PM – 02:00 PM:** FMT Lecture (Venue: Lecture Hall 402)
-* **02:00 PM – 03:00 PM:** General Medicine Lecture (Venue: Lecture Hall 402) ⚠️ *(Rescheduled from 3–4 PM; OBGY postponed)*
-* **03:00 PM Onwards:** College dismissed / Evening Micro Study Block
+* **01:00 PM – 02:00 PM:** FMT Lecture — Mechanical Injury — Dr. Pawan Sir (Venue: Room 402) ⚠️ **STRICT ATTENDANCE WARNING:** FMT Dept issued strict instruction regarding low attendance; no relaxation for university eligibility.
+* **02:00 PM – 03:00 PM:** General Medicine Lecture (Venue: Room 402) ⚠️ *(Rescheduled from 3–4 PM / 17-Nov 2 PM lecture postponed; OBGY postponed)*
+* **03:00 PM Onwards:** College dismissed
 
 ---
 
-## 📅 Daily Timetable — 19-Nov-2026 (Thursday) ✅ Verified
+## 📅 Daily Timetable — 19-Nov-2026 (Thursday) ✅ Verified (All lec as per schedule in Room 402)
 * **09:00 AM – 10:00 AM:** ENT Lecture — Chronic Otitis Media (Squamosal Type / Cholesteatoma) — Dr. Vicky Khattar (Venue: Room 402)
 * **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OPD Day** (Roll 38–56: Out-Patient Dept)
-* **01:00 PM – 02:00 PM:** Ophthalmology Lecture — Eyelid Malpositions: Ptosis, Entropion, Ectropion, Lid Lag, Lagophthalmos — Dr. Rashmi (Venue: Room 402 / 302)
+* **01:00 PM – 02:00 PM:** Ophthalmology Lecture — Eyelid Malpositions: Ptosis, Entropion, Ectropion, Lid Lag, Lagophthalmos — Dr. Rashmi (Venue: Room 402)
 
 ---
 

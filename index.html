@@ -640,10 +640,49 @@ const N={
  '2026-11-18':[
   [1,155,'9–10 am','Surgery – Rescheduled',1],
   [38,56,'10 am–1 pm','ENT Posting – OT (Operation Theatre)',0],
-  [1,155,'1–2 pm','FMT (Lec hall 402)',1],
+  [1,155,'1–2 pm','FMT: Mechanical Injury – Dr. Pawan Sir (Lec hall 402) ⚠️ Strict attendance',1],
   [1,155,'2–3 pm','Medicine: Acute Volume Loss in GI Bleed – Dr. Akshay Rasve (Lec hall 402)',1]
+ ],
+ '2026-11-19':[
+  [1,155,'9–10 am','ENT: Chronic Otitis Media – Dr. Vicky Khattar (Venue 402)',0],
+  [38,56,'10 am–1 pm','ENT Posting – OPD (Out-Patient Dept)',0],
+  [1,155,'1–2 pm','Ophthalmology: Eyelid Malpositions – Dr. Rashmi (Venue 402)',0]
  ]
 };
+const DEFAULT_WEEKLY = {
+ 1: [
+  ['9–10 am', 'Medicine', 0],
+  ['1–2 pm', 'Surgery', 0],
+  ['2–3 pm', 'FMT', 0],
+  ['3–4 pm', 'Community Medicine', 0]
+ ],
+ 2: [
+  ['8–9 am', 'Ophthalmology', 0],
+  ['9–10 am', 'OBGY', 0],
+  ['1–2 pm', 'Community Medicine', 0],
+  ['2–3 pm', 'ENT', 0],
+  ['3–4 pm', 'Paediatrics', 0]
+ ],
+ 3: [
+  ['9–10 am', 'Surgery', 0],
+  ['1–2 pm', 'FMT', 0],
+  ['2–3 pm', 'OBGY', 0],
+  ['3–4 pm', 'Medicine', 0]
+ ],
+ 4: [
+  ['9–10 am', 'ENT', 0],
+  ['1–2 pm', 'Ophthalmology', 0]
+ ],
+ 5: [
+  ['9–10 am', 'FMT', 0],
+  ['1–2 pm', 'Surgery', 0],
+  ['2–3 pm', 'Community Medicine', 0]
+ ],
+ 6: [
+  ['9–10 am', 'Paediatrics', 0]
+ ]
+};
+
 function getDailyClasses(targetDate, r) {
  const key = toISO(targetDate);
  const br = BR.find(x => targetDate >= D(x[0]) && targetDate <= D(x[1]));
@@ -679,14 +718,19 @@ function getDailyClasses(targetDate, r) {
   const e = ENT_SCHEDULE[key];
   it.push([e.tm, 'ENT: ' + e.t + ' – ' + e.f + ' (' + e.v + ')', 0]);
  }
- if (targetDate.getDay() === 2 && !it.some(x => x[1].toLowerCase().includes('paediatrics'))) {
-  it.push(['3–4 pm', 'Paediatrics (Lecture Hall 402/502)', 0]);
+ const w = targetDate.getDay();
+ if (DEFAULT_WEEKLY[w]) {
+  DEFAULT_WEEKLY[w].forEach(([tm, subj, flg]) => {
+   const tOrder = timeOrder(tm);
+   if (!it.some(x => timeOrder(x[0]) === tOrder)) {
+    it.push([tm, subj, flg]);
+   }
+  });
  }
  if (!it.some(x => x[0].includes('10 am') || x[1].toLowerCase().includes('posting') || x[1].includes('OT') || x[1].includes('OPD') || x[1].includes('clerkship'))) {
   if (r >= 1 && r <= 37 && BATCH_A_CLERKSHIP[key]) {
    it.push(['10 am–1 pm', BATCH_A_CLERKSHIP[key], 0]);
   } else if (r >= 38 && r <= 56 && targetDate >= D('2026-10-26') && targetDate <= D('2026-11-29')) {
-   const w = targetDate.getDay();
    if ([1, 3, 5].includes(w)) it.push(['10 am–1 pm', 'ENT Posting – OT (Operation Theatre)', 0]);
    else if ([2, 4, 6].includes(w)) it.push(['10 am–1 pm', 'ENT Posting – OPD (Out-Patient Dept)', 0]);
   } else {
