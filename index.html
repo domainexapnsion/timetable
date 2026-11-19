@@ -637,10 +637,8 @@ const N={
   [1,155,'3–4 pm','Paediatrics',0]
  ],
  '2026-11-18':[
-  [1,155,'9–10 am','Surgery – Rescheduled',1],
   [38,56,'10 am–1 pm','ENT Posting – OT (Operation Theatre)',0],
-  [1,155,'1–2 pm','FMT: Mechanical Injury – Dr. Pawan Sir (Lec hall 402) ⚠️ Strict attendance',1],
-  [1,155,'2–3 pm','Medicine: Acute Volume Loss in GI Bleed – Dr. Akshay Rasve (Lec hall 402)',1]
+  [1,155,'1–2 pm','FMT: Mechanical Injury – Dr. Pawan Sir (Lec hall 402) ⚠️ Strict attendance',1]
  ],
  '2026-11-19':[
   [1,155,'9–10 am','ENT: Chronic Otitis Media – Dr. Vicky Khattar (Venue 402)',0],
@@ -682,6 +680,21 @@ const DEFAULT_WEEKLY = {
  ]
 };
 
+function isNotConducted(title) {
+ if (!title) return false;
+ const t = title.toLowerCase();
+ return t.includes('rescheduled') || 
+        t.includes('postponed') || 
+        t.includes('cancelled') || 
+        t.includes('canceled') || 
+        t.includes('not conducted') || 
+        t.includes('did not happen') || 
+        t.includes("didn't happen") || 
+        t.includes('holiday') || 
+        t.includes('dismissed') ||
+        t.includes('college dismissed');
+}
+
 function getDailyClasses(targetDate, r) {
  const key = toISO(targetDate);
  const br = BR.find(x => targetDate >= D(x[0]) && targetDate <= D(x[1]));
@@ -690,41 +703,51 @@ function getDailyClasses(targetDate, r) {
  }
  if (targetDate.getDay() === 0) return [];
  const it = [];
- if (N[key]) {
-  N[key].forEach(x => { if (r >= x[0] && r <= x[1]) it.push([x[2], x[3], x[4]]); });
- }
- if (typeof SURGERY_SCHEDULE !== 'undefined' && SURGERY_SCHEDULE[key] && !it.some(x => x[1].toLowerCase().includes('surgery'))) {
-  const s = SURGERY_SCHEDULE[key];
-  it.push(['9–10 am', 'Surgery: ' + s.t + ' – ' + s.f + ' (Venue 502)', 0]);
- }
- if (typeof CM_SCHEDULE !== 'undefined' && CM_SCHEDULE[key] && !it.some(x => x[1].toLowerCase().includes('community medicine') || x[1].toLowerCase().includes('cm:'))) {
-  const c = CM_SCHEDULE[key];
-  it.push([c.tm, 'Community Medicine: ' + c.t + ' – ' + c.f + ' (Venue 402)', 0]);
- }
- if (typeof MEDICINE_SCHEDULE !== 'undefined' && MEDICINE_SCHEDULE[key] && !it.some(x => x[1].toLowerCase().includes('medicine'))) {
-  const m = MEDICINE_SCHEDULE[key];
-  it.push([m.tm, 'Medicine: ' + m.t + ' – ' + m.f + ' (' + m.v + ')', 0]);
- }
- if (typeof OPHTHAL_SCHEDULE !== 'undefined' && OPHTHAL_SCHEDULE[key] && !it.some(x => x[1].toLowerCase().includes('ophthal'))) {
-  const o = OPHTHAL_SCHEDULE[key];
-  it.push([o.tm, 'Ophthalmology: ' + o.t + ' – ' + o.f + ' (' + o.v + ')', 0]);
- }
- if (typeof OBGY_SCHEDULE !== 'undefined' && OBGY_SCHEDULE[key] && !it.some(x => x[1].toLowerCase().includes('obgy') || x[1].toLowerCase().includes('obstetrics'))) {
-  const b = OBGY_SCHEDULE[key];
-  it.push([b.tm, 'OBGY: ' + b.t + ' – ' + b.f + ' (' + b.v + ')', 0]);
- }
- if (typeof ENT_SCHEDULE !== 'undefined' && ENT_SCHEDULE[key] && !it.some(x => (x[1].toLowerCase().includes('ent') || x[1].toLowerCase().includes('otorhinolaryngology')) && !x[1].toLowerCase().includes('posting'))) {
-  const e = ENT_SCHEDULE[key];
-  it.push([e.tm, 'ENT: ' + e.t + ' – ' + e.f + ' (' + e.v + ')', 0]);
- }
  const w = targetDate.getDay();
- if (DEFAULT_WEEKLY[w]) {
-  DEFAULT_WEEKLY[w].forEach(([tm, subj, flg]) => {
-   const tOrder = timeOrder(tm);
-   if (!it.some(x => timeOrder(x[0]) === tOrder)) {
-    it.push([tm, subj, flg]);
+ if (N[key]) {
+  N[key].forEach(x => {
+   if (r >= x[0] && r <= x[1]) {
+    if (!isNotConducted(x[3])) {
+     it.push([x[2], x[3], x[4]]);
+    }
    }
   });
+ } else {
+  if (DEFAULT_WEEKLY[w]) {
+   DEFAULT_WEEKLY[w].forEach(([tm, subj, flg]) => {
+    it.push([tm, subj, flg]);
+   });
+  }
+  if (typeof SURGERY_SCHEDULE !== 'undefined' && SURGERY_SCHEDULE[key]) {
+   const s = SURGERY_SCHEDULE[key];
+   const idx = it.findIndex(x => x[1].toLowerCase().includes('surgery'));
+   if (idx >= 0) it[idx] = ['9–10 am', 'Surgery: ' + s.t + ' – ' + s.f + ' (Venue 502)', 0];
+  }
+  if (typeof CM_SCHEDULE !== 'undefined' && CM_SCHEDULE[key]) {
+   const c = CM_SCHEDULE[key];
+   const idx = it.findIndex(x => x[1].toLowerCase().includes('community medicine') || x[1].toLowerCase().includes('cm:'));
+   if (idx >= 0) it[idx] = [c.tm, 'Community Medicine: ' + c.t + ' – ' + c.f + ' (Venue 402)', 0];
+  }
+  if (typeof MEDICINE_SCHEDULE !== 'undefined' && MEDICINE_SCHEDULE[key]) {
+   const m = MEDICINE_SCHEDULE[key];
+   const idx = it.findIndex(x => x[1].toLowerCase().includes('medicine'));
+   if (idx >= 0) it[idx] = [m.tm, 'Medicine: ' + m.t + ' – ' + m.f + ' (' + m.v + ')', 0];
+  }
+  if (typeof OPHTHAL_SCHEDULE !== 'undefined' && OPHTHAL_SCHEDULE[key]) {
+   const o = OPHTHAL_SCHEDULE[key];
+   const idx = it.findIndex(x => x[1].toLowerCase().includes('ophthal'));
+   if (idx >= 0) it[idx] = [o.tm, 'Ophthalmology: ' + o.t + ' – ' + o.f + ' (' + o.v + ')', 0];
+  }
+  if (typeof OBGY_SCHEDULE !== 'undefined' && OBGY_SCHEDULE[key]) {
+   const b = OBGY_SCHEDULE[key];
+   const idx = it.findIndex(x => x[1].toLowerCase().includes('obgy') || x[1].toLowerCase().includes('obstetrics'));
+   if (idx >= 0) it[idx] = [b.tm, 'OBGY: ' + b.t + ' – ' + b.f + ' (' + b.v + ')', 0];
+  }
+  if (typeof ENT_SCHEDULE !== 'undefined' && ENT_SCHEDULE[key]) {
+   const e = ENT_SCHEDULE[key];
+   const idx = it.findIndex(x => (x[1].toLowerCase().includes('ent') || x[1].toLowerCase().includes('otorhinolaryngology')) && !x[1].toLowerCase().includes('posting'));
+   if (idx >= 0) it[idx] = [e.tm, 'ENT: ' + e.t + ' – ' + e.f + ' (' + e.v + ')', 0];
+  }
  }
  if (!it.some(x => x[0].includes('10 am') || x[1].toLowerCase().includes('posting') || x[1].includes('OT') || x[1].includes('OPD') || x[1].includes('clerkship'))) {
   if (r >= 1 && r <= 37 && BATCH_A_CLERKSHIP[key]) {
@@ -828,10 +851,8 @@ const SUBJ_CONFIG = {
 };
 
 function classifySlot(title, isPrac) {
+  if (isNotConducted(title)) return null;
   const t = title.toLowerCase();
-  if (t.includes('rescheduled to') || t.startsWith('rescheduled') || t.includes('postponed') || t.includes('cancelled') || t.includes('canceled') || t.includes('holiday') || t.includes('meeting') || t.includes('reminder')) {
-    return null;
-  }
   if (isPrac || t.includes('posting') || t.includes('ot (operation') || t.includes('opd (out-patient') || t.includes('clerkship')) {
     return 'Posting';
   }
@@ -1091,20 +1112,7 @@ function collectAbsenceDetails() {
     const k = toISO(cur);
     const br = BR.find(x => cur >= D(x[0]) && cur <= D(x[1]));
     if (!br && cur.getDay() !== 0) {
-      const it = [];
-      if (N[k]) { N[k].forEach(x => { if (roll >= x[0] && roll <= x[1]) it.push([x[2], x[3], x[4]]) }); }
-      if (SURGERY_SCHEDULE[k] && !it.some(x => x[1].toLowerCase().includes('surgery'))) {
-        it.push(['9–10 am', 'Surgery: ' + SURGERY_SCHEDULE[k].t, 0]);
-      }
-      if (CM_SCHEDULE[k] && !it.some(x => x[1].toLowerCase().includes('community medicine'))) {
-        it.push([CM_SCHEDULE[k].tm, 'CM: ' + CM_SCHEDULE[k].t, 0]);
-      }
-      if (!it.some(x => x[0].includes('10 am') || x[1].toLowerCase().includes('posting') || x[1].includes('OT') || x[1].includes('OPD') || x[1].includes('clerkship'))) {
-        if (roll >= 38 && roll <= 56) {
-          const w = cur.getDay();
-          it.push(['10 am–1 pm', w % 2 === 1 ? 'ENT Posting (OT)' : 'ENT Posting (OPD)', 0]);
-        }
-      }
+      const it = getDailyClasses(cur, roll !== null ? roll : 45);
       it.forEach(x => {
         const tmNum = timeOrder(x[0]);
         const slotKey = k + '_' + tmNum;
