@@ -1,0 +1,571 @@
+{
+  "Sheet1": [
+    [
+      "Third MBBS (Part 1) AY 2026 Master TT",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "",
+      "8AM TO 9 AM",
+      "1:00 PM TO 2:00 PM",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2026-10-27 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Physiology of vision",
+      "",
+      "Dr. Sanoja",
+      "",
+      ""
+    ],
+    [
+      "2026-10-29 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Myopia, Astigmatism",
+      "Dr. Rashmi",
+      "",
+      ""
+    ],
+    [
+      "2026-11-03 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Hypermetropia, Accommodation, Presbyopia",
+      "",
+      "Dr. Salma",
+      "",
+      ""
+    ],
+    [
+      "2026-11-05 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Refractive surgery",
+      "Dr. Twinkle",
+      "",
+      ""
+    ],
+    [
+      "2026-11-17 00:00:00",
+      "TUESDAY",
+      "OPHTHAL lid and adnexa including Hordeolum externum / internum, blepharitis, preseptal cellulitis , dacryocystitis , hemangioma, dermoid",
+      "",
+      "Dr. Rashmi",
+      "",
+      ""
+    ],
+    [
+      "2026-11-19 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL lid and adnexa including ptosis , entropion, ectropion, lid lag, lagophthalmos",
+      "Dr. Rashmi",
+      "",
+      ""
+    ],
+    [
+      "2026-11-26 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Proptosis",
+      "Dr. Darshana ma'am / Dr.Rashmi",
+      "",
+      ""
+    ],
+    [
+      "2026-12-01 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Infective Conjunctivitis",
+      "",
+      "Dr. Shraddha",
+      "",
+      ""
+    ],
+    [
+      "2026-12-03 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Non-infective Conjunctivitis",
+      "Dr. Anujja",
+      "",
+      ""
+    ],
+    [
+      "2026-12-08 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Dry eye",
+      "",
+      "Dr. Sanoja",
+      "",
+      ""
+    ],
+    [
+      "2026-12-10 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Corneal ulcer",
+      "Dr. Salma",
+      "",
+      ""
+    ],
+    [
+      "2026-12-15 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Infective Keratitis",
+      "",
+      "Dr. Twinkle",
+      "",
+      ""
+    ],
+    [
+      "2026-12-17 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Non-infective Keratitis",
+      "Dr. Twinkle",
+      "",
+      ""
+    ],
+    [
+      "2026-12-22 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Corneal Blindness",
+      "",
+      "Dr. Salma",
+      "",
+      ""
+    ],
+    [
+      "2026-12-24 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Keratoplasty",
+      "Dr. Sanoja",
+      "",
+      ""
+    ],
+    [
+      "2026-12-29 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Eye donation, Eye banking",
+      "",
+      "Dr. Rashmi",
+      "",
+      ""
+    ],
+    [
+      "2026-12-31 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Uveitis- anterior, intermediate, posterior",
+      "Dr. Shraddha",
+      "",
+      ""
+    ],
+    [
+      "2027-01-05 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Uveitis- acute/chronic, granulomatous/Non-granulomatous, specific types",
+      "",
+      "Dr. Shraddha",
+      "",
+      ""
+    ],
+    [
+      "2027-01-07 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Aqueous humour dynamics, IOP, Angle assessment",
+      "Dr. Darshana ma'am/ Dr. Sanoja",
+      "",
+      ""
+    ],
+    [
+      "2027-01-12 00:00:00",
+      "TUESDAY",
+      "OPHTHAL POAG, visual fields",
+      "",
+      "Dr. Anujja",
+      "",
+      ""
+    ],
+    [
+      "2027-01-14 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL PACG",
+      "Dr. Sanoja",
+      "",
+      ""
+    ],
+    [
+      "2027-01-19 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Secondary Glaucoma, Congenital Glaucoma",
+      "",
+      "Dr. Rashmi",
+      "",
+      ""
+    ],
+    [
+      "2027-01-28 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Cataract- aetio-pathogenesis , stages of maturation and complications",
+      "Dr. Salma",
+      "",
+      ""
+    ],
+    [
+      "2027-02-02 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Cataract surgery",
+      "",
+      "Dr. Salma",
+      "",
+      ""
+    ],
+    [
+      "2027-02-04 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Vascular diseases of retina",
+      "Dr. Shraddha",
+      "",
+      ""
+    ],
+    [
+      "2027-02-09 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Fundus examination techniques & RD",
+      "",
+      "Dr. Shraddha",
+      "",
+      ""
+    ],
+    [
+      "2027-02-11 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Optic nerve diseases",
+      "Dr. Nayana ma'am/ Dr. Shraddha",
+      "",
+      ""
+    ],
+    [
+      "2027-02-16 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Visual pathway lesions",
+      "",
+      "Dr. Anujja",
+      "",
+      ""
+    ],
+    [
+      "2027-02-18 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL Strabismus",
+      "Dr. Nayana ma'am/ Dr. Salma",
+      "",
+      ""
+    ],
+    [
+      "2027-02-23 00:00:00",
+      "TUESDAY",
+      "OPHTHAL Stabilization, initial management and indication for referral in a patient with ocular injury",
+      "",
+      "Dr. Anujja",
+      "",
+      ""
+    ],
+    [
+      "2027-02-25 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL SDL Causes of Glaucoma associated with shallow and deep anterior chamber",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-03-02 00:00:00",
+      "TUESDAY",
+      "OPHTHAL SDL Investigations in Glaucoma",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-03-04 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL SDL Treatment in Glaucoma",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-03-09 00:00:00",
+      "TUESDAY",
+      "OPHTHAL SDL the types and the mechanism by which strabismus leads to amblyopia",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-03-11 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL SDL Amblyopia Management",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-03-16 00:00:00",
+      "TUESDAY",
+      "OPHTHAL SDL Corneal blindness causes",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-03-18 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL SDL Indications of Keratoplasty",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-03-23 00:00:00",
+      "TUESDAY",
+      "OPHTHAL SDL Types of Keratoplasty",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-03-25 00:00:00",
+      "THURSDAY",
+      "",
+      "OPHTHAL SDL Causes of avoidable blindness",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-03-30 00:00:00",
+      "TUESDAY",
+      "Ophthal SDL- Eye donation and eye banking, AETCOM2",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-04-01 00:00:00",
+      "THURSDAY",
+      "",
+      "Ophthal SGT Batch A- Gonioscopic anatomy of angle of anterior chamber",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-04-06 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT Batch A- Aqueous production and maintenance of IOP",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-04-08 00:00:00",
+      "THURSDAY",
+      "",
+      "Ophthal SGT Batch A- Refractive errors \u2013 myopia, Astigmatism",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-04-13 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT Batch A- Refractive errors \u2013 Hypermetropia and aphakia",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-04-20 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT Batch A- Visual pathway",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-04-22 00:00:00",
+      "THURSDAY",
+      "",
+      "Ophthal SGT Batch A- Normal Fundus & Technique of fundus examination",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-04-27 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT Batch A- Anatomy of orbit, surgical spaces of orbit and SOF, Proptosis",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-04-29 00:00:00",
+      "THURSDAY",
+      "",
+      "Ophthal SGT Batch A- Follicular conjunctivitis and trachoma",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-05-04 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT Batch A- Dry eye",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-05-06 00:00:00",
+      "THURSDAY",
+      "",
+      "Ophthal SGT Batch A- Keratoconus",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-05-11 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT Batch A- Differential diagnosis of limbal nodule",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-05-13 00:00:00",
+      "THURSDAY",
+      "",
+      "Ophthal SGT Batch A- Primary open angle glaucoma",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-05-18 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT Batch A- Secondary glaucoma",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-06-01 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT Batch A- Diabetic retinopathy, Hypertensive retinopathy",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-06-03 00:00:00",
+      "THURSDAY",
+      "",
+      "Ophthal SGT Batch A- Optic neuritis and optic atrophy, Papilloedema",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-06-08 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT Batch A- Visual pathway lesions",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-06-10 00:00:00",
+      "THURSDAY",
+      "",
+      "Ophthal SGT Batch A- Abnormal pupillary reactions",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-06-15 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT, SDL Batch A- Anatomy of cornea and maintenance of corneal transparency",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-06-17 00:00:00",
+      "THURSDAY",
+      "",
+      "Ophthal SGT, SDL Batch A- Anatomy and physiology of lacrimal apparatus",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-06-22 00:00:00",
+      "TUESDAY",
+      "Ophthal SGT, SDL Batch A- Anatomy and metabolism of lens, Accommodation",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "2027-06-24 00:00:00",
+      "THURSDAY",
+      "",
+      "Ophthal SGT, SDL Batch A- Anatomy of  EOM, 3rd , 6th cranial nerve",
+      "",
+      "",
+      ""
+    ]
+  ]
+}
