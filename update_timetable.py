@@ -185,10 +185,14 @@ def update_html(date_str, entries):
     if date_pattern.search(content):
         content = date_pattern.sub(formatted_entry + r"\2", content)
     else:
-        n_close = content.find("};\nfunction tt(")
+        n_close = content.find("};\nconst DEFAULT_WEEKLY")
+        if n_close == -1: n_close = content.find("};\nfunction tt(")
         if n_close == -1: n_close = content.find("}; function tt(")
         if n_close == -1: n_close = content.find("};\n\nfunction tt(")
         
+        if n_close == -1:
+            raise ValueError("Could not find closing anchor for const N={...} in index.html")
+            
         last_bracket = content.rfind("]", 0, n_close)
         if last_bracket != -1:
             content = content[:last_bracket+1] + ",\n" + formatted_entry + content[last_bracket+1:]

@@ -644,6 +644,12 @@ const N={
   [1,155,'9–10 am','ENT: Chronic Otitis Media – Dr. Vicky Khattar (Venue 402)',0],
   [38,56,'10 am–1 pm','ENT Posting – OPD (Out-Patient Dept)',0],
   [1,155,'1–2 pm','Ophthalmology: Eyelid Malpositions – Dr. Rashmi (Venue 402)',0]
+ ],
+ '2026-11-20':[
+  [38,56,'10 am–1 pm','ENT Posting – OT (Operation Theatre)',0],
+  [1,155,'1–2 pm','FMT Practical / Lecture (Venue 402) ⚠️ Bring FMT Journal strictly!',1],
+  [1,155,'2–3 pm','General Surgery (Venue 402)',0],
+  [1,155,'3–4 pm','Community Medicine: Healthcare of Community & Community Diagnosis – Dr. Erum Naaz (Venue 402)',0]
  ]
 };
 const DEFAULT_WEEKLY = {
@@ -1153,13 +1159,7 @@ async function syncWithGoogleSheets(userInitiated) {
       thCushion: $('thCushion')?.textContent || '',
       prTot: parseInt($('prSub')?.textContent.match(/Attended:\s*\d+\s*\/\s*(\d+)/)?.[1] || 0, 10),
       prAtt: parseInt($('prSub')?.textContent.match(/Attended:\s*(\d+)/)?.[1] || 0, 10),
-      prMiss: parseInt($('prSub')?.textContent.match(/Missed:\s*(\d+)/)?.[1],
- '2026-11-20':[
-  [38,56,'10 am–1 pm','ENT Posting – OT (Operation Theatre)',0],
-  [1,155,'1–2 pm','FMT Practical / Lecture (Venue 402) ⚠️ Bring FMT Journal strictly!',1],
-  [1,155,'2–3 pm','General Surgery (Venue 402)',0],
-  [1,155,'3–4 pm','Community Medicine: Healthcare of Community & Community Diagnosis – Dr. Erum Naaz (Venue 402)',0]
- ] || 0, 10),
+      prMiss: parseInt($('prSub')?.textContent.match(/Missed:\s*(\d+)/)?.[1] || 0, 10),
       prPct: parseFloat($('prPct')?.textContent || 0),
       prCushion: $('prCushion')?.textContent || ''
     },
