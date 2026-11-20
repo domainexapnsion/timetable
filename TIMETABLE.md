@@ -191,7 +191,7 @@
 * **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre)
 * **01:00 PM – 02:00 PM:** FMT Practical / Lecture (Venue: Room 402) ⚠️ **STRICT MANDATORY: Bring FMT Journal for practical!**
 * **02:00 PM – 03:00 PM:** General Surgery Lecture (Venue: Room 402)
-* **03:00 PM – 04:00 PM:** Community Medicine Lecture — Healthcare of Community & Community Diagnosis — Dr. Erum Naaz (Venue: Room 402)
+* **03:00 PM – 04:00 PM:** Community Medicine Lecture — Healthcare of Community & Community Diagnosis — CANCELLED ❌ (Venue: Room 402)
 
 ---
 
