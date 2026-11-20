@@ -46,7 +46,7 @@
   - 10:00 AM – 01:00 PM: Clinical Posting
   - 01:00 PM – 02:00 PM: Community Medicine
   - 02:00 PM – 03:00 PM: ENT
-  - 03:00 PM – 04:00 PM: Paediatrics
+  - 03:00 PM – 04:00 PM: Paediatrics ⚠️ *(Not commenced until further notice — awaiting schedule)*
 * **Wednesday:**
   - 09:00 AM – 10:00 AM: General Surgery
   - 10:00 AM – 01:00 PM: Clinical Posting
@@ -63,7 +63,7 @@
   - 01:00 PM – 02:00 PM: General Surgery
   - 02:00 PM – 03:00 PM: Community Medicine
 * **Saturday:**
-  - 09:00 AM – 10:00 AM: Paediatrics
+  - 09:00 AM – 10:00 AM: Paediatrics ⚠️ *(Not commenced until further notice — awaiting schedule)*
   - 10:00 AM – 01:00 PM: Clinical Posting
 
 ---
