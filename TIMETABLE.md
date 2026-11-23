@@ -195,6 +195,16 @@
 
 ---
 
+## 📅 Daily Timetable — 23-Nov-2026 (Monday) ⚠️ Updated (CR Mitesh TNMC)
+* **09:00 AM – 10:00 AM:** Medicine Lecture (Venue: Room 402/502) ⚠️ **Attendance Guaranteed:** Everybody marked present per CR; attendance sorted
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre / Roll 57–75: Wards/OPD)
+* **01:00 PM – 02:00 PM:** General Surgery (SGD/SDL) — **Pathophysiology of shock, types of shock** — Faculty: Lect. of Dr. JSP Unit (Venue: Room 502) ⚠️ **Mandatory Pre-Read:** "Read and come" per CR announcement
+* **02:00 PM – 03:00 PM:** FMT Lecture — **Mechanical injuries-II:** Define, describe and classify different types of mechanical injuries (abrasion, bruise, laceration, stab wound, incised wound, chop wound, defense wound, self-inflicted/fabricated wounds) (Venue: Room 402/502)
+* **03:00 PM – 04:00 PM:** Community Medicine Lecture (Venue: Room 402/502)
+* *Note on Paediatrics:* Confirmed suspended until further notice (no schedule released).
+
+---
+
 ## 📅 Daily Timetable — 21-Nov-2026 (Saturday) ✅ Verified
 * **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OPD Day** (Roll 38–56: Out-Patient Dept)
 * *Note:* Posting session only. No afternoon theory lectures scheduled.
@@ -306,6 +316,214 @@
 * **Lecture 24 • 05-May-2027 (Wed)**
   - Topic: Occlusive Arterial Diseases
   - Faculty: Dr. Rajesh Patil
+
+---
+
+### 📋 CBME Small Group Discussion (SGD) / Self-Directed Learning (SDL) Schedule (Oct 2026 – Apr 2027)
+* **Source:**  (Released by Dept of General Surgery)
+* **Venues & Timings:**
+  - **Mondays:** 01:00 PM – 02:00 PM (Venue: Room 502)
+  - **Fridays:** 02:00 PM – 03:00 PM (Venue: Room 402)
+
+* **26-Oct-2026 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Demonstration of Professionalism and empathy to the patient
+  - Faculty: Lect. Of Dr. RCM Unit
+  - Venue: Room 502
+
+* **30-Oct-2026 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Legal and ethical issues concerning organ donation.
+  - Faculty: Lect. Of Dr. RGP Unit
+  - Venue: Room 402
+
+* **02-Nov-2026 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Counsel patients and relatives on organ donation
+  - Faculty: Lect. Of Dr. JSP Unit
+  - Venue: Room 502
+
+* **06-Nov-2026 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Basic concepts of perioperative care – preoperative
+  - Faculty: Lect. Of Dr. RGP Unit
+  - Venue: Room 402
+
+* **16-Nov-2026 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Basic concepts of perioperative care – intraoperative
+  - Faculty: Lect. Of Dr. JSP Unit
+  - Venue: Room 502
+
+* **20-Nov-2026 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Basic concepts of perioperative care – postoperative
+  - Faculty: Lect. Of Dr. RGP Unit
+  - Venue: Room 402
+
+* **23-Nov-2026 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Pathophysiology of shock, types of shock
+  - Faculty: Lect. Of Dr. JSP Unit
+  - Venue: Room 502
+
+* **27-Nov-2026 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Clinical features of shock and its appropriate treatment
+  - Faculty: Lect. Of Dr. JSP Unit
+  - Venue: Room 402
+
+* **30-Nov-2026 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Blood transfusions
+  - Faculty: Lect. Of Dr. JSP Unit
+  - Venue: Room 502
+
+* **04-Dec-2026 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Burns
+  - Faculty: Lect. Of Dr. RGP Unit
+  - Venue: Room 402
+
+* **07-Dec-2026 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Medicolegal aspects in burn injuries
+  - Faculty: Lect. Of Dr. JSP Unit
+  - Venue: Room 502
+
+* **11-Dec-2026 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Types of wounds, plan and observe management of wounds.
+  - Faculty: Lect. Of Dr. RGP Unit
+  - Venue: Room 402
+
+* **14-Dec-2026 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Medico legal aspects of wounds
+  - Faculty: Lect. Of Dr. JSP Unit
+  - Venue: Room 502
+
+* **18-Dec-2026 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Aetiology and pathogenesis of surgical infections
+  - Faculty: Lect. Of NAB Unit
+  - Venue: Room 402
+
+* **21-Dec-2026 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Enumerate prophylactic and therapeutic antibiotics
+  - Faculty: Lect. Of Dr. RGP Unit
+  - Venue: Room 502
+
+* **28-Dec-2026 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Conduct of surgical audit and clinical research
+  - Faculty: Lect. Of NAB Unit
+  - Venue: Room 502
+
+* **01-Jan-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Principles of Ethics as it pertains to General Surgery
+  - Faculty: Lect. Of Dr. JSP Unit
+  - Venue: Room 402
+
+* **04-Jan-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Interpret the investigative data in a surgical patient
+  - Faculty: Lect. Of Dr. JSP Unit
+  - Venue: Room 502
+
+* **08-Jan-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Multidisciplinary approach in management of cancer
+  - Faculty: Lect. Of Dr. SBD Unit
+  - Venue: Room 402
+
+* **11-Jan-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Perioperative management of common surgical procedures
+  - Faculty: Lect. Of Dr. RCM Unit
+  - Venue: Room 502
+
+* **15-Jan-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Legal and ethical issues concerning organ donation
+  - Faculty: Lect. Of Dr. DJB Unit
+  - Venue: Room 402
+
+* **18-Jan-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Nutrition and Fluid Therapy
+  - Faculty: Lect. Of Dr. RCM Unit
+  - Venue: Room 502
+
+* **22-Jan-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Surgical approaches, incisions and the use of appropriate instruments in Surgery in general
+  - Faculty: Lect. Of Dr. DJB Unit
+  - Venue: Room 402
+
+* **25-Jan-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Materials and methods used for surgical wound closure and anastomosis (sutures, knots and needles)
+  - Faculty: Lect. Of Dr. RCM Unit
+  - Venue: Room 502
+
+* **29-Jan-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Hospital waste and appropriate methods of disposal
+  - Faculty: Lect. Of Dr. DJB Unit
+  - Venue: Room 402
+
+* **01-Feb-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Principles in management of mass casualties
+  - Faculty: Lect. Of Dr. RCM Unit
+  - Venue: Room 502
+
+* **05-Feb-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Skin and Subcutaneous Tissue
+  - Faculty: Lect. Of Dr. RCM Unit
+  - Venue: Room 402
+
+* **08-Feb-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Classification of cleft lip and palate.
+  - Faculty: Lect. Of Dr. RCM Unit
+  - Venue: Room 502
+
+* **12-Feb-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Oral and Oropharyngeal Cancer
+  - Faculty: Lect. Of NAB Unit
+  - Venue: Room 402
+
+* **15-Feb-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Disorders of salivary glands
+  - Faculty: Lect. Of Dr. SBD Unit
+  - Venue: Room 502
+
+* **22-Feb-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Treatment of disorders of salivary glands
+  - Faculty: Lect. Of NAB Unit
+  - Venue: Room 502
+
+* **26-Feb-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Applied anatomy and physiology of thyroid. Describe the etiopathogenesis of thyroidal swellings.
+  - Faculty: Lect. Of Dr. SBD Unit
+  - Venue: Room 402
+
+* **01-Mar-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Clinical examination of thyroid swellings
+  - Faculty: Lect. Of Dr. DJB Unit
+  - Venue: Room 502
+
+* **05-Mar-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Management of thyroid cancer
+  - Faculty: Lect. Of Dr. SBD Unit
+  - Venue: Room 402
+
+* **08-Mar-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Parathyroid glands
+  - Faculty: Lect. Of Dr. DJB Unit
+  - Venue: Room 502
+
+* **12-Mar-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Applied anatomy and appropriate investigations for breast disease
+  - Faculty: Lect. Of NAB Unit
+  - Venue: Room 402
+
+* **15-Mar-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Management of benign breast disease including infections of the breast
+  - Faculty: Lect. Of Dr. SBD Unit
+  - Venue: Room 502
+
+* **19-Mar-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Principles of treatment of occlusive arterial disease.
+  - Faculty: Lect. Of Dr. DJB Unit
+  - Venue: Room 402
+
+* **29-Mar-2027 (Mon) • 01:00 PM – 02:00 PM**
+  - Topic: Principles of management of DVT and Varicose veins and Lymphedema
+  - Faculty: Lect. Of Dr. JSP Unit
+  - Venue: Room 502
+
+* **02-Apr-2027 (Fri) • 02:00 PM – 03:00 PM**
+  - Topic: Ethics as it pertains to General Surgery.
+  - Faculty: Lect. Of Dr. SBD Unit
+  - Venue: Room 402
 
 ---
 

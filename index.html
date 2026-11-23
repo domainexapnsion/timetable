@@ -323,6 +323,48 @@ function render(){
   $('lab').textContent='All done';$('nm').textContent='Postings complete!';$('rg').textContent='Prelims Jun/Jul 2027 | University exam Aug 2027';$('bw').style.display='none';$('lf').textContent='';
  }
 }
+const SURGERY_SGD_SCHEDULE={
+ '2026-10-26':{t:'Demonstration of Professionalism and empathy to the patient',f:'Lect. Of Dr. RCM Unit',v:'502',tm:'1–2 pm'},
+ '2026-10-30':{t:'Legal and ethical issues concerning organ donation.',f:'Lect. Of Dr. RGP Unit',v:'402',tm:'2–3 pm'},
+ '2026-11-02':{t:'Counsel patients and relatives on organ donation',f:'Lect. Of Dr. JSP Unit',v:'502',tm:'1–2 pm'},
+ '2026-11-06':{t:'Basic concepts of perioperative care – preoperative',f:'Lect. Of Dr. RGP Unit',v:'402',tm:'2–3 pm'},
+ '2026-11-16':{t:'Basic concepts of perioperative care – intraoperative',f:'Lect. Of Dr. JSP Unit',v:'502',tm:'1–2 pm'},
+ '2026-11-20':{t:'Basic concepts of perioperative care – postoperative',f:'Lect. Of Dr. RGP Unit',v:'402',tm:'2–3 pm'},
+ '2026-11-23':{t:'Pathophysiology of shock, types of shock',f:'Lect. Of Dr. JSP Unit',v:'502',tm:'1–2 pm'},
+ '2026-11-27':{t:'Clinical features of shock and its appropriate treatment',f:'Lect. Of Dr. JSP Unit',v:'402',tm:'2–3 pm'},
+ '2026-11-30':{t:'Blood transfusions',f:'Lect. Of Dr. JSP Unit',v:'502',tm:'1–2 pm'},
+ '2026-12-04':{t:'Burns',f:'Lect. Of Dr. RGP Unit',v:'402',tm:'2–3 pm'},
+ '2026-12-07':{t:'Medicolegal aspects in burn injuries',f:'Lect. Of Dr. JSP Unit',v:'502',tm:'1–2 pm'},
+ '2026-12-11':{t:'Types of wounds, plan and observe management of wounds.',f:'Lect. Of Dr. RGP Unit',v:'402',tm:'2–3 pm'},
+ '2026-12-14':{t:'Medico legal aspects of wounds',f:'Lect. Of Dr. JSP Unit',v:'502',tm:'1–2 pm'},
+ '2026-12-18':{t:'Aetiology and pathogenesis of surgical infections',f:'Lect. Of NAB Unit',v:'402',tm:'2–3 pm'},
+ '2026-12-21':{t:'Enumerate prophylactic and therapeutic antibiotics',f:'Lect. Of Dr. RGP Unit',v:'502',tm:'1–2 pm'},
+ '2026-12-28':{t:'Conduct of surgical audit and clinical research',f:'Lect. Of NAB Unit',v:'502',tm:'1–2 pm'},
+ '2027-01-01':{t:'Principles of Ethics as it pertains to General Surgery',f:'Lect. Of Dr. JSP Unit',v:'402',tm:'2–3 pm'},
+ '2027-01-04':{t:'Interpret the investigative data in a surgical patient',f:'Lect. Of Dr. JSP Unit',v:'502',tm:'1–2 pm'},
+ '2027-01-08':{t:'Multidisciplinary approach in management of cancer',f:'Lect. Of Dr. SBD Unit',v:'402',tm:'2–3 pm'},
+ '2027-01-11':{t:'Perioperative management of common surgical procedures',f:'Lect. Of Dr. RCM Unit',v:'502',tm:'1–2 pm'},
+ '2027-01-15':{t:'Legal and ethical issues concerning organ donation',f:'Lect. Of Dr. DJB Unit',v:'402',tm:'2–3 pm'},
+ '2027-01-18':{t:'Nutrition and Fluid Therapy',f:'Lect. Of Dr. RCM Unit',v:'502',tm:'1–2 pm'},
+ '2027-01-22':{t:'Surgical approaches, incisions and the use of appropriate instruments in Surgery in general',f:'Lect. Of Dr. DJB Unit',v:'402',tm:'2–3 pm'},
+ '2027-01-25':{t:'Materials and methods used for surgical wound closure and anastomosis (sutures, knots and needles)',f:'Lect. Of Dr. RCM Unit',v:'502',tm:'1–2 pm'},
+ '2027-01-29':{t:'Hospital waste and appropriate methods of disposal',f:'Lect. Of Dr. DJB Unit',v:'402',tm:'2–3 pm'},
+ '2027-02-01':{t:'Principles in management of mass casualties',f:'Lect. Of Dr. RCM Unit',v:'502',tm:'1–2 pm'},
+ '2027-02-05':{t:'Skin and Subcutaneous Tissue',f:'Lect. Of Dr. RCM Unit',v:'402',tm:'2–3 pm'},
+ '2027-02-08':{t:'Classification of cleft lip and palate.',f:'Lect. Of Dr. RCM Unit',v:'502',tm:'1–2 pm'},
+ '2027-02-12':{t:'Oral and Oropharyngeal Cancer',f:'Lect. Of NAB Unit',v:'402',tm:'2–3 pm'},
+ '2027-02-15':{t:'Disorders of salivary glands',f:'Lect. Of Dr. SBD Unit',v:'502',tm:'1–2 pm'},
+ '2027-02-22':{t:'Treatment of disorders of salivary glands',f:'Lect. Of NAB Unit',v:'502',tm:'1–2 pm'},
+ '2027-02-26':{t:'Applied anatomy and physiology of thyroid. Describe the etiopathogenesis of thyroidal swellings.',f:'Lect. Of Dr. SBD Unit',v:'402',tm:'2–3 pm'},
+ '2027-03-01':{t:'Clinical examination of thyroid swellings',f:'Lect. Of Dr. DJB Unit',v:'502',tm:'1–2 pm'},
+ '2027-03-05':{t:'Management of thyroid cancer',f:'Lect. Of Dr. SBD Unit',v:'402',tm:'2–3 pm'},
+ '2027-03-08':{t:'Parathyroid glands',f:'Lect. Of Dr. DJB Unit',v:'502',tm:'1–2 pm'},
+ '2027-03-12':{t:'Applied anatomy and appropriate investigations for breast disease',f:'Lect. Of NAB Unit',v:'402',tm:'2–3 pm'},
+ '2027-03-15':{t:'Management of benign breast disease including infections of the breast',f:'Lect. Of Dr. SBD Unit',v:'502',tm:'1–2 pm'},
+ '2027-03-19':{t:'Principles of treatment of occlusive arterial disease.',f:'Lect. Of Dr. DJB Unit',v:'402',tm:'2–3 pm'},
+ '2027-03-29':{t:'Principles of management of DVT and Varicose veins and Lymphedema',f:'Lect. Of Dr. JSP Unit',v:'502',tm:'1–2 pm'},
+ '2027-04-02':{t:'Ethics as it pertains to General Surgery.',f:'Lect. Of Dr. SBD Unit',v:'402',tm:'2–3 pm'}
+};
 const SURGERY_SCHEDULE={
  '2026-10-28':{t:'Basic Concepts of Post Op Care (SU 1.3)',f:'Dr. Maaz'},
  '2026-11-04':{t:'Surgical Audit (SU 7.1, 7.2)',f:'Dr. Harsh'},
@@ -723,6 +765,11 @@ function getDailyClasses(targetDate, r) {
    DEFAULT_WEEKLY[w].forEach(([tm, subj, flg]) => {
     it.push([tm, subj, flg]);
    });
+  }
+    if (typeof SURGERY_SGD_SCHEDULE !== 'undefined' && SURGERY_SGD_SCHEDULE[key]) {
+   const s = SURGERY_SGD_SCHEDULE[key];
+   const idx = it.findIndex(x => x[1].toLowerCase().includes('surgery'));
+   if (idx >= 0) it[idx] = [s.tm, 'Surgery (SGD/SDL): ' + s.t + ' – ' + s.f + ' (Venue ' + s.v + ')', 0];
   }
   if (typeof SURGERY_SCHEDULE !== 'undefined' && SURGERY_SCHEDULE[key]) {
    const s = SURGERY_SCHEDULE[key];
