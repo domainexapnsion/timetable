@@ -196,11 +196,11 @@
 ---
 
 ## 📅 Daily Timetable — 23-Nov-2026 (Monday) ✅ Verified (Mitesh TNMC Group)
-* **09:00 AM – 10:00 AM:** Medicine Lecture (Venue: Room 402/502)
+* **09:00 AM – 10:00 AM:** Medicine Lecture — Indications for Blood Transfusion & Components, Precautions during Transfusion including Mismatch Transfusion (Faculty: Dr. Umesh | Venue: Room 502)
 * **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre / Roll 57–75: Wards/OPD)
 * **01:00 PM – 02:00 PM:** General Surgery (SGD/SDL) — Pathophysiology of shock, types of shock (Faculty: Lect. of Dr. JSP Unit | Venue: Room 502)
-* **02:00 PM – 03:00 PM:** FMT Lecture — Mechanical injuries-II (Venue: Room 402/502)
-* **03:00 PM – 04:00 PM:** Community Medicine Lecture (Venue: Room 402/502)
+* **02:00 PM – 03:00 PM:** FMT Lecture — Mechanical injuries-II: Define, describe and classify different types of mechanical injuries, abrasion, bruise, laceration, stab wound, incised wound, chop wound, defense wound, self-inflicted/fabricated wounds (Venue: Room 402/502)
+* **03:00 PM – 04:00 PM:** Community Medicine Lecture — Health Care Delivery System & PHC (Faculty: Dr. Pranita Dharmadhikari | Venue: Room 402/502)
 
 ---
 
