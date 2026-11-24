@@ -195,6 +195,12 @@
 
 ---
 
+## 📅 Daily Timetable — 24-Nov-2026 (Tuesday) ✅ Verified (Holiday)
+* **All day:** Guru Nanak Jayanti — Official Gazetted Holiday (College & Hospital Clinical Postings Closed)
+* *Note:* No academic lectures or postings conducted. College departmental syllabus already accounted for this holiday (zero lectures displaced).
+
+---
+
 ## 📅 Daily Timetable — 23-Nov-2026 (Monday) ✅ Verified (Mitesh TNMC Group)
 * **09:00 AM – 10:00 AM:** Medicine Lecture — Indications for blood transfusion & components, precautions during transfusion including mismatch transfusion (Faculty: Dr. Umesh | Venue: Room 502)
 * **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre / Roll 57–75: Wards/OPD)
