@@ -151,6 +151,7 @@ details[open] .att-arrow{transform:rotate(180deg)}
    <div class="rng" id="rg"></div>
    <div class="meter" id="bw"><i id="pb" style="width:0"></i></div>
    <div class="left" id="lf"></div>
+   <button class="cbtn" id="btnAllPostings" type="button" style="margin-top:10px;width:100%;font-size:14px;background:#f0f7ff;border:1.5px dashed var(--ink);border-radius:8px;padding:4px 8px;cursor:pointer">📋 View Full Posting Schedule</button>
   </div>
   <div class="box wide" id="tbox" style="display:none;min-height:0">
    <div class="tt-head">
@@ -186,10 +187,15 @@ details[open] .att-arrow{transform:rotate(180deg)}
       <div class="att-c-sub" id="thSub">Attended: -- / -- (Bunked: --) • Floor: 75%</div>
       <div class="att-c-cushion" id="thCushion">--</div>
      </div>
-     <div class="att-card">
+     <div class="att-card" id="prAttCard">
       <div class="att-c-title"><span>Clinical Postings</span><span class="att-c-pct" id="prPct">--%</span></div>
       <div class="att-c-sub" id="prSub">Attended: -- / -- (Missed: --) • Floor: 80%</div>
       <div class="att-c-cushion" id="prCushion">--</div>
+      <div style="margin-top:10px;padding-top:8px;border-top:1.5px dashed rgba(29,78,216,.25);display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+       <button class="cbtn" id="btnTogglePostingBunk" type="button" style="font-size:13px;padding:3px 9px;background:#fff;border-color:var(--err);color:var(--err);cursor:pointer">🚨 Mark Bunk for Selected Day</button>
+       <button class="cbtn" id="btnViewPostingBunks" type="button" style="font-size:13px;padding:3px 9px;background:#fff;border-color:var(--ink);color:var(--ink);cursor:pointer">📋 View Bunks (<span id="bunkCount">0</span>)</button>
+      </div>
+      <div id="postingBunksList" style="display:none;margin-top:8px;font-size:13px;background:#fff;padding:8px 10px;border-radius:8px;border:1px dashed #cbd5e1"></div>
      </div>
     </div>
 
@@ -245,6 +251,21 @@ details[open] .att-arrow{transform:rotate(180deg)}
  </div>
  <div style="text-align:center;margin-top:24px;font-size:16px;color:#888;font-style:italic;">"Lekhak yaha kahna chahte hai ki unko jab man kiya tab wo ise update karenge."</div>
 </div>
+
+<div class="ov" id="postingOv"><div class="pop" style="max-width:540px;width:95%;max-height:85vh;overflow-y:auto;text-align:left">
+ <h2>Clinical Postings Roster</h2>
+ <p style="margin-bottom:10px;font-size:15px;color:#555">MBBS Phase III Part 1 (2026–2027) • 33 Weeks Total</p>
+ <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap" id="postingTabs">
+  <button class="cbtn" data-batch="0" type="button" style="font-size:14px;padding:3px 10px">Batch A (1–37)</button>
+  <button class="cbtn" data-batch="1" type="button" style="font-size:14px;padding:3px 10px;font-weight:bold;background:var(--hi)">Batch B (38–75)</button>
+  <button class="cbtn" data-batch="2" type="button" style="font-size:14px;padding:3px 10px">Batch C (76–111)</button>
+  <button class="cbtn" data-batch="3" type="button" style="font-size:14px;padding:3px 10px">Batch D (112–155)</button>
+ </div>
+ <div id="postingContent" style="font-size:14.5px;line-height:1.45"></div>
+ <div style="text-align:center;margin-top:14px">
+  <button class="go" id="closePostingOv" type="button" style="font-size:16px;padding:6px 20px">Close</button>
+ </div>
+</div></div>
 
 <div class="ov" id="ov"><div class="pop">
  <h2>Hey, doc-to-be!</h2><p>Enter your roll number to see your posting.</p>
@@ -705,6 +726,13 @@ const N={
  ],
  '2026-11-24':[
   [1,155,'All day','Guru Nanak Jayanti – Holiday (College & Hospital Clinical Postings Closed)',1]
+ ],
+ '2026-11-25':[
+  [1,155,'9–10 am','General Surgery: Cancer – Early Detection and Role of MDT Approach – Dr. Nitin Borle (Venue 502)',0],
+  [38,56,'10 am–1 pm','ENT Posting – OT (Operation Theatre)',0],
+  [1,155,'1–2 pm','FMT (Venue 402/502)',0],
+  [1,155,'2–3 pm','OBGY: Prolonged Pregnancy and Post-term Delivery (OG 13.2) – Dr. Pallavi (Venue 502)',0],
+  [1,155,'3–4 pm','Medicine – CANCELLED / Rescheduled for later (SDL 1: Prevention of Anaemia)',1]
  ]
 };
 const DEFAULT_WEEKLY = {
@@ -946,6 +974,7 @@ function updateAttendanceSummary(){
  const now=new Date();
  const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
  let thTot=0,thMiss=0,prTot=0,prMiss=0;
+ const postingBunks=[];
 
  const subjStats = {
   FMT: { tot: 0, miss: 0 },
@@ -973,7 +1002,11 @@ function updateAttendanceSummary(){
     if(sKey === 'Posting'){
      prTot++;
      subjStats.Posting.tot++;
-     if(isBunk){ prMiss++; subjStats.Posting.miss++; }
+     if(isBunk){
+      prMiss++;
+      subjStats.Posting.miss++;
+      postingBunks.push({ slotKey, date: k, title: x[1] });
+     }
     } else {
      thTot++;
      if(!subjStats[sKey]) subjStats[sKey] = { tot: 0, miss: 0 };
@@ -1081,6 +1114,31 @@ function updateAttendanceSummary(){
    }
   });
   $('dynSubjConducted').innerHTML = cHtml;
+ }
+
+ // Quick Posting Attendance Controls
+ if($('bunkCount')) $('bunkCount').textContent = prMiss;
+ const curSelSlot = toISO(selectedDate) + '_10';
+ if($('btnTogglePostingBunk')){
+  const isMarked = !!absences[curSelSlot];
+  $('btnTogglePostingBunk').innerHTML = isMarked 
+    ? '✅ Marked Absent on ' + toISO(selectedDate) + ' (Tap to Unmark)' 
+    : '🚨 Mark Bunk for Selected Day (' + toISO(selectedDate) + ')';
+  $('btnTogglePostingBunk').style.borderColor = isMarked ? 'var(--safe)' : 'var(--err)';
+  $('btnTogglePostingBunk').style.color = isMarked ? 'var(--safe)' : 'var(--err)';
+ }
+ const listEl = $('postingBunksList');
+ if(listEl){
+  if(postingBunks.length === 0){
+   listEl.innerHTML = '<div style="color:#64748b;font-style:italic">Zero posting bunks marked! 100% posting attendance.</div>';
+  } else {
+   listEl.innerHTML = '<div style="font-weight:bold;margin-bottom:6px;color:var(--navy)">Marked Missed Postings:</div>' + postingBunks.map(b => 
+    '<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px dotted #e2e8f0">' +
+    '<span><b>' + b.date + ':</b> ' + b.title + '</span>' +
+    '<button class="cbtn" type="button" style="height:22px;font-size:12px;color:var(--err);padding:0 6px;cursor:pointer" onclick="deletePostingBunk(\'' + b.slotKey + '\')">Remove ✕</button>' +
+    '</div>'
+   ).join('');
+  }
  }
 }
 
@@ -1274,5 +1332,99 @@ async function pullFromGoogleSheets() {
     updateSheetUI();
   }
 }
+function togglePostingBunkForSelectedDate(){
+ const curSelSlot = toISO(selectedDate) + '_10';
+ if(absences[curSelSlot]) delete absences[curSelSlot];
+ else absences[curSelSlot] = true;
+ localStorage.setItem('tnmc_absences', JSON.stringify(absences));
+ updateTT(selectedDate);
+ updateAttendanceSummary();
+ if(autoSync && typeof SHEET_URL !== 'undefined' && SHEET_URL) syncWithGoogleSheets(false);
+}
+
+function deletePostingBunk(slot){
+ if(absences[slot]){
+  delete absences[slot];
+  localStorage.setItem('tnmc_absences', JSON.stringify(absences));
+  updateTT(selectedDate);
+  updateAttendanceSummary();
+  if(autoSync && typeof SHEET_URL !== 'undefined' && SHEET_URL) syncWithGoogleSheets(false);
+ }
+}
+
+if($('btnTogglePostingBunk')){
+ $('btnTogglePostingBunk').onclick = togglePostingBunkForSelectedDate;
+}
+if($('btnViewPostingBunks')){
+ $('btnViewPostingBunks').onclick = () => {
+  const el = $('postingBunksList');
+  if(el) el.style.display = (el.style.display === 'none' || !el.style.display) ? 'block' : 'none';
+ };
+}
+
+// Posting Roster Modal Handler
+function renderPostingRoster(bIdx){
+ const tabs = document.querySelectorAll('#postingTabs button');
+ tabs.forEach(t => {
+  const isActive = parseInt(t.dataset.batch, 10) === bIdx;
+  t.style.fontWeight = isActive ? 'bold' : 'normal';
+  t.style.background = isActive ? 'var(--hi)' : '#fff';
+ });
+ const L = build(bIdx);
+ const today = new Date();
+ const todayMid = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+ 
+ let html = '<div style="margin-bottom:12px"><b>📍 Term 1 Postings (4 Blocks • 4 Weeks Each):</b><br>';
+ T1.forEach((r, i) => {
+  const item = L[i];
+  const s = D(r[0]), e = D(r[1]);
+  const isCur = todayMid >= s && todayMid <= e;
+  html += '<div style="padding:6px 8px;margin:5px 0;border-radius:8px;background:' + (isCur ? '#e0f2fe;border:2px solid var(--ink)' : '#f8fafc;border:1px dashed #cbd5e1') + '">' +
+   '<div style="display:flex;justify-content:space-between;align-items:center"><b>Block ' + (i+1) + ': ' + item.n + '</b>' + (isCur ? '<span style="color:var(--safe);font-weight:bold;font-size:12px;background:#eefbf0;padding:1px 6px;border-radius:4px">CURRENT ACTIVE</span>' : '') + '</div>' +
+   '<div style="font-size:13px;color:#555">' + F(s) + ' – ' + F(e) + '</div>' +
+   (bIdx === 1 && item.n.includes('ENT') ? '<div style="font-size:12px;color:#64748b;margin-top:3px;background:#fff;padding:4px;border-radius:4px">• Roll 38–56: Mon/Wed/Fri OT | Tue/Thu/Sat OPD<br>• Roll 57–75: Wards/OPD</div>' : '') +
+   '</div>';
+ });
+ html += '</div>';
+
+ html += '<div style="margin-bottom:12px"><b>📍 Term 2 Postings (05-Mar-2027 to 03-Jun-2027):</b><br>';
+ T2.forEach((r, i) => {
+  const item = L[4 + i];
+  const s = D(r[0]), e = D(r[1]);
+  html += '<div style="padding:5px 8px;margin:3px 0;border-radius:6px;background:#f8fafc;border:1px dashed #cbd5e1">' +
+   '<b>Block ' + (i+5) + ': ' + item.n + '</b> (' + F(s) + ' – ' + F(e) + ')</div>';
+ });
+ html += '</div>';
+
+ html += '<div><b>📍 Term 3 Postings (04-Jun-2027 to 17-Jun-2027):</b><br>';
+ [0, 1].forEach(i => {
+  const item = L[8 + i];
+  const s = D(T3[i][0]), e = D(T3[i][1]);
+  html += '<div style="padding:5px 8px;margin:3px 0;border-radius:6px;background:#f8fafc;border:1px dashed #cbd5e1">' +
+   '<b>Block ' + (i+9) + ': ' + item.n + '</b> (' + F(s) + ' – ' + F(e) + ')</div>';
+ });
+ html += '</div>';
+
+ if($('postingContent')) $('postingContent').innerHTML = html;
+}
+
+if($('btnAllPostings')){
+ $('btnAllPostings').onclick = () => {
+  renderPostingRoster(batch !== null ? batch : 1);
+  $('postingOv').classList.add('on');
+ };
+}
+if($('closePostingOv')){
+ $('closePostingOv').onclick = () => $('postingOv').classList.remove('on');
+}
+if($('postingTabs')){
+ $('postingTabs').onclick = e => {
+  const btn = e.target.closest('button');
+  if(btn && btn.dataset.batch !== undefined){
+   renderPostingRoster(parseInt(btn.dataset.batch, 10));
+  }
+ };
+}
+
 updateSheetUI();
 </script></body></html>

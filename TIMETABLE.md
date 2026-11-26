@@ -195,6 +195,15 @@
 
 ---
 
+## 📅 Daily Timetable — 25-Nov-2026 (Wednesday) ✅ Verified
+* **09:00 AM – 10:00 AM:** General Surgery Lecture — Cancer – Early Detection and Role of MDT Approach (Faculty: Dr. Nitin Borle | Venue: Room 502)
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre / Roll 57–75: Wards/OPD)
+* **01:00 PM – 02:00 PM:** FMT Lecture (Venue: Room 402/502)
+* **02:00 PM – 03:00 PM:** Obstetrics & Gynaecology (OBGY) Lecture — Prolonged Pregnancy and Post-term Delivery [OG 13.2] (Faculty: Dr. Pallavi | Venue: Room 502)
+* **03:00 PM – 04:00 PM:** Medicine Lecture (SDL 1: National Programmes for Prevention of Anaemia) — ⚠️ **NO LECTURE / CANCELLED (Rescheduled for later date/time)**
+
+---
+
 ## 📅 Daily Timetable — 24-Nov-2026 (Tuesday) ✅ Verified (Holiday)
 * **All day:** Guru Nanak Jayanti — Official Gazetted Holiday (College & Hospital Clinical Postings Closed)
 * *Note:* No academic lectures or postings conducted. College departmental syllabus already accounted for this holiday (zero lectures displaced).
