@@ -231,7 +231,7 @@
 
 ## 📅 Daily Timetable — 30-Nov-2026 (Monday) 🩺 Block 2 Posting Begins
 * **09:00 AM – 10:00 AM:** Medicine Lecture — Investigations & treatment of GI bleed & Acid Peptic disease (Faculty: Dr. Swapnil | Venue: Room 502)
-* **10:00 AM – 01:00 PM:** Clinical Posting Block 2 — Community Medicine Posting Begins (Roll 38–75: Batch B)
+* **10:00 AM – 01:00 PM:** Community Medicine Posting
 * **01:00 PM – 02:00 PM:** General Surgery (SGD/SDL) — Shock Resuscitation & Fluid Management (Venue: Room 502)
 * **02:00 PM – 03:00 PM:** FMT Lecture — Firearm injuries - I: Types of firearms (Smooth bore & Rifled), Ammunition, Cartridges, Projectiles (Faculty: Dr. Vaibhav Sharma | Venue: Room 402/502)
 * **03:00 PM – 04:00 PM:** Community Medicine Lecture — Concept of Health Care Delivery System in India (CM 17.3, 17.5) (Faculty: Dr. Pranita Dharmadhikari | Venue: Room 402/502)
@@ -239,14 +239,14 @@
 ---
 
 ## 📅 Daily Timetable — 28-Nov-2026 (Saturday) ⚠️ ENT End-Posting
-* **10:00 AM – 01:00 PM:** Clinical Posting — ENT End-Posting Completion & Clinical Exam / Sign-off (Roll 38–56)
+* **10:00 AM – 01:00 PM:** ENT Posting – OPD
 * *Note:* Block 1 (ENT) finishes. Prepare CSOM, Tracheostomy, Audiograms & Instruments.
 
 ---
 
 ## 📅 Daily Timetable — 27-Nov-2026 (Friday) ✅ Today
 * **09:00 AM – 10:00 AM:** FMT (SGL Practical / Tutorial) — Medical sickness / Under-treatment certificate (Faculty: Dr. Balamurugan Vasudevan | Venue: Room 402/502)
-* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting (Roll 38–56: OT / End-Posting Prep)
+* **10:00 AM – 01:00 PM:** ENT Posting – OT
 * **01:00 PM – 02:00 PM:** General Surgery (SGD/SDL) — Clinical features of shock & appropriate treatment (Faculty: Lect. Of Dr. JSP Unit | Venue: Room 402)
 * **02:00 PM – 03:00 PM:** Community Medicine Lecture 11 — Air Pollution, Water Pollution & NPCB (Faculty: Dr. Komal Dhumal | Venue: Room 402)
 
