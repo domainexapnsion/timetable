@@ -21,12 +21,18 @@
      - Keep `<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">` in `index.html`.
      - Direct user to pull-down refresh on the standalone URL (`https://domainexapnsion.github.io/timetable/`) or use Incognito to overwrite mobile Chrome's iframe disk cache.
 
+4. **Obfuscated PDF Character Streams & Ghost Slot Injections (27-Nov-2026):**
+   - *Error:* Single-character vertical splits (`C\nB\nM\nE...`) in `CBME 2024 BATCH- TEACHING SCHEDULE.pdf` bypassed naive grep/text filters, leading the AI to trust a hallucinated 9–10 AM Friday FMT lecture that did not exist (FMT is scheduled on Saturdays).
+   - *Fix:* Always sanitize and de-obfuscate newline-split PDF text before verification. Never inject or maintain a lecture slot without an exact de-obfuscated match on date, day, and time in the primary source document.
+
 ---
 
 ## ⚡ Step-by-Step Execution Protocol
 
-### Step 1: Ingest & Extract Verbatim Topics
+### Step 1: Ingest, De-obfuscate & Verify Verbatim Topics
 * Extract from source document (Excel, Word docx, PDF, or WhatsApp CR notice).
+* For PDFs with vertical character splits, strip intra-word newlines before searching.
+* Assert Date, Day of Week, and Time Slot match the primary department roster. Zero unverified slot injections.
 * Retain the full, unshortened competency and syllabus text word-for-word.
 
 ### Step 2: Format Clean Timetable Rows
