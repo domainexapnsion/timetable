@@ -195,6 +195,63 @@
 
 ---
 
+## 📅 Daily Timetable — 04-Dec-2026 (Friday)
+* **09:00 AM – 10:00 AM:** FMT (SGL Practical / Tutorial) — Regional Injuries: Head injuries, scalp wounds, skull fractures, intracranial haemorrhages, coup & contrecoup injuries (Faculty: Dr. Digvijay Jadhav | Venue: Room 402/502)
+* **10:00 AM – 01:00 PM:** Clinical Posting — Community Medicine
+* **01:00 PM – 02:00 PM:** General Surgery Lecture — Principles of Laparoscopic & Robotic Surgery (Venue: Room 402)
+* **02:00 PM – 03:00 PM:** Community Medicine Lecture — Health Planning & Management in India (Venue: Room 402)
+
+---
+
+## 📅 Daily Timetable — 03-Dec-2026 (Thursday)
+* **09:00 AM – 10:00 AM:** ENT Lecture — Facial Nerve Anatomy & Bell's Palsy (Venue: Room 402)
+* **10:00 AM – 01:00 PM:** Clinical Posting — Community Medicine
+* **01:00 PM – 02:00 PM:** Ophthalmology Lecture — Non-infective Conjunctivitis (Faculty: Dr. Anujja | Venue: Room 402)
+
+---
+
+## 📅 Daily Timetable — 02-Dec-2026 (Wednesday)
+* **09:00 AM – 10:00 AM:** General Surgery Lecture — Informed Consent in Surgery (Faculty: Dr. Asma Khalife | Venue: Room 502)
+* **10:00 AM – 01:00 PM:** Clinical Posting — Community Medicine
+* **01:00 PM – 02:00 PM:** FMT Lecture — Firearm injuries - II: Wound ballistics, Range of fire, Entry & Exit wounds, Gunshot residues (Faculty: Dr. Vaibhav Sharma | Venue: Room 402/502)
+* **02:00 PM – 03:00 PM:** Obstetrics & Gynaecology (OBGY) Lecture — Abnormal Puerperium & Puerperal Sepsis (Venue: Room 502)
+* **03:00 PM – 04:00 PM:** Medicine Lecture (SDL 2) — Cholelithiasis & Cholecystitis (Faculty: Dr. Prakruti | Venue: Room 502)
+
+---
+
+## 📅 Daily Timetable — 01-Dec-2026 (Tuesday)
+* **08:00 AM – 09:00 AM:** Ophthalmology Lecture — Infective Conjunctivitis (Faculty: Dr. Shraddha | Venue: Room 402)
+* **09:00 AM – 10:00 AM:** Obstetrics & Gynaecology (OBGY) Lecture — Normal Puerperium & Lactation (Venue: Room 502)
+* **10:00 AM – 01:00 PM:** Clinical Posting — Community Medicine
+* **01:00 PM – 02:00 PM:** Community Medicine Lecture — Primary Health Care & Health Centres (Venue: Room 402)
+* **02:00 PM – 03:00 PM:** ENT Lecture — Otosclerosis & Stapes Surgery (Venue: Room 402)
+* **03:00 PM – 04:00 PM:** Paediatrics — Awaiting Schedule / Not Commenced ⚠️
+
+---
+
+## 📅 Daily Timetable — 30-Nov-2026 (Monday) 🩺 Block 2 Posting Begins
+* **09:00 AM – 10:00 AM:** Medicine Lecture — Investigations & treatment of GI bleed & Acid Peptic disease (Faculty: Dr. Swapnil | Venue: Room 502)
+* **10:00 AM – 01:00 PM:** Clinical Posting Block 2 — Community Medicine Posting Begins (Roll 38–75: Batch B)
+* **01:00 PM – 02:00 PM:** General Surgery (SGD/SDL) — Shock Resuscitation & Fluid Management (Venue: Room 502)
+* **02:00 PM – 03:00 PM:** FMT Lecture — Firearm injuries - I: Types of firearms (Smooth bore & Rifled), Ammunition, Cartridges, Projectiles (Faculty: Dr. Vaibhav Sharma | Venue: Room 402/502)
+* **03:00 PM – 04:00 PM:** Community Medicine Lecture — Concept of Health Care Delivery System in India (CM 17.3, 17.5) (Faculty: Dr. Pranita Dharmadhikari | Venue: Room 402/502)
+
+---
+
+## 📅 Daily Timetable — 28-Nov-2026 (Saturday) ⚠️ ENT End-Posting
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT End-Posting Completion & Clinical Exam / Sign-off (Roll 38–56)
+* *Note:* Block 1 (ENT) finishes. Prepare CSOM, Tracheostomy, Audiograms & Instruments.
+
+---
+
+## 📅 Daily Timetable — 27-Nov-2026 (Friday) ✅ Today
+* **09:00 AM – 10:00 AM:** FMT (SGL Practical / Tutorial) — Medical sickness / Under-treatment certificate (Faculty: Dr. Balamurugan Vasudevan | Venue: Room 402/502)
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting (Roll 38–56: OT / End-Posting Prep)
+* **01:00 PM – 02:00 PM:** General Surgery (SGD/SDL) — Clinical features of shock & appropriate treatment (Faculty: Lect. Of Dr. JSP Unit | Venue: Room 402)
+* **02:00 PM – 03:00 PM:** Community Medicine Lecture 11 — Air Pollution, Water Pollution & NPCB (Faculty: Dr. Komal Dhumal | Venue: Room 402)
+
+---
+
 ## 📅 Daily Timetable — 25-Nov-2026 (Wednesday) ✅ Verified
 * **09:00 AM – 10:00 AM:** General Surgery Lecture — Cancer – Early Detection and Role of MDT Approach (Faculty: Dr. Nitin Borle | Venue: Room 502)
 * **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre / Roll 57–75: Wards/OPD)
@@ -1084,3 +1141,203 @@
 * **37 • 16-Mar-2027 (Tue, 2–3 PM):** Diseases of Salivary Glands (Sialadenitis, Sialolithiasis, Tumours) — Dr. Rohan Fuladi
 * **38 • 18-Mar-2027 (Thu, 9–10 AM):** Manifestations of HIV in Otorhinolaryngology — Dr. Meena Kale
 * **39 • 23-Mar-2027 (Tue, 2–3 PM):** Emergency Procedures in ENT: Tracheostomy, Epistaxis Packing & Cricothyroidotomy — Dr. Siva
+
+---
+
+## ⚖️ Department of Forensic Medicine & Toxicology (FMT) — Teaching Schedule (Batch 2024)
+*Institution: Topiwala National Medical College (TNMC) & B.Y.L. Nair Charitable Hospital, Mumbai*
+*Phase: III MBBS Part 1 (Term 2: 2026–2027) | Tenure Commenced: 26-Oct-2026*
+*Rhythm: Monday (2:00 PM – 3:00 PM Lecture), Wednesday (01:00 PM – 02:00 PM Lecture), Friday (09:00 AM – 10:00 AM Small Group Learning / SGL)*
+
+### Chronological 38-Session Matrix (Lectures & SGL Practicals)
+
+* **Session 01 • 26-Oct-2026 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: ugDependance                   2:00pm-3:
+  - Faculty: Dr. .R.C.Dere Sir
+
+* **Session 02 • 28-Oct-2026 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: odPoisoning                    01:00pmto 2:00pm
+  - Faculty: Dr. .SharadGaikwad
+
+* **Session 03 • 30-Oct-2026 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: timationofskeletal             9:00amto remains&ageestimation 10:00am report
+  - Faculty: Dr. Arundhatimhaske
+
+* **Session 04 • 02-Nov-2026 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: edicalJurisprudence-I  Dr.R DescribetheCodeofMedical Ethics2002conduct, EtiquetteandEthicsinmedical practiceand unethicalpractices&the dichotomy.Describethe functionsand roleofMedicalCouncil ofIndia andStateMedicalCouncils DescribetheIndian MedicalRegister Rights/privilegesofa medicalpractitioner,penal erasure,infamousconduct, disciplinary Committee,disciplinary procedures,warningnotice andpenalerasure
+  - Faculty: Dr. .R.C.Dere Sir
+
+* **Session 05 • 04-Nov-2026 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: MedicalJurisprudence-II 01:00pmto DescribetheLawsin Relation   2:00pm tomedicalpracticeandthe dutiesofamedicalpractitioner towards patientsandsociety. Enumeraterights,privileges anddutiesofaRegistered MedicalPractitioner.Discuss doctor-patientrelationship: professionalsecrecyand privileged communication.
+  - Faculty: Dr. VaibhavSharma
+
+* **Session 06 • 06-Nov-2026 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: MedicalJurisprudence-I I 9:00amto Describeanddiscuss           10:00am medicalnegligenceincluding civilandcriminalnegligence, contributorynegligence, corporatenegligence, vicariousliability,ResIpsa Loquitor,preventionofmedical negligenceanddefensesin medicalnegligencelitigations
+  - Faculty: Dr. VaibhavSharma
+
+* **Session 07 • 16-Nov-2026 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: MedicalJurisprudence-IV 02:00pmto DefineConsent.Describe       3:00pm differenttypesof consentandingredientsof informedconsent.Describe therulesofconsentand importanceofconsentin relationtoage,emergency situation,mental illnessandalcoholintoxication *Describetherapeutic privilege,Malingering, Therapeutic Misadventure, ProfessionalSecrecy,Human ExperimentationDescribe ProductsliabilityandMedical IndemnityInsurance
+  - Faculty: Dr. PawanSabale
+
+* **Session 08 • 18-Nov-2026 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: Examinationoffoetusforage 1:00amto2:00p
+  - Faculty: Dr. SharadGaikwad
+
+* **Session 09 • 20-Nov-2026 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: Mechanicalinjuries-I          9:00am-10 Defineinjury,assault&hurt. DescribeIPCpertainingto injuries.Define,describeand classify,differenttypesof mechanicalinjuries, abrasion,bruise,laceration, stabwound,incisedwound, chopwound,defensewound, self-inflicted/fabricated woundsandtheirmedico- legalaspects.
+  - Faculty: Dr. PawanSabale
+
+* **Session 10 • 23-Nov-2026 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: 6 Mechanicalinjuries-II         02:00pmt Define,describeandclassify    3:00pm differenttypesofmechanical injuries,abrasion,bruise, laceration,stabwound,incised wound,chopwound,defense wound, self-Inflicted/fabricated ounds.
+  - Faculty: Dr. PawanSabale
+
+* **Session 11 • 25-Nov-2026 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: 6 Describesalientfeaturesofthe 01:00pmto OrganTransplantationand 2:00pm TheHumanOrganTransplant (Amendment)Act 2011anddiscussethicalissues regardingorgandonation
+  - Faculty: Dr. RajeshDere
+
+* **Session 12 • 27-Nov-2026 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: 6 Medicalsickness/Under 9:00amto treatmentcertificate          10:00am
+  - Faculty: Faculty as per roster
+
+* **Session 13 • 30-Nov-2026 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: 6 Firearminjuries-I             2:00pm-3 Describedifferenttypesof firearmsincludingstructure andcomponents.Alongwith descriptionofammunition propel antchargeand mechanismoffire-arms, differenttypesofcartridges andbul etsandvarious terminologyinrelationof firearm– caliber,range, choking.
+  - Faculty: Dr. VaibhavSharma
+
+* **Session 14 • 02-Dec-2026 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: 6 Firearminjuries-II            01:00pmt Describeanddiscusswound       2:00pm bal istics-differenttypesof firearminjuries,blastinjuries andtheir interpretation, preservationanddispatchof traceevidencesincasesof firearmandblastinjuries, varioustestsrelatedto confirmationofuseoffirearms
+  - Faculty: Dr. VaibhavSharma
+
+* **Session 15 • 04-Dec-2026 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: egionalInjuries                 9:00amto Describeanddiscussregional      10:00am injuriestohead(Scalp wounds,fractureskul , intracranialhaemorrhages, coupandcontrecoup injuries),neck,chest,abdomen, limbs,genitalorgans,spinal cordandskeleton
+  - Faculty: Dr. DigvijayJadhav
+
+* **Session 16 • 07-Dec-2026 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: Regionalinjuries                2:00pm-3 Describeanddiscuss injuriesrelatedtofallfrom heightandvehicularinjuries– PrimaryandSecondary impact,Secondaryinjuries, crushsyndrome,railwayspine
+  - Faculty: Dr. DigvijayJadhav
+
+* **Session 17 • 09-Dec-2026 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: lectricalInjury                 01:00pmt Describetypesofinjuries,        2:00pm clinicalfeatures, patho-physiology,post- mortemfindingsand medico-legalaspectsin cases ofburns, scalds,lightening,electrocution andradiations.
+  - Faculty: Dr. SharadGaikwad
+
+* **Session 18 • 11-Dec-2026 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: Thermalinjury                  9:00amto Describetheclinicalfeatures,   10:00am post-mortemfindingand medicolegalaspectsofinjuries duetophysicalagentslikeheat (heat-hyper-pyrexia,heat stroke,sunstroke,heat exhaustion/prostration,heat cramps[miner’ scramp]or cold(systemic andlocalized hypothermia,frostbite, trenchfoot,immersionfoot
+  - Faculty: Dr. VaibhavSharma
+
+* **Session 19 • 14-Dec-2026 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: Examinationandcertificateof 2:00pm-3:00p Injury
+  - Faculty: Dr. SharadGaikwad
+
+* **Session 20 • 16-Dec-2026 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: Mechanicalasphyxia-I 01:00pmto Describeanddiscuss             2:00pm differenttypesofhangingand strangulationincludingclinical findings,causesofdeath,post- mortemfindingsand medico-legalaspectsofdeath duetohangingand strangulationincluding examination, preservationanddispatchof ligaturematerial
+  - Faculty: Dr. DigvijayJadhav
+
+* **Session 21 • 18-Dec-2026 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: Mechanicalasphyxia-II 9:00amto Describeanddiscuss             10:00am patho-physiology,clinical features,post-mortem findingsandmedico-legal aspectsoftraumatic asphyxia, obstructionofnose&mouth, suffocationandsexual asphyxia
+  - Faculty: Dr. DigvijayJadhav
+
+* **Session 22 • 21-Dec-2026 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: 6 Drowning                     2:00pm-3: Describeanddiscuss types,patho-physiology, clinicalfeatures,postmortem findingsandmedico-legal aspectsofdrowning,diatom testand,gettlertest.
+  - Faculty: Dr. VaibhavSharma
+
+* **Session 23 • 23-Dec-2026 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: 6 ExaminationofWeapons 01:00pmto 2:00pm
+  - Faculty: Dr. ChetnaVerma
+
+* **Session 24 • 28-Dec-2026 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: 6 AnaestheticDeathandMass Disaster
+  - Faculty: Dr. SharadGaikwad
+
+* **Session 25 • 30-Dec-2026 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: 6Virginity,Pregnancyand 01:00pmto Delivery                     2:00pm Discussthemedicolegal aspectsofvirginity,pregnancy anddelivery,signsof pregnancy,precipitatelabour superfoetation,super fecundationandsignsof recentandremotedeliveryin livinganddead
+  - Faculty: Dr. DigvijayJadhav
+
+* **Session 26 • 01-Jan-2027 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: 7 Starvation                   9:00amto 10:00am
+  - Faculty: Dr. SharadGaikwad
+
+* **Session 27 • 04-Jan-2027 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: 7Abortion,MTPAct               2:00pm-3: Define,classifyanddiscuss abortion,methodsofprocuring MTPandcriminalabortionand complicationofabortion.MTP Act1971 Describeevidencesofabortion -livinganddead,dutiesof doctorin cases ofabortion,investigationsof deathduetocriminalabortion
+  - Faculty: Dr. PawanSabale
+
+* **Session 28 • 06-Jan-2027 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: 7Sexualoffences-I              01:00pmto Describeanatomyofmaleand     2:00pm femalegenitalia,hymenandits types.Discussthe medico-legalimportanceof hymen.Definevirginity, Defloration,legitimacyandits medicolegal importance.Describedifferent typesofsexualoffences. Describevarioussectionsof BNSregardingrapeincluding definitionofrape,Punishment forRapeandrecent amendmentsnotifiedtil date.
+  - Faculty: Dr. RajeshDere
+
+* **Session 29 • 08-Jan-2027 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: 7PotencyCertificate            9:00amto 10:00am
+  - Faculty: Dr. SmitaBhokare
+
+* **Session 30 • 11-Jan-2027 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: 7 SEXUALOFFENCES-II  DrRaje Describeanddiscussthe examinationofthevictimofan allegedcaseofrape,andthe preparationofreport,framing theopinionandpreservation anddispatchoftrace evidences.
+  - Faculty: Dr. RajeshDere
+
+* **Session 31 • 13-Jan-2027 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: 7 SEXUALOFFENCES-III 01:00pmto Describeanddiscussadultery   2:00pm andunnaturalsexual offences-sodomy, incest,lesbianism,buccal coitus,bestiality,indecent assault and preparationofreport,framing theopinionandpreservation and dispatchoftrace evidencesin suchcases
+  - Faculty: Dr. PawanSabale
+
+* **Session 32 • 15-Jan-2027 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: 7 Examinationofalcoholic 9:00amto person                          10:00a
+  - Faculty: Faculty as per roster
+
+* **Session 33 • 18-Jan-2027 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: 7 SEXUALOFFENCES-IV  DrPawa Defineanddiscussimpotence, sterility,frigidity,sexual dysfunction,premature ejaculation.Discussthe causesofimpotenceand sterilityin maleandfemale DiscussSterilizationof male andfemale,artificial insemination,TestTubeBaby, surrogatemother,hormonal replacementtherapywith respecttoappropriatenational andstatelaws
+  - Faculty: Dr. PawanSabale
+
+* **Session 34 • 20-Jan-2027 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: 7Euthanasia                       01:00p 2:00pm
+  - Faculty: Dr. DigvijayJadhav
+
+* **Session 35 • 22-Jan-2027 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: 7 FSL,traceevidence,blood 9:00amto stains                          10:00a
+  - Faculty: Dr. SharadGaikwad
+
+* **Session 36 • 25-Jan-2027 (Mon) — Theory Lecture**
+  - Time: 2:00 PM – 3:00 PM
+  - Topic: 7 ForensicPsychiatry              01:00p DescribeCivilandcriminal       2:00pm responsibilitiesofamentally ill person.Differentiatebetween trueinsanityfromfeigned insanity
+  - Faculty: Dr. VaibhavSharma
+
+* **Session 37 • 27-Jan-2027 (Wed) — Theory Lecture**
+  - Time: 01:00 PM – 02:00 PM
+  - Topic: CPNDTActandPOCSOact  DrPawa iscussPre-conceptionand reNatalDiagnostic echniques(PC&PNDT)- rohibitionofSexSelection ct2003andDomestic iolenceAct2005
+  - Faculty: Dr. PawanSabale
+
+* **Session 38 • 29-Jan-2027 (Fri) — SGL Practical / Tutorial**
+  - Time: 09:00 AM – 10:00 AM
+  - Topic: 9:00amto 10:00am 01:00pmto 2:00pm 01:00pmto 2:00pm 01:00pmto 2:00pm
+  - Faculty: Faculty as per roster
+
