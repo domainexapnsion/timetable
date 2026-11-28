@@ -238,17 +238,17 @@
 
 ---
 
-## 📅 Daily Timetable — 28-Nov-2026 (Saturday) ⚠️ ENT End-Posting
+## 📅 Daily Timetable — 28-Nov-2026 (Saturday) ✅ Today (ENT End-Posting)
 * **10:00 AM – 01:00 PM:** ENT Posting – OPD
 * *Note:* Block 1 (ENT) finishes. Prepare CSOM, Tracheostomy, Audiograms & Instruments.
 
 ---
 
-## 📅 Daily Timetable — 27-Nov-2026 (Friday) ✅ Today
-* **09:00 AM – 10:00 AM:** FMT (SGL Practical / Tutorial) — Medical sickness / Under-treatment certificate (Faculty: Dr. Balamurugan Vasudevan | Venue: Room 402/502)
-* **10:00 AM – 01:00 PM:** ENT Posting – OT
-* **01:00 PM – 02:00 PM:** General Surgery (SGD/SDL) — Clinical features of shock & appropriate treatment (Faculty: Lect. Of Dr. JSP Unit | Venue: Room 402)
-* **02:00 PM – 03:00 PM:** Community Medicine Lecture 11 — Air Pollution, Water Pollution & NPCB (Faculty: Dr. Komal Dhumal | Venue: Room 402)
+## 📅 Daily Timetable — 27-Nov-2026 (Friday) ✅ Verified (Actual Conducted)
+* **10:00 AM – 01:00 PM:** Clinical Posting — ENT Posting **OT Day** (Roll 38–56: Operation Theatre)
+* **01:00 PM – 02:00 PM:** FMT Lecture / Practical (Venue: Room 402)
+* **02:00 PM – 03:00 PM:** General Surgery (SGD/SDL) — Clinical features of shock & appropriate treatment (Faculty: Lect. Of Dr. JSP Unit | Venue: Room 402)
+* *Note:* Conducted order: FMT held at 01:00 PM – 02:00 PM; General Surgery taken at 02:00 PM – 03:00 PM (matching Surgery SGD matrix). Morning 09:00 AM FMT was not held; Community Medicine 03:00 PM – 04:00 PM was cancelled/dismissed.
 
 ---
 
